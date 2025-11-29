@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Alan Lima</title>
-    <meta name="description" content="Portfólio de Design e Identidade Visual">
-
-    <!-- Tailwind CSS (Estilos) -->
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Babel (para traduzir o JSX) -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <!-- Fontes -->
     <style>
@@ -15,37 +17,31 @@
         .font-pixelify { font-family: 'Pixelify Sans', display; }
         .font-roc { font-family: 'Space Grotesk', sans-serif; }
         
-        /* Scrollbar Personalizada */
+        /* Ocultar cursor padrão para usar o personalizado (opcional, mantive visível por usabilidade) */
+        /* body { cursor: none; } */
+        
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #141414; }
         ::-webkit-scrollbar-thumb { background: #313519; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #D8F334; }
-        
-        @keyframes revealChar { 
-            0% { opacity: 0; transform: translateY(20px); } 
-            100% { opacity: 1; transform: translateY(0); } 
-        }
+        @keyframes revealChar { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
     </style>
-
-    <!-- Babel (Para entender o código React no navegador) -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body class="bg-[#141414]">
     <div id="root"></div>
 
-    <!-- Script Principal -->
+    <!-- Script Principal com Módulos -->
     <script type="text/babel" data-type="module">
-        // Importando React e ícones direto da nuvem (ES Modules)
         import React, { useState, useEffect, useRef } from 'https://esm.sh/react@18.2.0';
-        import ReactDOM from 'https://esm.sh/react-dom@18.2.0/client';
+        import { createRoot } from 'https://esm.sh/react-dom@18.2.0/client';
         import { 
-            ArrowRight, Check, Grid, Type, Palette, Layers, PenTool, 
-            Instagram, Monitor, Mail, Phone, Menu, X, ArrowUpRight, 
-            User, Globe, MessageCircle, Quote, Plus, Minus 
+          ArrowRight, Check, Grid, Type, Palette, Layers, PenTool, 
+          Instagram, Monitor, Mail, Phone, Menu, X, ArrowUpRight, 
+          User, Globe, MessageCircle, Quote, Plus, Minus, Linkedin
         } from 'https://esm.sh/lucide-react@0.292.0';
 
-        // --- CONFIGURAÇÃO DE IMAGENS E LINKS ---
-        const PROFILE_IMAGE_URL = "https://lh3.googleusercontent.com/d/1YU-RVx500BihAHk9DYOm7Y28NNkBk7e_";
+        // --- DADOS E CONFIGURAÇÕES ---
+        const PROFILE_IMAGE_URL = "https://47alanlima-erhlw.wordpress.com/wp-content/uploads/2025/11/capa-1.jpg";
         const BRANDING_PNG_URL = "https://lh3.googleusercontent.com/d/17YiPeDgsIQpmIMykIO_Fuk9K9apWkeDc";
         const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeg1FYPJkb1v180-7LIcPJ27wi9SSph3oSFFWEoviUrwkm0OA/viewform";
         const WHATSAPP_URL = "https://wa.me/5516991818725";
@@ -55,489 +51,880 @@
         const IMG_GALANTE = "1dTWIRZA4Rkya_Ss3NuNrgvo87PnwjDMn";
         const IMG_CONNECT = "1OOXTtJ8SWnMmIOazeVBqKpeC0VWR4YEB";
 
-        // --- DADOS ---
-        const PROJECTS = [
-            {
-                id: 1,
-                title: "Acampa 2024",
-                category: "ID.Visual",
-                image: `https://lh3.googleusercontent.com/d/${IMG_ACAMPA}`,
-                fallback: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2670&auto=format&fit=crop",
-                desc: "Identidade visual para evento jovem",
-                link: "https://www.behance.net/gallery/196926601/Acampa-2024-Incendeia-me-com-seu-fogo"
-            },
-            {
-                id: 2,
-                title: "Mahrte Racing Team",
-                category: "ID.Visual",
-                image: `https://lh3.googleusercontent.com/d/${IMG_MAHRTE}`,
-                fallback: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=2670&auto=format&fit=crop",
-                desc: "Branding para equipe de corrida",
-                link: "https://www.behance.net/gallery/194190413/Mahrte-Racing-Team-Identidade-Visual"
-            },
-            {
-                id: 3,
-                title: "Galante",
-                category: "ID.Visual",
-                image: `https://lh3.googleusercontent.com/d/${IMG_GALANTE}`,
-                fallback: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop",
-                desc: "Identidade visual sofisticada",
-                link: "https://www.behance.net/gallery/231429431/GALANTE-CERVEJARIA-Identidade-Visual"
-            },
-            {
-                id: 4,
-                title: "Connect Energia Solar", 
-                category: "ID.Visual",
-                image: `https://lh3.googleusercontent.com/d/${IMG_CONNECT}`,
-                fallback: "https://images.unsplash.com/photo-1481487484168-9b9301cd2766?q=80&w=2662&auto=format&fit=crop",
-                desc: "Design digital e app",
-                link: "https://www.behance.net/gallery/225361699/Connect-Energia-Solar-Identidade-Visual"
-            },
-            {
-                id: 5,
-                title: "Aura",
-                category: "ID.Visual",
-                image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2727&auto=format&fit=crop", 
-                desc: "Rebranding e embalagens"
-            },
-            {
-                id: 6,
-                title: "Flux",
-                category: "ID.Visual",
-                image: "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=2670&auto=format&fit=crop",
-                desc: "Identidade visual dinâmica"
-            }
-        ];
+        // --- DADOS & CONTENT ---
 
-        const SERVICES = [
-            { title: 'PALETA DE CORES', desc: 'Códigos de cor (RGB, CMYK, HEX, Pantone)', icon: <Palette /> },
-            { title: 'GRÁFICOS DE APOIO', desc: 'Ícones personalizados. Padrões e Ilustrações.', icon: <Grid /> },
-            { title: 'MÍDIAS SOCIAIS', desc: 'Padrão estético para artes social media', icon: <Instagram /> },
-            { title: 'APRESENTAÇÕES', desc: 'Apresentação PDF', icon: <Monitor /> },
-            { title: 'TIPOGRAFIA', desc: 'Fontes principais e secundárias', icon: <Type /> },
-            { title: 'BRANDING', desc: 'Produtos promocionais (canecas, uniformes, etc.)', icon: <Layers /> },
-            { title: 'LOGOTIPO', desc: 'logotipo principal e suas variações', icon: <PenTool /> },
+        const PROJECTS = [
+          {
+            id: 1,
+            title: "Acampa 2024",
+            category: "ID.Visual",
+            image: `https://lh3.googleusercontent.com/d/${IMG_ACAMPA}`,
+            fallback: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2670&auto=format&fit=crop",
+            desc: "Identidade visual para evento jovem",
+            link: "https://www.behance.net/gallery/196926601/Acampa-2024-Incendeia-me-com-seu-fogo"
+          },
+          {
+            id: 2,
+            title: "Mahrte Racing Team",
+            category: "ID.Visual",
+            image: `https://lh3.googleusercontent.com/d/${IMG_MAHRTE}`,
+            fallback: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=2670&auto=format&fit=crop",
+            desc: "Branding para equipe de corrida",
+            link: "https://www.behance.net/gallery/194190413/Mahrte-Racing-Team-Identidade-Visual"
+          },
+          {
+            id: 3,
+            title: "Galante",
+            category: "ID.Visual",
+            image: `https://lh3.googleusercontent.com/d/${IMG_GALANTE}`,
+            fallback: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop",
+            desc: "Identidade visual sofisticada",
+            link: "https://www.behance.net/gallery/231429431/GALANTE-CERVEJARIA-Identidade-Visual"
+          },
+          {
+            id: 4,
+            title: "Connect Energia Solar", 
+            category: "ID.Visual",
+            image: `https://lh3.googleusercontent.com/d/${IMG_CONNECT}`,
+            fallback: "https://images.unsplash.com/photo-1481487484168-9b9301cd2766?q=80&w=2662&auto=format&fit=crop",
+            desc: "Franquia de energia solar",
+            link: "https://www.behance.net/gallery/225361699/Connect-Energia-Solar-Identidade-Visual"
+          },
+          {
+            id: 5,
+            title: "GUIPINOTTI",
+            category: "ID.Visual",
+            image: "https://47alanlima-erhlw.wordpress.com/wp-content/uploads/2025/11/apresentacao_06.jpg", 
+            desc: "Identidade Visual Personalizada",
+            link: "https://www.behance.net/gallery/157510531/-GUIPINOTTI-Identidade-Visual"
+          },
+          {
+            id: 6,
+            title: "REDE CEELS - Church",
+            category: "ID.Visual",
+            image: "https://47alanlima-erhlw.wordpress.com/wp-content/uploads/2025/11/thumb.png",
+            desc: "Identidade Visual Igreja",
+            link: "https://www.behance.net/gallery/109463107/REDE-CEELS-Church"
+          }
         ];
 
         const TESTIMONIALS = [
-            { id: 1, name: "Carlos Mendes", role: "CEO, TechFlow", text: "O Alan não entregou apenas um logo, ele entregou uma estratégia. Nossa percepção de valor no mercado aumentou drasticamente após o rebranding." },
-            { id: 2, name: "Juliana Paes", role: "Fundadora, Aura Beauty", text: "Profissionalismo impecável. O processo foi claro, organizado e o resultado final superou todas as minhas expectativas. Recomendo de olhos fechados." },
-            { id: 3, name: "Roberto Silva", role: "Diretor, Construtora Viver", text: "Estávamos estagnados com uma marca antiga. O trabalho do Alan trouxe o frescor e a modernidade que precisávamos para atrair novos investidores." }
+          {
+            id: 1,
+            name: "Sérgio Galante",
+            role: "Fundador, GALANTE Cervejaria",
+            text: "O Alan não entregou apenas um logo, ele entregou uma estratégia. Nossa percepção de valor no mercado aumentou drasticamente após o rebranding."
+          },
+          {
+            id: 2,
+            name: "Josué Alves",
+            role: "Líder, REDE CEELS",
+            text: "Profissionalismo impecável. O processo foi claro, organizado e o resultado final superou todas as minhas expectativas. Recomendo de olhos fechados."
+          },
+          {
+            id: 3,
+            name: "Alexandre Castilho",
+            role: "CEO, Connect Energia Solar",
+            text: "Estávamos estagnados com uma marca antiga. O trabalho do Alan trouxe o frescor e a modernidade que precisávamos para atrair novos franqueados e clientes."
+          }
         ];
 
         const FAQ = [
-            { q: "Você entrega os arquivos editáveis?", a: "Sim! Ao final do projeto, você recebe um pacote completo com arquivos em vetor (AI, EPS, PDF) e imagem (PNG, JPG) prontos para uso impresso e digital." },
-            { q: "Qual é o prazo médio de entrega?", a: "Para uma identidade visual completa, o prazo médio é de 30 a 45 dias úteis. Isso garante tempo para pesquisa, estratégia e refinamento." },
-            { q: "Como funciona o pagamento?", a: "Trabalho com 50% de entrada para reserva da agenda e início do projeto, e os 50% restantes na aprovação final e entrega dos arquivos." },
-            { q: "E se eu não gostar do resultado?", a: "O processo inclui etapas de aprovação (Moodboard e Estratégia) antes do design final para mitigar isso. Além disso, os planos incluem rodadas de revisão para ajustes finos." }
+          {
+            q: "Você entrega os arquivos editáveis?",
+            a: "Sim! Ao final do projeto, você recebe um pacote completo com arquivos em vetor (AI, EPS, PDF) e imagem (PNG, JPG) prontos para uso impresso e digital."
+          },
+          {
+            q: "Qual é o prazo médio de entrega?",
+            a: "Para uma identidade visual completa, o prazo médio é de 30 a 45 dias úteis. Isso garante tempo para pesquisa, estratégia e refinamento."
+          },
+          {
+            q: "Como funciona o pagamento?",
+            a: "Trabalho com 50% de entrada para reserva da agenda e início do projeto, e os 50% restantes na aprovação final e entrega dos arquivos."
+          }
         ];
 
         const PROCESS_STEPS = [
-            { id: '01', title: 'Imersão & Briefing', desc: 'Mergulhamos no universo da sua marca para entender a essência, o público e os objetivos de negócio.', icon: <Layers className="w-6 h-6" /> },
-            { id: '02', title: 'Estratégia Visual', desc: 'Desenvolvimento do conceito, moodboards e arquitetura visual antes do design final.', icon: <PenTool className="w-6 h-6" /> },
-            { id: '03', title: 'Entrega & Guia', desc: 'Finalização dos arquivos e criação do brandbook para garantir consistência futura.', icon: <Check className="w-6 h-6" /> }
+          {
+            id: '01',
+            title: 'Imersão & Briefing',
+            desc: 'Mergulhamos no universo da sua marca para entender a essência, o público e os objetivos de negócio.',
+            icon: <Layers className="w-6 h-6" />
+          },
+          {
+            id: '02',
+            title: 'Estratégia Visual',
+            desc: 'Desenvolvimento do conceito, moodboards e arquitetura visual antes do design final.',
+            icon: <PenTool className="w-6 h-6" />
+          },
+          {
+            id: '03',
+            title: 'Entrega & Guia',
+            desc: 'Finalização dos arquivos e criação do brandbook para garantir consistência futura.',
+            icon: <Check className="w-6 h-6" />
+          }
+        ];
+
+        const SERVICES = [
+          { 
+            title: 'PALETA DE CORES', 
+            desc: 'Códigos de cor (RGB, CMYK, HEX, Pantone)', 
+            icon: <Palette /> 
+          },
+          { 
+            title: 'GRÁFICOS DE APOIO', 
+            desc: 'Ícones personalizados. Padrões e Ilustrações.', 
+            icon: <Grid /> 
+          },
+          { 
+            title: 'MÍDIAS SOCIAIS', 
+            desc: 'Padrão estético para artes social media', 
+            icon: <Instagram /> 
+          },
+          { 
+            title: 'APRESENTAÇÕES', 
+            desc: 'Apresentação PDF', 
+            icon: <Monitor /> 
+          },
+          { 
+            title: 'TIPOGRAFIA', 
+            desc: 'Fontes principais e secundárias', 
+            icon: <Type /> 
+          },
+          { 
+            title: 'BRANDING', 
+            desc: 'Produtos promocionais (canecas, uniformes, etc.)', 
+            icon: <Layers /> 
+          },
+          { 
+            title: 'LOGOTIPO', 
+            desc: 'logotipo principal e suas variações', 
+            icon: <PenTool /> 
+          },
         ];
 
         const PLANS = [
-            { name: "Bronze", tagline: "Ideal para quem está começando e precisa de profissionalismo rápido.", features: ["3 Mockups de aplicação", "1 Proposta de Identidade Visual", "1 Rodada de revisão", "Arquivos em alta resolução"], highlight: false },
-            { name: "Prata", tagline: "Perfeito para negócios que buscam reposicionamento de mercado.", features: ["10 Mockups de aplicação", "3 Templates Social Media", "Manual de Marca (Brandbook)", "1 Proposta de Identidade Visual", "2 Rodadas de revisão", "Arquivos vetoriais (AI, EPS, SVG)"], highlight: true },
-            { name: "Ouro", tagline: "A experiência completa para dominar o seu nicho.", features: ["15 Mockups realistas", "Manual de Marca Completo", "3 Templates Social Media", "Ícones Personalizados", "Curadoria de Fotos (Mood)", "Estudo de Arquétipo", "3 Rodadas de revisão", "5 Vídeos curtos c/ IA"], highlight: false }
+          {
+            name: "Bronze",
+            tagline: "Ideal para quem está começando e precisa de profissionalismo rápido.",
+            features: [
+              "3 Mockups de aplicação",
+              "1 Proposta de Identidade Visual",
+              "1 Rodada de revisão",
+              "Arquivos em alta resolução"
+            ],
+            highlight: false
+          },
+          {
+            name: "Prata",
+            tagline: "Perfeito para negócios que buscam reposicionamento de mercado.",
+            features: [
+              "10 Mockups de aplicação",
+              "3 Templates Social Media",
+              "Manual de Marca (Brandbook)",
+              "1 Proposta de Identidade Visual",
+              "2 Rodadas de revisão",
+              "Arquivos vetoriais (AI, EPS, SVG)"
+            ],
+            highlight: true
+          },
+          {
+            name: "Ouro",
+            tagline: "A experiência completa para dominar o seu nicho.",
+            features: [
+              "15 Mockups realistas",
+              "Manual de Marca Completo",
+              "3 Templates Social Media",
+              "Ícones Personalizados",
+              "Curadoria de Fotos (Mood)",
+              "Estudo de Arquétipo",
+              "3 Rodadas de revisão",
+              "5 Vídeos curtos c/ IA"
+            ],
+            highlight: false
+          }
         ];
 
         // --- COMPONENTES ---
 
+        // Componente Cursor Personalizado (Bolinha Verde)
+        const CustomCursor = () => {
+            const cursorRef = useRef(null);
+            
+            useEffect(() => {
+                const moveCursor = (e) => {
+                    if (cursorRef.current) {
+                        // Usando transform translate3d para melhor performance
+                        cursorRef.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`;
+                    }
+                };
+                window.addEventListener('mousemove', moveCursor);
+                return () => window.removeEventListener('mousemove', moveCursor);
+            }, []);
+
+            return (
+                <div 
+                    ref={cursorRef}
+                    className="fixed top-0 left-0 w-4 h-4 bg-[#D8F334] rounded-full pointer-events-none z-[9999] shadow-[0_0_15px_#D8F334]"
+                    style={{ 
+                        transition: 'transform 0.1s ease-out',
+                        willChange: 'transform'
+                    }}
+                />
+            );
+        };
+
         const Button = ({ children, variant = 'primary', className = '', ...props }) => {
-            const baseStyle = "inline-flex items-center justify-center font-roc px-6 py-4 rounded-lg transition-all duration-300 text-sm font-semibold tracking-wide uppercase cursor-pointer";
-            const variants = {
-                primary: "bg-[#D8F334] text-[#141414] hover:bg-[#C7E92A] hover:shadow-[0_0_20px_rgba(216,243,52,0.3)]",
-                outline: "border border-[#D8F334] text-[#D8F334] hover:bg-[#D8F334] hover:text-[#141414]",
-                neon: "bg-transparent border border-[#D8F334] text-[#D8F334] shadow-[0_0_10px_rgba(216,243,52,0.15)] hover:bg-[#D8F334] hover:text-[#141414] hover:shadow-[0_0_25px_rgba(216,243,52,0.6)]",
-                black: "bg-[#141414] text-[#D8F334] border-2 border-[#141414] hover:bg-[#D8F334] hover:text-[#141414] hover:border-[#141414]"
-            };
-            return <button className={`${baseStyle} ${variants[variant]} ${className}`} {...props}>{children}</button>;
+          const baseStyle = "inline-flex items-center justify-center font-roc px-6 py-4 rounded-lg transition-all duration-300 text-sm font-semibold tracking-wide uppercase cursor-pointer";
+          const variants = {
+            primary: "bg-[#D8F334] text-[#141414] hover:bg-[#C7E92A] hover:shadow-[0_0_20px_rgba(216,243,52,0.3)]",
+            outline: "border border-[#D8F334] text-[#D8F334] hover:bg-[#D8F334] hover:text-[#141414]",
+            neon: "bg-transparent border border-[#D8F334] text-[#D8F334] shadow-[0_0_10px_rgba(216,243,52,0.15)] hover:bg-[#D8F334] hover:text-[#141414] hover:shadow-[0_0_25px_rgba(216,243,52,0.6)]",
+            black: "bg-[#141414] text-[#D8F334] border-2 border-[#141414] hover:bg-[#D8F334] hover:text-[#141414] hover:border-[#141414]"
+          };
+
+          return (
+            <button className={`${baseStyle} ${variants[variant]} ${className}`} {...props}>
+              {children}
+            </button>
+          );
         };
 
         const Badge = ({ children }) => (
-            <span className="inline-block px-3 py-1 bg-[#D8F334] text-[#141414] text-[10px] uppercase tracking-wider font-bold rounded-full mb-3">{children}</span>
+          <span className="inline-block px-3 py-1 bg-[#D8F334] text-[#141414] text-[10px] uppercase tracking-wider font-bold rounded-full mb-3">
+            {children}
+          </span>
         );
 
         const SimpleCard = ({ children, className = "", borderColor = "border-[#313519]", bgHeader = "bg-[#1a1a1a]", href, ...props }) => {
-            const Component = href ? 'a' : 'div';
-            return (
-                <Component 
-                href={href}
-                target={href ? "_blank" : undefined}
-                rel={href ? "noopener noreferrer" : undefined}
-                className={`relative border ${borderColor} rounded-xl p-6 flex flex-col h-full transition-all duration-500 hover:shadow-2xl ${bgHeader} ${className} ${href ? 'cursor-pointer' : ''}`}
-                {...props}
-                >
-                {children}
-                </Component>
-            );
+          const Component = href ? 'a' : 'div';
+          return (
+            <Component 
+              href={href}
+              target={href ? "_blank" : undefined}
+              rel={href ? "noopener noreferrer" : undefined}
+              className={`relative border ${borderColor} rounded-xl p-6 flex flex-col h-full transition-all duration-500 hover:shadow-2xl ${bgHeader} ${className} ${href ? 'cursor-pointer' : ''}`}
+              {...props}
+            >
+              {children}
+            </Component>
+          );
         };
 
         const FolderCard = ({ children, label = "INFO", className = "", borderColor = "border-[#333]", bgHeader = "bg-[#1a1a1a]", labelColor = "text-[#888]" }) => {
-            return (
-                <div className={`group relative mt-10 h-full flex flex-col ${className}`}>
-                    <div className={`absolute -top-8 left-0 h-9 w-3/4 max-w-[240px] z-10 flex items-center px-6 rounded-t-2xl border-t border-l border-r ${borderColor} ${bgHeader}`}>
-                        <span className={`text-[10px] uppercase tracking-widest ${labelColor} font-roc truncate w-full group-hover:text-[#D8F334] transition-colors`}>{label}</span>
-                        <div className={`absolute bottom-[-1px] -right-4 w-4 h-4 overflow-hidden pointer-events-none`}>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute bottom-0 right-0">
-                                <path d="M0 16H16C16 16 0 16 0 0V16Z" fill="#141414"/> 
-                                <path d="M0 16C8.83656 16 16 8.83656 16 0" stroke={borderColor === 'border-[#333]' ? '#333' : borderColor === 'border-[#222]' ? '#222' : borderColor === 'border-[#D8F334]' ? '#D8F334' : borderColor === 'border-[#141414]/10' ? '#333' : '#313519'} strokeWidth="1"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div className={`absolute -top-[1px] left-[1px] h-[2px] w-[calc(75%-2px)] max-w-[238px] z-20 ${bgHeader}`}></div>
-                    <div className={`relative border ${borderColor} rounded-b-2xl rounded-tr-2xl rounded-tl-none p-8 flex-grow flex flex-col ${bgHeader} transition-colors duration-300`}>{children}</div>
+          return (
+            <div className={`group relative mt-10 h-full flex flex-col ${className}`}>
+              <div className={`absolute -top-8 left-0 h-9 w-3/4 max-w-[240px] z-10 flex items-center px-6 
+                rounded-t-2xl border-t border-l border-r ${borderColor} ${bgHeader}`}>
+                <span className={`text-[10px] uppercase tracking-widest ${labelColor} font-roc truncate w-full group-hover:text-[#D8F334] transition-colors`}>
+                  {label}
+                </span>
+                
+                <div className={`absolute bottom-[-1px] -right-4 w-4 h-4 overflow-hidden pointer-events-none`}>
+                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute bottom-0 right-0">
+                        <path d="M0 16H16C16 16 0 16 0 0V16Z" fill="#141414"/> 
+                        <path d="M0 16C8.83656 16 16 8.83656 16 0" stroke={borderColor === 'border-[#333]' ? '#333' : borderColor === 'border-[#222]' ? '#222' : borderColor === 'border-[#D8F334]' ? '#D8F334' : borderColor === 'border-[#141414]/10' ? '#333' : '#313519'} strokeWidth="1"/>
+                     </svg>
                 </div>
-            );
+              </div>
+
+              <div className={`absolute -top-[1px] left-[1px] h-[2px] w-[calc(75%-2px)] max-w-[238px] z-20 ${bgHeader}`}></div>
+
+              <div className={`relative border ${borderColor} rounded-b-2xl rounded-tr-2xl rounded-tl-none p-8 flex-grow flex flex-col ${bgHeader} transition-colors duration-300`}>
+                {children}
+              </div>
+            </div>
+          );
         };
 
         const AccordionItem = ({ question, answer }) => {
-            const [isOpen, setIsOpen] = useState(false);
-            return (
-                <div className="border-b border-[#333]">
-                    <button className="w-full py-6 flex justify-between items-center text-left focus:outline-none group" onClick={() => setIsOpen(!isOpen)}>
-                        <span className={`font-roc text-lg md:text-xl ${isOpen ? 'text-[#D8F334]' : 'text-[#D0D0D0]'} group-hover:text-[#D8F334] transition-colors`}>{question}</span>
-                        <div className={`p-2 rounded-full border border-[#333] group-hover:border-[#D8F334] transition-all ${isOpen ? 'bg-[#D8F334] text-black' : 'text-[#D8F334]'}`}>
-                            {isOpen ? <Minus size={16} /> : <Plus size={16} />}
-                        </div>
-                    </button>
-                    <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-40 opacity-100 pb-6' : 'max-h-0 opacity-0'}`}>
-                        <p className="font-roc text-gray-400 text-sm leading-relaxed max-w-2xl">{answer}</p>
-                    </div>
+          const [isOpen, setIsOpen] = useState(false);
+          return (
+            <div className="border-b border-[#333]">
+              <button 
+                className="w-full py-6 flex justify-between items-center text-left focus:outline-none group"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                <span className={`font-roc text-lg md:text-xl ${isOpen ? 'text-[#D8F334]' : 'text-[#D0D0D0]'} group-hover:text-[#D8F334] transition-colors`}>
+                  {question}
+                </span>
+                <div className={`p-2 rounded-full border border-[#333] group-hover:border-[#D8F334] transition-all ${isOpen ? 'bg-[#D8F334] text-black' : 'text-[#D8F334]'}`}>
+                  {isOpen ? <Minus size={16} /> : <Plus size={16} />}
                 </div>
-            );
+              </button>
+              <div 
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-40 opacity-100 pb-6' : 'max-h-0 opacity-0'}`}
+              >
+                <p className="font-roc text-gray-400 text-sm leading-relaxed max-w-2xl">
+                  {answer}
+                </p>
+              </div>
+            </div>
+          );
         };
 
         const AnimatedDotGrid = () => {
-            const [isVisible, setIsVisible] = useState(false);
-            const containerRef = useRef(null);
-            const dotPattern = [0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0];
-            useEffect(() => {
-                const observer = new IntersectionObserver(([entry]) => {
-                    if (entry.isIntersecting) {
-                        setIsVisible(true);
-                        if (containerRef.current) observer.unobserve(containerRef.current);
-                    }
-                }, { threshold: 0.3 });
-                if (containerRef.current) observer.observe(containerRef.current);
-                return () => { if (containerRef.current) observer.unobserve(containerRef.current); };
-            }, []);
-            return (
-                <div ref={containerRef} className="grid grid-cols-4 gap-4 md:gap-6 place-items-center h-full">
-                    {dotPattern.map((val, i) => (
-                        <div key={i} style={{ transitionDelay: `${i * 100}ms` }} className={`w-12 h-12 md:w-16 md:h-16 rounded-full transition-all duration-700 ease-out ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'} ${val ? 'bg-[#D8F334] shadow-[0_0_20px_rgba(216,243,52,0.5)]' : 'bg-[#313519]/40'}`} />
-                    ))}
-                </div>
+          const [isVisible, setIsVisible] = useState(false);
+          const containerRef = useRef(null);
+          const dotPattern = [0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0];
+
+          useEffect(() => {
+            const observer = new IntersectionObserver(
+              ([entry]) => {
+                if (entry.isIntersecting) {
+                  setIsVisible(true);
+                  if (containerRef.current) observer.unobserve(containerRef.current);
+                }
+              }, { threshold: 0.3 }
             );
+            if (containerRef.current) observer.observe(containerRef.current);
+            return () => { if (containerRef.current) observer.unobserve(containerRef.current); };
+          }, []);
+
+          return (
+            <div ref={containerRef} className="grid grid-cols-4 gap-4 md:gap-6 place-items-center h-full">
+              {dotPattern.map((val, i) => (
+                <div key={i} style={{ transitionDelay: `${i * 100}ms` }} className={`w-12 h-12 md:w-16 md:h-16 rounded-full transition-all duration-700 ease-out ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'} ${val ? 'bg-[#D8F334] shadow-[0_0_20px_rgba(216,243,52,0.5)]' : 'bg-[#313519]/40'}`} />
+              ))}
+            </div>
+          );
         };
 
         const AnimatedSection = ({ children, className = "" }) => {
-            const [isVisible, setIsVisible] = useState(false);
-            const domRef = useRef();
-            useEffect(() => {
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => setIsVisible(entry.isIntersecting));
-                });
-                const currentElement = domRef.current;
-                if (currentElement) observer.observe(currentElement);
-                return () => { if (currentElement) observer.unobserve(currentElement); };
-            }, []);
-            return (
-                <div ref={domRef} className={`transition-all duration-700 ease-out transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} ${className}`}>{children}</div>
-            );
+          const [isVisible, setIsVisible] = useState(false);
+          const domRef = useRef();
+
+          useEffect(() => {
+            const observer = new IntersectionObserver(entries => {
+              entries.forEach(entry => setIsVisible(entry.isIntersecting));
+            });
+            const currentElement = domRef.current;
+            if (currentElement) observer.observe(currentElement);
+            return () => { if (currentElement) observer.unobserve(currentElement); };
+          }, []);
+
+          return (
+            <div ref={domRef} className={`transition-all duration-700 ease-out transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} ${className}`}>{children}</div>
+          );
         };
 
         const MixedType = ({ text }) => {
-            const [isVisible, setIsVisible] = useState(false);
-            const elementRef = useRef(null);
-            useEffect(() => {
-                const observer = new IntersectionObserver(([entry]) => {
-                    if (entry.isIntersecting) {
-                        setIsVisible(true);
-                        if (elementRef.current) observer.unobserve(elementRef.current);
-                    }
-                }, { threshold: 0.1 });
-                if (elementRef.current) observer.observe(elementRef.current);
-                return () => { if (elementRef.current) observer.unobserve(elementRef.current); };
-            }, []);
-            return (
-                <span ref={elementRef} aria-label={text} className="inline-block">
-                    {text.split('').map((char, i) => {
-                        const seed = char.charCodeAt(0) + (i * 13); 
-                        const isPixel = seed % 2 === 0; 
-                        return (
-                            <span key={i} className={`inline-block ${isPixel ? 'font-pixelify' : 'font-roc'} hover:text-[#D8F334] transition-colors duration-300`}
-                                style={{ opacity: 0, animationName: isVisible ? 'revealChar' : 'none', animationDuration: '0.6s', animationTimingFunction: 'cubic-bezier(0.2, 0.65, 0.3, 0.9)', animationFillMode: 'forwards', animationDelay: `${i * 0.04}s` }}>
-                                {char === ' ' ? '\u00A0' : char}
-                            </span>
-                        );
-                    })}
-                </span>
+          const [isVisible, setIsVisible] = useState(false);
+          const elementRef = useRef(null);
+
+          useEffect(() => {
+            const observer = new IntersectionObserver(
+              ([entry]) => {
+                if (entry.isIntersecting) {
+                  setIsVisible(true);
+                  if (elementRef.current) observer.unobserve(elementRef.current);
+                }
+              }, { threshold: 0.1 }
             );
+            if (elementRef.current) observer.observe(elementRef.current);
+            return () => { if (elementRef.current) observer.unobserve(elementRef.current); };
+          }, []);
+
+          return (
+            <span ref={elementRef} aria-label={text} className="inline-block">
+              {text.split('').map((char, i) => {
+                const seed = char.charCodeAt(0) + (i * 13); 
+                const isPixel = seed % 2 === 0; 
+                return (
+                  <span key={i} className={`inline-block ${isPixel ? 'font-pixelify' : 'font-roc'} hover:text-[#D8F334] transition-colors duration-300`}
+                    style={{
+                       opacity: 0,
+                       animationName: isVisible ? 'revealChar' : 'none',
+                       animationDuration: '0.6s',
+                       animationTimingFunction: 'cubic-bezier(0.2, 0.65, 0.3, 0.9)',
+                       animationFillMode: 'forwards',
+                       animationDelay: `${i * 0.04}s`
+                    }}
+                  >
+                    {char === ' ' ? '\u00A0' : char}
+                  </span>
+                );
+              })}
+            </span>
+          );
         };
 
-        // --- APLICAÇÃO PRINCIPAL ---
+        // --- MAIN APP ---
 
         function App() {
-            const [scrolled, setScrolled] = useState(false);
-            const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+          const [scrolled, setScrolled] = useState(false);
+          const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-            useEffect(() => {
-                const handleScroll = () => setScrolled(window.scrollY > 50);
-                window.addEventListener('scroll', handleScroll);
-                return () => window.removeEventListener('scroll', handleScroll);
-            }, []);
+          useEffect(() => {
+            const handleScroll = () => setScrolled(window.scrollY > 50);
+            window.addEventListener('scroll', handleScroll);
+            return () => window.removeEventListener('scroll', handleScroll);
+          }, []);
 
-            const getStepStyle = (index) => {
-                switch(index) {
-                    case 0: return { bgHeader: "bg-[#D0D0D0]", borderColor: "border-[#D0D0D0]", textColor: "text-[#141414]", descColor: "text-[#333]", iconColor: "text-[#141414]", labelColor: "text-[#141414]/60" };
-                    case 1: return { bgHeader: "bg-[#1a1a1a]", borderColor: "border-[#333]", textColor: "text-white", descColor: "text-gray-400", iconColor: "text-[#D0D0D0]", labelColor: "text-[#888]" };
-                    case 2: return { bgHeader: "bg-[#D8F334]", borderColor: "border-[#D8F334]", textColor: "text-[#141414]", descColor: "text-[#141414]/80", iconColor: "text-[#141414]", labelColor: "text-[#141414]/60" };
-                    default: return {};
-                }
+          const getStepStyle = (index) => {
+            switch(index) {
+              case 0: 
+                return {
+                  bgHeader: "bg-[#D0D0D0]",
+                  borderColor: "border-[#D0D0D0]",
+                  textColor: "text-[#141414]",
+                  descColor: "text-[#333]",
+                  iconColor: "text-[#141414]",
+                  labelColor: "text-[#141414]/60"
+                };
+              case 1: 
+                return {
+                  bgHeader: "bg-[#1a1a1a]",
+                  borderColor: "border-[#333]",
+                  textColor: "text-white",
+                  descColor: "text-gray-400",
+                  iconColor: "text-[#D0D0D0]",
+                  labelColor: "text-[#888]"
+                };
+              case 2: 
+                return {
+                  bgHeader: "bg-[#D8F334]",
+                  borderColor: "border-[#D8F334]",
+                  textColor: "text-[#141414]",
+                  descColor: "text-[#141414]/80",
+                  iconColor: "text-[#141414]",
+                  labelColor: "text-[#141414]/60"
+                };
+              default: return {};
             }
+          }
 
-            return (
-                <div className="min-h-screen bg-[#141414] text-[#D0D0D0] font-roc selection:bg-[#D8F334] selection:text-[#141414] overflow-x-hidden relative">
-                    
-                    <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="fixed bottom-8 right-8 z-50 bg-[#D8F334] text-[#141414] p-4 rounded-full shadow-[0_0_20px_rgba(216,243,52,0.5)] hover:scale-110 transition-transform duration-300 animate-bounce" title="Fale comigo no WhatsApp">
-                        <MessageCircle size={28} fill="#141414" className="text-[#141414]" />
+          return (
+            <div className="min-h-screen bg-[#141414] text-[#D0D0D0] font-roc selection:bg-[#D8F334] selection:text-[#141414] overflow-x-hidden relative">
+              
+              {/* Cursor Personalizado */}
+              <CustomCursor />
+
+              <a 
+                href={WHATSAPP_URL} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="fixed bottom-8 right-8 z-50 bg-[#D8F334] text-[#141414] p-4 rounded-full shadow-[0_0_20px_rgba(216,243,52,0.5)] hover:scale-110 transition-transform duration-300 animate-bounce"
+                title="Fale comigo no WhatsApp"
+              >
+                <MessageCircle size={28} fill="#141414" className="text-[#141414]" />
+              </a>
+
+              <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#141414]/95 backdrop-blur-md py-4 border-b border-[#313519]' : 'bg-transparent py-6'}`}>
+                <div className="container mx-auto px-6 flex justify-between items-center">
+                  <div className="text-2xl font-roc font-bold text-white tracking-tighter">
+                    ALAN<span className="text-[#D8F334]">.</span>LIMA
+                  </div>
+                  <nav className="hidden md:flex gap-8 items-center">
+                    {['Cases', 'Sobre', 'Processo', 'Serviços', 'Planos'].map((item) => (
+                      <a key={item} href={`#${item.toLowerCase()}`} className="text-sm uppercase tracking-widest hover:text-[#D8F334] transition-colors">
+                        {item}
+                      </a>
+                    ))}
+                    <a href="#contact" className="px-4 py-2 border border-[#D0D0D0] rounded text-xs uppercase hover:bg-[#D8F334] hover:border-[#D8F334] hover:text-black transition-all">
+                      Contato
                     </a>
+                  </nav>
+                  <button className="md:hidden text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+                    {mobileMenuOpen ? <X /> : <Menu />}
+                  </button>
+                </div>
+              </header>
 
-                    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#141414]/95 backdrop-blur-md py-4 border-b border-[#313519]' : 'bg-transparent py-6'}`}>
-                        <div className="container mx-auto px-6 flex justify-between items-center">
-                            <div className="text-2xl font-roc font-bold text-white tracking-tighter">ALAN<span className="text-[#D8F334]">.</span>LIMA</div>
-                            <nav className="hidden md:flex gap-8 items-center">
-                                {['Cases', 'Sobre', 'Processo', 'Serviços', 'Planos'].map((item) => (
-                                    <a key={item} href={`#${item.toLowerCase()}`} className="text-sm uppercase tracking-widest hover:text-[#D8F334] transition-colors">{item}</a>
-                                ))}
-                                <a href="#contact" className="px-4 py-2 border border-[#D0D0D0] rounded text-xs uppercase hover:bg-[#D8F334] hover:border-[#D8F334] hover:text-black transition-all">Contato</a>
-                            </nav>
-                            <button className="md:hidden text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>{mobileMenuOpen ? <X /> : <Menu />}</button>
+              {mobileMenuOpen && (
+                <div className="fixed inset-0 bg-[#141414] z-40 flex flex-col items-center justify-center gap-8 md:hidden">
+                  {['Cases', 'Sobre', 'Processo', 'Serviços', 'Planos'].map((item) => (
+                    <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setMobileMenuOpen(false)} className="text-3xl font-pixelify hover:text-[#D8F334]">
+                      {item}
+                    </a>
+                  ))}
+                </div>
+              )}
+
+              <section className="relative min-h-screen flex flex-col justify-center pt-20 overflow-hidden bg-[#141414]">
+                <div className="absolute inset-0 w-full h-full">
+                  <img 
+                    src={PROFILE_IMAGE_URL} 
+                    alt="Alan Lima" 
+                    className="w-full h-full object-cover object-top opacity-50 md:opacity-100 transition-opacity duration-1000"
+                    onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2574&auto=format&fit=crop"; }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#141414] via-[#141414]/80 to-transparent opacity-100"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-[#141414]/50 opacity-100"></div>
+                </div>
+
+                <div className="container mx-auto px-6 relative z-10 text-center flex flex-col items-center justify-center">
+                  <AnimatedSection className="w-full">
+                    <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-[#D0D0D0] leading-[0.9] tracking-tighter mb-6">
+                      <MixedType text="DÊ FRESCOR" /> <br />
+                      <span className="text-white"><MixedType text="À SUA MARCA" /></span> <span className="text-[#D8F334]">.</span>
+                    </h1>
+                  </AnimatedSection>
+                </div>
+              </section>
+
+              <div id="cases" className="container mx-auto px-4 mt-32 mb-24">
+                <AnimatedSection>
+                  <div className="mb-16 text-center md:text-left">
+                     <h2 className="text-5xl md:text-8xl font-black text-[#D0D0D0] tracking-tighter leading-none">
+                       <MixedType text="CASES" />
+                     </h2>
+                     <div className="h-1 w-24 bg-[#D8F334] mt-4 md:ml-2"></div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {PROJECTS.map((project) => (
+                      <SimpleCard 
+                        key={project.id} 
+                        href={project.link}
+                        borderColor="border-[#313519]"
+                        className={`p-0 overflow-hidden group hover:border-[#D8F334] aspect-video`}
+                      >
+                        <img 
+                          src={project.image} 
+                          alt={project.title} 
+                          className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                          onError={(e) => { 
+                              if(project.fallback) e.target.src = project.fallback; 
+                          }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent opacity-90" />
+                        
+                        <div className="absolute bottom-0 left-0 w-full p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                          <span className="inline-block px-2 py-1 bg-[#D8F334] text-[#141414] text-[10px] font-bold uppercase tracking-wider rounded mb-2">
+                            {project.category}
+                          </span>
+                          <div className="flex justify-between items-end">
+                            <div>
+                              <h3 className="text-2xl font-roc font-bold text-white mb-1">{project.title}</h3>
+                              <p className="text-xs text-[#D0D0D0] font-roc uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                                {project.desc}
+                              </p>
+                            </div>
+                            <div className="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                              <ArrowUpRight size={16} />
+                            </div>
+                          </div>
                         </div>
-                    </header>
+                      </SimpleCard>
+                    ))}
+                  </div>
 
-                    {mobileMenuOpen && (
-                        <div className="fixed inset-0 bg-[#141414] z-40 flex flex-col items-center justify-center gap-8 md:hidden">
-                            {['Cases', 'Sobre', 'Processo', 'Serviços', 'Planos'].map((item) => (
-                                <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setMobileMenuOpen(false)} className="text-3xl font-pixelify hover:text-[#D8F334]">{item}</a>
+                  {/* Botão Ver Mais */}
+                  <div className="mt-16 flex justify-center">
+                    <Button 
+                      variant="outline" 
+                      onClick={() => window.open("https://www.behance.net/alanlima47", "_blank")}
+                      className="px-10 py-4 text-sm tracking-widest hover:scale-105 transition-transform"
+                    >
+                      VER MAIS PROJETOS
+                    </Button>
+                  </div>
+
+                </AnimatedSection>
+              </div>
+
+              <section id="sobre" className="py-24 bg-[#1a1a1a] border-t border-[#313519] relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-[#313519]/20 rounded-full blur-[100px] pointer-events-none"></div>
+                <div className="container mx-auto px-6">
+                  <AnimatedSection>
+                    <div className="flex flex-col md:flex-row gap-16 items-center">
+                      <div className="md:w-1/2 flex justify-center md:justify-start">
+                         <AnimatedDotGrid />
+                      </div>
+                      
+                      <div className="md:w-1/2">
+                        <Badge>Sobre Mim</Badge>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white leading-tight">
+                          <MixedType text="DESIGN É A ESTRATÉGIA" /> <br/>
+                          <span className="text-[#D8F334]"><MixedType text="DA MUDANÇA." /></span>
+                        </h2>
+                        
+                        <div className="font-roc text-[#D0D0D0] text-base leading-relaxed space-y-4">
+                            <p>
+                                Empreender exige coragem, mas quando os desafios aparecem, é preciso estratégia. Sou <strong>Alan Lima</strong>, designer gráfico em Ribeirão Preto, e acredito em uma verdade: se a vida te der limões, faça uma limonada.
+                            </p>
+                            <p>
+                                Desde 2018, minha missão é transformar o "azedo" dos problemas do seu negócio em soluções visuais que encantam e vendem. Eu não entrego apenas design; entrego a clareza estratégica que sua empresa precisa para voltar a crescer.
+                            </p>
+                            <p className="text-white font-medium border-l-2 border-[#D8F334] pl-4 italic">
+                                "Vamos transformar seus obstáculos na sua melhor apresentação?"
+                            </p>
+                        </div>
+                      </div>
+                    </div>
+                  </AnimatedSection>
+                </div>
+              </section>
+
+              <section className="bg-[#D0D0D0] text-[#141414] py-32 rounded-t-[40px] md:rounded-t-[80px] -mt-10 relative z-20 overflow-hidden">
+                <div className="container mx-auto px-6 relative z-10">
+                  <div className="flex flex-col lg:flex-row items-center gap-12">
+                    <div className="lg:w-1/2">
+                      <div className="inline-block px-3 py-1 border border-[#141414] text-[#141414] text-[10px] uppercase tracking-wider font-bold rounded-full mb-6">
+                        Conceito
+                      </div>
+                      <h2 className="text-6xl md:text-8xl font-black leading-[0.85] mb-8">
+                        <MixedType text="O QUE É" /><br/>
+                        <span className="text-[#666]"><MixedType text="BRANDING?" /></span>
+                      </h2>
+                      <p className="font-roc text-xl font-medium leading-relaxed mb-6 text-[#141414] max-w-md">
+                        Não é apenas um logotipo bonito. É a linguagem silenciosa que sua empresa fala antes mesmo de você abrir a boca.
+                      </p>
+                      <p className="font-roc text-sm text-[#444] leading-relaxed max-w-md mb-8">
+                        Uma identidade visual coesa constrói confiança, estabelece autoridade e diferencia você em um mercado saturado.
+                      </p>
+                      <div className="flex items-center gap-4 border-t border-[#141414]/20 pt-6">
+                        <div className="text-5xl font-bold font-roc">94%</div>
+                        <p className="text-xs font-bold uppercase tracking-wider max-w-[150px]">
+                          das primeiras impressões são relacionadas ao design
+                        </p>
+                      </div>
+                    </div>
+                    <div className="lg:w-1/2 flex justify-center lg:justify-end relative">
+                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-white rounded-full blur-[80px] opacity-60"></div>
+                       <img 
+                         src={BRANDING_PNG_URL} 
+                         alt="3D Abstract Shape" 
+                         className="relative z-10 w-full max-w-[500px] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-700"
+                         onError={(e) => { e.target.style.display = 'none'; }}
+                       />
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section id="processo" className="bg-[#141414] pt-32 pb-24 relative">
+                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#313519] rounded-full blur-[100px] opacity-40"></div>
+                <div className="container mx-auto px-6">
+                  <div className="mb-32">
+                    <AnimatedSection>
+                      <h2 className="font-roc text-4xl font-bold mb-16 text-center">Como Trabalhamos</h2>
+                      <div className="grid md:grid-cols-3 gap-8">
+                        {PROCESS_STEPS.map((step, i) => {
+                          const styles = getStepStyle(i);
+                          return (
+                            <FolderCard 
+                              key={step.id} 
+                              label={`PASSO ${step.id}`} 
+                              borderColor={styles.borderColor}
+                              bgHeader={styles.bgHeader}
+                              labelColor={styles.labelColor} 
+                            >
+                              <div className={`mt-2 mb-4 ${styles.iconColor}`}>
+                                {step.icon}
+                              </div>
+                              <h3 className={`font-roc text-xl font-bold mb-3 ${styles.textColor}`}>{step.title}</h3>
+                              <p className={`font-roc text-sm leading-relaxed ${styles.descColor}`}>
+                                {step.desc}
+                              </p>
+                            </FolderCard>
+                          )
+                        })}
+                      </div>
+                    </AnimatedSection>
+                  </div>
+
+                  <div id="serviços">
+                    <AnimatedSection>
+                      <div className="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-[#333] pb-6">
+                        <h2 className="text-5xl font-bold uppercase">
+                          <MixedType text="SERVIÇOS" />
+                        </h2>
+                        <div className="flex items-center gap-4 mt-4 md:mt-0">
+                          <div className="w-8 h-8 rounded-full bg-[#D8F334] flex items-center justify-center text-black transform rotate-45">
+                            <ArrowRight size={16} />
+                          </div>
+                          <p className="text-gray-400 text-sm font-bold uppercase tracking-wide">
+                            INCLUSOS EM QUALQUER DOS 3 PLANOS
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+                        {SERVICES.map((service, index) => (
+                          <div key={index} className="flex flex-col group">
+                            <div className="flex items-start gap-4">
+                              <div className="w-1 h-12 bg-[#D8F334] group-hover:h-full transition-all duration-500 ease-in-out"></div>
+                              
+                              <div className="flex-1">
+                                 <div className="flex items-center gap-3 mb-2">
+                                    <div className="text-[#666] group-hover:text-[#D8F334] transition-colors duration-300">
+                                      {React.cloneElement(service.icon, { size: 20, strokeWidth: 2 })}
+                                    </div>
+                                    <h3 className="font-roc text-xl font-bold text-white uppercase tracking-wide group-hover:text-[#D8F334] transition-colors">
+                                      {service.title}
+                                    </h3>
+                                 </div>
+                                <p className="font-roc text-sm text-gray-400 leading-relaxed border-t border-[#333] pt-2 mt-1 group-hover:border-[#D8F334]/30 transition-colors">
+                                  {service.desc}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </AnimatedSection>
+                  </div>
+                </div>
+              </section>
+
+              <section className="py-24 bg-[#141414] border-t border-[#333]">
+                <div className="container mx-auto px-6">
+                  <AnimatedSection>
+                    <h2 className="font-pixelify text-4xl text-center mb-16 text-white">
+                      O QUE <span className="text-[#D8F334]">DIZEM</span>
+                    </h2>
+                    <div className="grid md:grid-cols-3 gap-8">
+                      {TESTIMONIALS.map((t) => (
+                        <FolderCard key={t.id} label="FEEDBACK" borderColor="border-[#313519]" className="bg-[#1a1a1a]">
+                          <Quote className="text-[#D8F334] mb-4 opacity-50" size={32} />
+                          <p className="font-roc text-lg text-[#D0D0D0] mb-6 flex-grow italic">"{t.text}"</p>
+                          <div>
+                            <h4 className="text-white font-bold font-roc">{t.name}</h4>
+                            <span className="text-xs text-[#666] font-roc uppercase tracking-widest">{t.role}</span>
+                          </div>
+                        </FolderCard>
+                      ))}
+                    </div>
+                  </AnimatedSection>
+                </div>
+              </section>
+
+              <section id="planos" className="py-24 bg-[#0f0f0f] relative overflow-hidden">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] md:w-[50vw] md:h-[50vw] bg-[#313519] rounded-full blur-[150px] opacity-40 pointer-events-none"></div>
+                
+                <div className="container mx-auto px-6 relative z-10">
+                  <AnimatedSection>
+                    <h2 className="text-center text-5xl md:text-6xl mb-4 font-bold text-white">
+                       <MixedType text="INVESTIMENTO" />
+                    </h2>
+                    <p className="text-center text-gray-400 mb-16 max-w-md mx-auto font-roc text-lg">
+                      Escolha o nível de impacto que você deseja causar.
+                    </p>
+
+                    <div className="grid lg:grid-cols-3 gap-8 items-stretch">
+                      {PLANS.map((plan, idx) => (
+                        <SimpleCard 
+                          key={plan.name} 
+                          borderColor={plan.highlight ? 'border-[#D8F334]' : 'border-[#333]'}
+                          bgHeader="bg-[#141414]/80"
+                          className={`backdrop-blur-sm ${plan.highlight ? 'shadow-[0_0_30px_rgba(216,243,52,0.1)]' : 'hover:border-gray-500'}`}
+                        >
+                          <h3 className="font-roc text-4xl font-bold mb-4 text-white uppercase tracking-tight">
+                            {plan.name}
+                          </h3>
+                          <p className="font-roc text-sm text-gray-400 mb-8 leading-relaxed flex-grow">
+                            {plan.tagline}
+                          </p>
+
+                          <ul className="space-y-4 mb-10">
+                            {plan.features.map((feat, i) => (
+                              <li key={i} className="flex items-start gap-3 text-sm text-gray-300 font-roc">
+                                <Check size={16} className="text-[#666] mt-1 shrink-0" /> 
+                                <span>{feat}</span>
+                              </li>
                             ))}
-                        </div>
-                    )}
+                          </ul>
 
-                    <section className="relative min-h-screen flex flex-col justify-center pt-20 overflow-hidden bg-[#141414]">
-                        <div className="absolute inset-0 w-full h-full">
-                            <img src={PROFILE_IMAGE_URL} alt="Alan Lima" className="w-full h-full object-cover object-top opacity-50 md:opacity-100 transition-opacity duration-1000" onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2574&auto=format&fit=crop"; }} />
-                            <div className="absolute inset-0 bg-gradient-to-r from-[#141414] via-[#141414]/80 to-transparent opacity-100"></div>
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-[#141414]/50 opacity-100"></div>
-                        </div>
-                        <div className="container mx-auto px-6 relative z-10 text-center flex flex-col items-center justify-center">
-                            <AnimatedSection className="w-full">
-                                <h1 className="text-5xl md:text-7xl lg:text-9xl font-black text-[#D0D0D0] leading-[0.9] tracking-tighter mb-6">
-                                    <MixedType text="DÊ FRESCOR" /> <br />
-                                    <span className="text-white"><MixedType text="À SUA MARCA" /></span> <span className="text-[#D8F334]">.</span>
-                                </h1>
-                            </AnimatedSection>
-                        </div>
-                    </section>
-
-                    <div id="cases" className="container mx-auto px-4 mt-32 mb-24">
-                        <AnimatedSection>
-                            <div className="mb-16 text-center md:text-left">
-                                <h2 className="text-5xl md:text-8xl font-black text-[#D0D0D0] tracking-tighter leading-none"><MixedType text="CASES" /></h2>
-                                <div className="h-1 w-24 bg-[#D8F334] mt-4 md:ml-2"></div>
-                            </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                {PROJECTS.map((project) => (
-                                    <SimpleCard key={project.id} href={project.link} borderColor="border-[#313519]" className={`p-0 overflow-hidden group hover:border-[#D8F334] aspect-video`}>
-                                        <img src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" onError={(e) => { if(project.fallback) e.target.src = project.fallback; }} />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent opacity-90" />
-                                        <div className="absolute bottom-0 left-0 w-full p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                            <span className="inline-block px-2 py-1 bg-[#D8F334] text-[#141414] text-[10px] font-bold uppercase tracking-wider rounded mb-2">{project.category}</span>
-                                            <div className="flex justify-between items-end">
-                                                <div>
-                                                    <h3 className="text-2xl font-roc font-bold text-white mb-1">{project.title}</h3>
-                                                    <p className="text-xs text-[#D0D0D0] font-roc uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">{project.desc}</p>
-                                                </div>
-                                                <div className="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"><ArrowUpRight size={16} /></div>
-                                            </div>
-                                        </div>
-                                    </SimpleCard>
-                                ))}
-                            </div>
-                        </AnimatedSection>
+                          <Button 
+                            variant="black"
+                            className="w-full font-roc mt-auto"
+                            onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
+                          >
+                            Fazer Orçamento
+                          </Button>
+                        </SimpleCard>
+                      ))}
                     </div>
 
-                    <section id="sobre" className="py-24 bg-[#1a1a1a] border-t border-[#313519] relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-[#313519]/20 rounded-full blur-[100px] pointer-events-none"></div>
-                        <div className="container mx-auto px-6">
-                            <AnimatedSection>
-                                <div className="flex flex-col md:flex-row gap-16 items-center">
-                                    <div className="md:w-1/2 flex justify-center md:justify-start"><AnimatedDotGrid /></div>
-                                    <div className="md:w-1/2">
-                                        <Badge>Minha História</Badge>
-                                        <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white"><MixedType text="MAIS DO QUE PIXELS," /> <br/><span className="text-[#D8F334]"><MixedType text="CRIO CONEXÕES." /></span></h2>
-                                        <p className="font-roc text-[#D0D0D0] text-lg leading-relaxed mb-6">Minha jornada começou com uma curiosidade inquieta: entender como formas e cores influenciam o comportamento humano. O que começou como hobby se transformou em uma obsessão por estratégia visual.</p>
-                                        <p className="font-roc text-[#888] text-sm leading-relaxed mb-8">Não acredito em design apenas para preencher espaço. Minha motivação é traduzir a alma de negócios em identidades visuais que não apenas são vistas, mas sentidas.</p>
-                                    </div>
-                                </div>
-                            </AnimatedSection>
-                        </div>
-                    </section>
-
-                    <section className="bg-[#D0D0D0] text-[#141414] py-32 rounded-t-[40px] md:rounded-t-[80px] -mt-10 relative z-20 overflow-hidden">
-                        <div className="container mx-auto px-6 relative z-10">
-                            <div className="flex flex-col lg:flex-row items-center gap-12">
-                                <div className="lg:w-1/2">
-                                    <div className="inline-block px-3 py-1 border border-[#141414] text-[#141414] text-[10px] uppercase tracking-wider font-bold rounded-full mb-6">Conceito</div>
-                                    <h2 className="text-6xl md:text-8xl font-black leading-[0.85] mb-8"><MixedType text="O QUE É" /><br/><span className="text-[#666]"><MixedType text="BRANDING?" /></span></h2>
-                                    <p className="font-roc text-xl font-medium leading-relaxed mb-6 text-[#141414] max-w-md">Não é apenas um logotipo bonito. É a linguagem silenciosa que sua empresa fala antes mesmo de você abrir a boca.</p>
-                                    <p className="font-roc text-sm text-[#444] leading-relaxed max-w-md mb-8">Uma identidade visual coesa constrói confiança, estabelece autoridade e diferencia você em um mercado saturado.</p>
-                                    <div className="flex items-center gap-4 border-t border-[#141414]/20 pt-6"><div className="text-5xl font-bold font-roc">94%</div><p className="text-xs font-bold uppercase tracking-wider max-w-[150px]">das primeiras impressões são relacionadas ao design</p></div>
-                                </div>
-                                <div className="lg:w-1/2 flex justify-center lg:justify-end relative">
-                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-white rounded-full blur-[80px] opacity-60"></div>
-                                    <img src={BRANDING_PNG_URL} alt="3D Abstract Shape" className="relative z-10 w-full max-w-[500px] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-700" onError={(e) => { e.target.style.display = 'none'; }} />
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="processo" className="bg-[#141414] pt-32 pb-24 relative">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-[#313519] rounded-full blur-[100px] opacity-40"></div>
-                        <div className="container mx-auto px-6">
-                            <div className="mb-32">
-                                <AnimatedSection>
-                                    <h2 className="font-roc text-4xl font-bold mb-16 text-center">Como Trabalhamos</h2>
-                                    <div className="grid md:grid-cols-3 gap-8">
-                                        {PROCESS_STEPS.map((step, i) => {
-                                            const styles = getStepStyle(i);
-                                            return (
-                                                <FolderCard key={step.id} label={`PASSO ${step.id}`} borderColor={styles.borderColor} bgHeader={styles.bgHeader} labelColor={styles.labelColor}>
-                                                    <div className={`mt-2 mb-4 ${styles.iconColor}`}>{step.icon}</div>
-                                                    <h3 className={`font-roc text-xl font-bold mb-3 ${styles.textColor}`}>{step.title}</h3>
-                                                    <p className={`font-roc text-sm leading-relaxed ${styles.descColor}`}>{step.desc}</p>
-                                                </FolderCard>
-                                            )
-                                        })}
-                                    </div>
-                                </AnimatedSection>
-                            </div>
-
-                            <div id="serviços">
-                                <AnimatedSection>
-                                    <div className="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-[#333] pb-6">
-                                        <h2 className="text-5xl font-bold uppercase"><MixedType text="SERVIÇOS" /></h2>
-                                        <div className="flex items-center gap-4 mt-4 md:mt-0">
-                                            <div className="w-8 h-8 rounded-full bg-[#D8F334] flex items-center justify-center text-black transform rotate-45"><ArrowRight size={16} /></div>
-                                            <p className="text-gray-400 text-sm font-bold uppercase tracking-wide">INCLUSOS EM QUALQUER DOS 3 PLANOS</p>
-                                        </div>
-                                    </div>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-                                        {SERVICES.map((service, index) => (
-                                            <div key={index} className="flex flex-col group">
-                                                <div className="flex items-start gap-4">
-                                                    <div className="w-1 h-12 bg-[#D8F334] group-hover:h-full transition-all duration-500 ease-in-out"></div>
-                                                    <div className="flex-1">
-                                                        <div className="flex items-center gap-3 mb-2">
-                                                            <div className="text-[#666] group-hover:text-[#D8F334] transition-colors duration-300">{React.cloneElement(service.icon, { size: 20, strokeWidth: 2 })}</div>
-                                                            <h3 className="font-roc text-xl font-bold text-white uppercase tracking-wide group-hover:text-[#D8F334] transition-colors">{service.title}</h3>
-                                                        </div>
-                                                        <p className="font-roc text-sm text-gray-400 leading-relaxed border-t border-[#333] pt-2 mt-1 group-hover:border-[#D8F334]/30 transition-colors">{service.desc}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </AnimatedSection>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section className="py-24 bg-[#141414] border-t border-[#333]">
-                        <div className="container mx-auto px-6">
-                            <AnimatedSection>
-                                <h2 className="font-pixelify text-4xl text-center mb-16 text-white">O QUE <span className="text-[#D8F334]">DIZEM</span></h2>
-                                <div className="grid md:grid-cols-3 gap-8">
-                                    {TESTIMONIALS.map((t) => (
-                                        <FolderCard key={t.id} label="FEEDBACK" borderColor="border-[#313519]" className="bg-[#1a1a1a]">
-                                            <Quote className="text-[#D8F334] mb-4 opacity-50" size={32} />
-                                            <p className="font-roc text-lg text-[#D0D0D0] mb-6 flex-grow italic">"{t.text}"</p>
-                                            <div><h4 className="text-white font-bold font-roc">{t.name}</h4><span className="text-xs text-[#666] font-roc uppercase tracking-widest">{t.role}</span></div>
-                                        </FolderCard>
-                                    ))}
-                                </div>
-                            </AnimatedSection>
-                        </div>
-                    </section>
-
-                    <section id="planos" className="py-24 bg-[#0f0f0f] relative overflow-hidden">
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] md:w-[50vw] md:h-[50vw] bg-[#313519] rounded-full blur-[150px] opacity-40 pointer-events-none"></div>
-                        <div className="container mx-auto px-6 relative z-10">
-                            <AnimatedSection>
-                                <h2 className="text-center text-5xl md:text-6xl mb-4 font-bold text-white"><MixedType text="INVESTIMENTO" /></h2>
-                                <p className="text-center text-gray-400 mb-16 max-w-md mx-auto font-roc text-lg">Escolha o nível de impacto que você deseja causar.</p>
-                                <div className="grid lg:grid-cols-3 gap-8 items-stretch">
-                                    {PLANS.map((plan, idx) => (
-                                        <SimpleCard key={plan.name} borderColor={plan.highlight ? 'border-[#D8F334]' : 'border-[#333]'} bgHeader="bg-[#141414]/80" className={`backdrop-blur-sm ${plan.highlight ? 'shadow-[0_0_30px_rgba(216,243,52,0.1)]' : 'hover:border-gray-500'}`}>
-                                            <h3 className="font-roc text-4xl font-bold mb-4 text-white uppercase tracking-tight">{plan.name}</h3>
-                                            <p className="font-roc text-sm text-gray-400 mb-8 leading-relaxed flex-grow">{plan.tagline}</p>
-                                            <ul className="space-y-4 mb-10">
-                                                {plan.features.map((feat, i) => (<li key={i} className="flex items-start gap-3 text-sm text-gray-300 font-roc"><Check size={16} className="text-[#666] mt-1 shrink-0" /><span>{feat}</span></li>))}
-                                            </ul>
-                                            <Button variant="black" className="w-full font-roc mt-auto" onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}>Fazer Orçamento</Button>
-                                        </SimpleCard>
-                                    ))}
-                                </div>
-                                <div className="mt-12 text-center font-roc text-[10px] md:text-xs text-[#666] uppercase tracking-widest space-y-2"><p>Prazo médio: 45 dias úteis após o pagamento da entrada.</p><p>Pagamento: 50% na assinatura e 50% na entrega final.</p></div>
-                            </AnimatedSection>
-                        </div>
-                    </section>
-
-                    <section className="py-24 bg-[#141414] border-t border-[#222]">
-                        <div className="container mx-auto px-6 max-w-3xl">
-                            <AnimatedSection>
-                                <h2 className="text-4xl font-pixelify text-center mb-12 text-white">DÚVIDAS <span className="text-[#D8F334]">FREQUENTES</span></h2>
-                                <div className="space-y-2">{FAQ.map((item, i) => (<AccordionItem key={i} question={item.q} answer={item.a} />))}</div>
-                            </AnimatedSection>
-                        </div>
-                    </section>
-
-                    <footer id="contact" className="bg-[#D8F334] text-[#141414] pt-24 pb-12 rounded-t-[60px] relative overflow-hidden">
-                        <div className="container mx-auto px-6 relative z-10">
-                            <div className="flex flex-col items-center text-center mb-20">
-                                <h2 className="text-6xl md:text-8xl lg:text-9xl font-black leading-[0.85] mb-8 tracking-tight"><MixedType text="FAÇA DOS SEUS" /> <br /><MixedType text="PROBLEMAS," /> <br /><MixedType text="UMA SOLUÇÃO" /></h2>
-                                <Button variant="black" className="px-12 py-6 text-lg" onClick={() => window.open(GOOGLE_FORM_URL, "_blank")}>Solicitar Orçamento</Button>
-                            </div>
-                            <div className="grid md:grid-cols-3 gap-12 border-t border-[#141414]/20 pt-12">
-                                <div>
-                                    <h4 className="font-pixelify text-2xl mb-4">CONTATO</h4>
-                                    <div className="flex flex-col gap-2 font-roc font-medium">
-                                        <a href="mailto:47alanlima@gmail.com" className="flex items-center gap-2 hover:opacity-70"><Mail size={18} /> 47alanlima@gmail.com</a>
-                                        <a href="tel:+5516991818725" className="flex items-center gap-2 hover:opacity-70"><Phone size={18} /> (16) 99181-8725</a>
-                                    </div>
-                                </div>
-                                <div className="md:text-center">
-                                    <h4 className="font-pixelify text-2xl mb-4">SOCIAL</h4>
-                                    <div className="flex gap-4 md:justify-center items-center">
-                                        <a href="https://www.instagram.com/alanlima.dsgn/" target="_blank" rel="noopener noreferrer" className="p-2 border border-[#141414] rounded-full hover:bg-[#141414] hover:text-[#D8F334] transition-colors"><Instagram size={20} /></a>
-                                        <a href="https://www.behance.net/alanlima47" target="_blank" rel="noopener noreferrer" className="px-4 py-2 border border-[#141414] rounded-full font-bold text-sm hover:bg-[#141414] hover:text-[#D8F334] transition-colors">BEHANCE</a>
-                                        <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="p-2 border border-[#141414] rounded-full hover:bg-[#141414] hover:text-[#D8F334] transition-colors"><MessageCircle size={20} /></a>
-                                    </div>
-                                </div>
-                                <div className="md:text-right"><h4 className="font-pixelify text-2xl mb-4">LOCAL</h4><p className="font-roc font-medium">Brasil (Remote)<br/>Disponível para o mundo.</p></div>
-                            </div>
-                            <div className="mt-20 text-center border-t border-[#141414]/10 pt-8"><p className="font-roc text-xs font-bold uppercase tracking-widest">© 2025 Alan Lima. Todos os direitos reservados.</p></div>
-                        </div>
-                    </footer>
+                    <div className="mt-12 text-center font-roc text-[10px] md:text-xs text-[#666] uppercase tracking-widest space-y-2">
+                      <p>Prazo médio: 45 dias úteis após o pagamento da entrada.</p>
+                      <p>Pagamento: 50% na assinatura e 50% na entrega final.</p>
+                    </div>
+                  </AnimatedSection>
                 </div>
-            );
+              </section>
+
+              <section className="py-24 bg-[#141414] border-t border-[#222]">
+                <div className="container mx-auto px-6 max-w-3xl">
+                  <AnimatedSection>
+                    <h2 className="text-4xl font-pixelify text-center mb-12 text-white">DÚVIDAS <span className="text-[#D8F334]">FREQUENTES</span></h2>
+                    <div className="space-y-2">
+                      {FAQ.map((item, i) => (
+                        <AccordionItem key={i} question={item.q} answer={item.a} />
+                      ))}
+                    </div>
+                  </AnimatedSection>
+                </div>
+              </section>
+
+              <footer id="contact" className="bg-[#D8F334] text-[#141414] pt-24 pb-12 rounded-t-[60px] relative overflow-hidden">
+                <div className="container mx-auto px-6 relative z-10">
+                  <div className="flex flex-col items-center text-center mb-20">
+                    <h2 className="text-6xl md:text-8xl lg:text-9xl font-black leading-[0.85] mb-8 tracking-tight">
+                      <MixedType text="FAÇA DOS SEUS" /> <br />
+                      <MixedType text="PROBLEMAS," /> <br />
+                      <MixedType text="UMA SOLUÇÃO" />
+                    </h2>
+                    <Button variant="black" className="px-12 py-6 text-lg" onClick={() => window.open(GOOGLE_FORM_URL, "_blank")}>
+                      Solicitar Orçamento
+                    </Button>
+                  </div>
+
+                  <div className="grid md:grid-cols-3 gap-12 border-t border-[#141414]/20 pt-12">
+                    <div>
+                      <h4 className="font-pixelify text-2xl mb-4">CONTATO</h4>
+                      <div className="flex flex-col gap-2 font-roc font-medium">
+                        <a href="mailto:47alanlima@gmail.com" className="flex items-center gap-2 hover:opacity-70">
+                          <Mail size={18} /> 47alanlima@gmail.com
+                        </a>
+                        <a href="tel:+5516991818725" className="flex items-center gap-2 hover:opacity-70">
+                          <Phone size={18} /> (16) 99181-8725
+                        </a>
+                      </div>
+                    </div>
+                    
+                    <div className="md:text-center">
+                      <h4 className="font-pixelify text-2xl mb-4">SOCIAL</h4>
+                      <div className="flex gap-4 md:justify-center items-center">
+                        <a href="https://www.instagram.com/alanlima.dsgn/" target="_blank" rel="noopener noreferrer" className="p-2 border border-[#141414] rounded-full hover:bg-[#141414] hover:text-[#D8F334] transition-colors">
+                          <Instagram size={20} />
+                        </a>
+                        <a href="https://www.linkedin.com/in/alan-lima-28b8b11a2/" target="_blank" rel="noopener noreferrer" className="p-2 border border-[#141414] rounded-full hover:bg-[#141414] hover:text-[#D8F334] transition-colors">
+                          <Linkedin size={20} />
+                        </a>
+                        <a href="https://www.behance.net/alanlima47" target="_blank" rel="noopener noreferrer" className="px-4 py-2 border border-[#141414] rounded-full font-bold text-sm hover:bg-[#141414] hover:text-[#D8F334] transition-colors">
+                          BEHANCE
+                        </a>
+                        <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="p-2 border border-[#141414] rounded-full hover:bg-[#141414] hover:text-[#D8F334] transition-colors">
+                          <MessageCircle size={20} />
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="md:text-right">
+                      <h4 className="font-pixelify text-2xl mb-4">LOCAL</h4>
+                      <p className="font-roc font-medium">
+                        Ribeirão Preto/SP<br/>
+                        Disponível para o mundo.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-20 text-center border-t border-[#141414]/10 pt-8">
+                    <p className="font-roc text-xs font-bold uppercase tracking-widest">
+                      © 2025 Alan Lima. Todos os direitos reservados.
+                    </p>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          );
         }
 
-        const root = ReactDOM.createRoot(document.getElementById('root'));
+        // Renderização
+        const root = createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
 </body>
