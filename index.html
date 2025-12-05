@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Alan Lima</title>
-    
+    <meta name="description" content="Design é a Estratégia da Mudança. Portfólio de Alan Lima.">
+
+    <!-- === FAVICON ATUALIZADO === -->
+    <link rel="icon" type="image/png" href="https://47alanlima-erhlw.wordpress.com/wp-content/uploads/2025/12/isotipo.png">
+    <link rel="apple-touch-icon" href="https://47alanlima-erhlw.wordpress.com/wp-content/uploads/2025/12/isotipo.png">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Babel (para traduzir o JSX) -->
+    <!-- Babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <!-- Fontes -->
@@ -17,20 +22,17 @@
         .font-pixelify { font-family: 'Pixelify Sans', display; }
         .font-roc { font-family: 'Space Grotesk', sans-serif; }
         
-        /* Ocultar cursor padrão para usar o personalizado (opcional, mantive visível por usabilidade) */
-        /* body { cursor: none; } */
-        
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #141414; }
         ::-webkit-scrollbar-thumb { background: #313519; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #D8F334; }
+        html { scroll-behavior: smooth; }
         @keyframes revealChar { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body class="bg-[#141414]">
     <div id="root"></div>
 
-    <!-- Script Principal com Módulos -->
     <script type="text/babel" data-type="module">
         import React, { useState, useEffect, useRef } from 'https://esm.sh/react@18.2.0';
         import { createRoot } from 'https://esm.sh/react-dom@18.2.0/client';
@@ -50,6 +52,15 @@
         const IMG_MAHRTE = "1JsVhNrOlAeAmqgAk3M9XGHVKukaiV-HJ";
         const IMG_GALANTE = "1dTWIRZA4Rkya_Ss3NuNrgvo87PnwjDMn";
         const IMG_CONNECT = "1OOXTtJ8SWnMmIOazeVBqKpeC0VWR4YEB";
+
+        // --- MENU DE NAVEGAÇÃO ORGANIZADO ---
+        const NAV_ITEMS = [
+            { name: 'Cases', id: 'cases' },
+            { name: 'Sobre', id: 'sobre' },
+            { name: 'Processo', id: 'processo' },
+            { name: 'Serviços', id: 'serviços' },
+            { name: 'Investimento', id: 'planos' } // Mudado de "Planos" para "Investimento"
+        ];
 
         // --- DADOS & CONTENT ---
 
@@ -254,7 +265,6 @@
             useEffect(() => {
                 const moveCursor = (e) => {
                     if (cursorRef.current) {
-                        // Usando transform translate3d para melhor performance
                         cursorRef.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`;
                     }
                 };
@@ -515,27 +525,31 @@
                   <div className="text-2xl font-roc font-bold text-white tracking-tighter">
                     ALAN<span className="text-[#D8F334]">.</span>LIMA
                   </div>
+                  
+                  {/* --- MENU DESKTOP ATUALIZADO --- */}
                   <nav className="hidden md:flex gap-8 items-center">
-                    {['Cases', 'Sobre', 'Processo', 'Serviços', 'Planos'].map((item) => (
-                      <a key={item} href={`#${item.toLowerCase()}`} className="text-sm uppercase tracking-widest hover:text-[#D8F334] transition-colors">
-                        {item}
+                    {NAV_ITEMS.map((item) => (
+                      <a key={item.id} href={`#${item.id}`} className="text-sm uppercase tracking-widest hover:text-[#D8F334] transition-colors">
+                        {item.name}
                       </a>
                     ))}
                     <a href="#contact" className="px-4 py-2 border border-[#D0D0D0] rounded text-xs uppercase hover:bg-[#D8F334] hover:border-[#D8F334] hover:text-black transition-all">
                       Contato
                     </a>
                   </nav>
+                  
                   <button className="md:hidden text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                     {mobileMenuOpen ? <X /> : <Menu />}
                   </button>
                 </div>
               </header>
 
+              {/* --- MENU MOBILE ATUALIZADO --- */}
               {mobileMenuOpen && (
                 <div className="fixed inset-0 bg-[#141414] z-40 flex flex-col items-center justify-center gap-8 md:hidden">
-                  {['Cases', 'Sobre', 'Processo', 'Serviços', 'Planos'].map((item) => (
-                    <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setMobileMenuOpen(false)} className="text-3xl font-pixelify hover:text-[#D8F334]">
-                      {item}
+                  {NAV_ITEMS.map((item) => (
+                    <a key={item.id} href={`#${item.id}`} onClick={() => setMobileMenuOpen(false)} className="text-3xl font-pixelify hover:text-[#D8F334]">
+                      {item.name}
                     </a>
                   ))}
                 </div>
