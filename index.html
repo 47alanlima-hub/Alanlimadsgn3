@@ -59,7 +59,7 @@
             { name: 'Sobre', id: 'sobre' },
             { name: 'Processo', id: 'processo' },
             { name: 'Serviços', id: 'serviços' },
-            { name: 'Investimento', id: 'planos' } // Mudado de "Planos" para "Investimento"
+            { name: 'Investimento', id: 'planos' }
         ];
 
         // --- DADOS & CONTENT ---
@@ -103,11 +103,11 @@
           },
           {
             id: 5,
-            title: "GUIPINOTTI",
+            title: "MTZ",
             category: "ID.Visual",
-            image: "https://47alanlima-erhlw.wordpress.com/wp-content/uploads/2025/11/apresentacao_06.jpg", 
-            desc: "Identidade Visual Personalizada",
-            link: "https://www.behance.net/gallery/157510531/-GUIPINOTTI-Identidade-Visual"
+            image: "https://47alanlima-erhlw.wordpress.com/wp-content/uploads/2026/01/prancheta-1-copia-3.jpg", 
+            desc: "Identidade Visual",
+            link: "https://www.behance.net/gallery/241688325/MTZ-IDENTIDADE-VISUAL"
           },
           {
             id: 6,
@@ -117,6 +117,17 @@
             desc: "Identidade Visual Igreja",
             link: "https://www.behance.net/gallery/109463107/REDE-CEELS-Church"
           }
+        ];
+
+        // --- Correção: Fechamento correto da array SERVICES e declaração de TESTIMONIALS ---
+        const SERVICES = [
+            { title: 'PALETA DE CORES', desc: 'Códigos de cor (RGB, CMYK, HEX, Pantone)', icon: <Palette /> },
+            { title: 'GRÁFICOS DE APOIO', desc: 'Ícones personalizados. Padrões e Ilustrações.', icon: <Grid /> },
+            { title: 'MÍDIAS SOCIAIS', desc: 'Padrão estético para artes social media', icon: <Instagram /> },
+            { title: 'APRESENTAÇÕES', desc: 'Apresentação PDF', icon: <Monitor /> },
+            { title: 'TIPOGRAFIA', desc: 'Fontes principais e secundárias', icon: <Type /> },
+            { title: 'BRANDING', desc: 'Produtos promocionais (canecas, uniformes, etc.)', icon: <Layers /> },
+            { title: 'LOGOTIPO', desc: 'logotipo principal e suas variações', icon: <PenTool /> },
         ];
 
         const TESTIMONIALS = [
@@ -174,44 +185,6 @@
             desc: 'Finalização dos arquivos e criação do brandbook para garantir consistência futura.',
             icon: <Check className="w-6 h-6" />
           }
-        ];
-
-        const SERVICES = [
-          { 
-            title: 'PALETA DE CORES', 
-            desc: 'Códigos de cor (RGB, CMYK, HEX, Pantone)', 
-            icon: <Palette /> 
-          },
-          { 
-            title: 'GRÁFICOS DE APOIO', 
-            desc: 'Ícones personalizados. Padrões e Ilustrações.', 
-            icon: <Grid /> 
-          },
-          { 
-            title: 'MÍDIAS SOCIAIS', 
-            desc: 'Padrão estético para artes social media', 
-            icon: <Instagram /> 
-          },
-          { 
-            title: 'APRESENTAÇÕES', 
-            desc: 'Apresentação PDF', 
-            icon: <Monitor /> 
-          },
-          { 
-            title: 'TIPOGRAFIA', 
-            desc: 'Fontes principais e secundárias', 
-            icon: <Type /> 
-          },
-          { 
-            title: 'BRANDING', 
-            desc: 'Produtos promocionais (canecas, uniformes, etc.)', 
-            icon: <Layers /> 
-          },
-          { 
-            title: 'LOGOTIPO', 
-            desc: 'logotipo principal e suas variações', 
-            icon: <PenTool /> 
-          },
         ];
 
         const PLANS = [
