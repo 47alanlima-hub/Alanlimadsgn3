@@ -1,918 +1,1891 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Alan Lima</title>
-    <meta name="description" content="Design é a Estratégia da Mudança. Portfólio de Alan Lima.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alan Lima — Design é a estratégia da mudança</title>
+<meta name="description" content="Portfólio de Alan Lima, designer gráfico em Ribeirão Preto. Identidade visual, design & dev e product motion desde 2018.">
+<link rel="icon" type="image/png" href="https://47alanlima-erhlw.wordpress.com/wp-content/uploads/2025/12/isotipo.png">
+<style>
+/* ============================================================
+   ALANLIMA.DSGN — PORTFÓLIO 2026 (versão Nova)
+   Programado a partir do AlanLima-Portfolio-2026.ai de 14/09.
+   Medidas lidas do arquivo nativo do Illustrator: prancheta de
+   1440 com conteúdo de 1152 começando em x=144.
+   ============================================================ */
 
-    <!-- === FAVICON ATUALIZADO === -->
-    <link rel="icon" type="image/png" href="https://47alanlima-erhlw.wordpress.com/wp-content/uploads/2025/12/isotipo.png">
-    <link rel="apple-touch-icon" href="https://47alanlima-erhlw.wordpress.com/wp-content/uploads/2025/12/isotipo.png">
+/* ---------- fontes do projeto, servidas pelo site ---------- */
+@font-face{font-family:'Grotesk';src:url('assets/fontes/web/SpaceGroteskAL-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Grotesk';src:url('assets/fontes/web/SpaceGroteskAL-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'GroteskMd';src:url('assets/fontes/web/SpaceGroteskALMd-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Pixel';src:url('assets/fontes/web/PixelifySansAL-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Pixel';src:url('assets/fontes/web/PixelifySansAL-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Mono';src:url('assets/fontes/web/SpaceMono-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Mono';src:url('assets/fontes/web/SpaceMono-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Babel -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+:root{
+  --lime:#d8f334;
+  --ink:#141414;
+  --ink-2:#1a1a1a;
+  --ink-line:#333;
+  --silver:#d0d0d0;
+  --silver-100:#ededed;
+  --silver-500:#9a9a9a;
+  --muted:#666;
+  --grafite:#3a3a3a;
+  --branco:#fff;
 
-    <!-- Fontes -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
-        .font-pixelify { font-family: 'Pixelify Sans', display; }
-        .font-roc { font-family: 'Space Grotesk', sans-serif; }
-        
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #141414; }
-        ::-webkit-scrollbar-thumb { background: #313519; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #D8F334; }
-        html { scroll-behavior: smooth; }
-        @keyframes revealChar { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
-    </style>
+  --ff:'Grotesk',system-ui,sans-serif;
+  --ff-md:'GroteskMd','Grotesk',system-ui,sans-serif;
+  --ff-px:'Pixel','Grotesk',monospace;
+  --ff-mono:'Mono',ui-monospace,monospace;
+
+  --wrap:1152px;
+  --pad:clamp(20px,5.5vw,144px);
+
+  --ease:cubic-bezier(.16,1,.3,1);
+  --ease-snap:cubic-bezier(.2,.65,.3,.9);
+
+  /* cursor: seta lime com contorno preto, ponta em (4,3) */
+  --cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M4 3v19.6l5.1-4.8 3.5 7.6 3.7-1.6-3.4-7.5h6.9z' fill='%23d8f334' stroke='%23141414' stroke-width='1.8' stroke-linejoin='round'/%3E%3C/svg%3E") 4 3, auto;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:var(--lime);cursor:var(--cursor)}
+body{background:var(--ink);color:var(--silver);font-family:var(--ff);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;cursor:var(--cursor)}
+::selection{background:var(--lime);color:var(--ink)}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--ink)}
+::-webkit-scrollbar-thumb{background:#313519;border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--lime)}
+img,svg,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+:focus-visible{outline:2px solid var(--lime);outline-offset:3px;border-radius:2px}
+
+.wrap,.capa__in,.sobre__in,.faixa__in,.nav__in{
+  width:100%;max-width:calc(var(--wrap) + var(--pad)*2);
+  padding-inline:var(--pad);margin-inline:auto}
+section{position:relative;overflow:hidden}
+
+/* ---------- tipografia mesclada: metade dos glifos em Pixel ---------- */
+.mix{display:block}
+.mix .g{display:inline-block;font-family:var(--ff);font-weight:700}
+.mix .g.px{font-family:var(--ff-px);position:relative;top:.05em}
+.mix--base .g.px{top:0}
+
+.eyebrow{font-family:var(--ff-mono);letter-spacing:.3em;text-transform:uppercase;
+  color:var(--lime);display:block}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;
+  font-family:var(--ff-md);letter-spacing:.02em;text-transform:uppercase;
+  background:var(--ink);color:var(--lime);border-radius:8px;
+  transition:transform .3s var(--ease-snap),box-shadow .3s,background .3s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(20,20,20,.25)}
+.btn--pill{border-radius:999px;background:transparent;color:var(--lime);
+  border:1px solid var(--lime)}
+.btn--pill:hover{background:var(--lime);color:var(--ink);box-shadow:0 0 30px rgba(216,243,52,.35)}
+
+/* ---------- movimento (estados iniciais só com o motor ativo) ---------- */
+.anim .eyebrow,.anim .mix .g,.anim .capa__cta,.anim .capa__foto,
+.anim .cases__lead,.anim .card,.anim .cases__rodape,
+.anim .processo__lead,.anim .faixa__in,
+.anim .dev__sub,.anim .dev__cta,.anim .dev__tela,.anim .dev__cel,
+.anim .motion__cta,.anim .motion__legenda,.anim .motion__controles,
+.anim .faq__marca i,.anim .acc,
+.anim .contato__grade > *{opacity:0}
+.anim .faq{z-index:6}
+.anim .capa__foto{will-change:transform,opacity}
+.anim canvas.pixfaixa,.anim .sobre__maos{will-change:transform}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+
+/* ============================================================
+   HEADER FLUTUANTE
+   Uma faixa clara no topo com uma aba de pasta que desce em volta
+   do item da seção atual. A aba é desenhada em SVG a partir da curva
+   do .ai (degrau de 64.74 x 35.64) e corre de um item para o outro.
+   ============================================================ */
+.nav{position:fixed;top:0;left:0;right:0;height:60px;z-index:60;pointer-events:none}
+.nav__aba{position:absolute;left:0;top:0;width:100%;height:48px;overflow:visible}
+.nav__aba-fundo{fill:var(--silver-100)}
+.nav__aba-linha{fill:none;stroke:var(--ink);stroke-width:1}
+.nav__in{position:relative;height:46.58px;padding-top:10.94px;display:flex;align-items:center}
+.nav__links{display:flex;align-items:center;gap:clamp(30px,calc(3.86vw - 15.6px),53.3px);pointer-events:auto}
+.nav__links a,.nav__links span{position:relative;font-family:var(--ff);font-size:clamp(12px,.896vw,12.9px);font-weight:700;
+  letter-spacing:.01em;text-transform:uppercase;line-height:1;padding:10px 0;
+  color:var(--ink);transition:opacity .25s}
+.nav__links a:hover{opacity:.62}
+/* texto do menu no negativo do que estiver atrás. Os links reais ficam transparentes (e
+   clicáveis); o texto visível vem de duas camadas fixas por cima: branco em 'difference'
+   inverte o fundo, e uma cópia cinza em 'saturation' tira a cor da inversão. Fica escuro
+   sobre o lime e o cinza claro, claro sobre o preto e as fotos */
+.nav--tinta .nav__links a{color:transparent;opacity:1!important;transition:none}
+.nav-tinta{position:fixed;top:0;left:0;right:0;height:48px;z-index:61;pointer-events:none;mix-blend-mode:difference}
+.nav-tinta .nav__links{pointer-events:none}
+.nav-tinta .nav__links span{color:#fff;position:static;transition:none}
+.nav-tinta--cinza{z-index:62;mix-blend-mode:saturation}
+.nav-tinta--cinza .nav__links span{color:#808080}
+/* nada muda dentro das camadas no hover: o Chrome repinta um retângulo errado. O hover é a aba
+   indo até o item (JS do header) */
+.nav__cta{position:absolute;right:var(--pad);top:13px;height:44.1px;padding:0 26px;
+  border-radius:22.1px;background:#000;color:var(--lime);border:1px solid var(--lime);
+  font-family:var(--ff);font-size:17.6px;font-weight:700;letter-spacing:.01em;
+  text-transform:uppercase;display:grid;place-items:center;pointer-events:auto;
+  transition:background .3s,color .3s,border-color .3s}
+@media(min-width:1440px){ .nav__cta{right:calc((100vw - var(--wrap)) / 2)} }
+.nav__cta:hover,.nav__cta.ativo{background:var(--lime);color:var(--ink);border-color:var(--ink)}
+.burger{display:none;position:absolute;right:var(--pad);top:14px;width:48px;height:48px;
+  border-radius:50%;background:var(--lime);box-shadow:inset 0 0 0 2px var(--ink);
+  place-items:center;color:var(--ink);pointer-events:auto}
+.burger svg{width:22px;height:22px}
+
+/* faixas de pixel (paths reais do .ai) */
+.pixfaixa{position:absolute;left:0;right:0;z-index:3;pointer-events:none;
+  width:100%;height:min(219.5px,15.24vw);display:block;fill:var(--ink)}
+.capa .pixfaixa{bottom:0}
+
+/* ============================================================
+   01 · CAPA        1440×900
+   ============================================================ */
+.capa{background:var(--lime);min-height:900px;height:100vh;display:flex;align-items:center;
+  position:relative;overflow:hidden}
+.capa__in{position:relative;z-index:2;padding-top:29.4px}
+.capa__foto{position:absolute;z-index:1;--fw:min(67.2vw,967.7px);
+  width:var(--fw);height:auto;max-width:none;
+  right:calc(var(--fw) * -.0831);top:calc(var(--fw) * -.2976);pointer-events:none}
+.isofundo{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.capa__eyebrow{font-size:10.23px;margin:0 0 14px -7.5px;color:var(--ink);opacity:.72}
+.capa__titulo{font-size:min(109.12px,7.58vw);line-height:.854;letter-spacing:-.03em;color:var(--ink);margin-left:-.083em;
+  position:relative;top:-1.2px}
+.capa__cta{margin-top:40.6px;width:262px;height:58px;font-size:14px}
+
+/* ============================================================
+   02 · ID. VISUAIS   1440×1917.9
+   ============================================================ */
+.cases{background:var(--ink);padding:81.5px 0 71.9px}
+.cases__topo{display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:start;
+  margin-bottom:94.3px}
+.cases__titulo{font-size:114.67px;line-height:.9;letter-spacing:-.03em;color:var(--silver)}
+.cases__lead{font-size:17px;line-height:1.6;color:var(--silver-500);max-width:258px;margin-top:-7px}
+.grade{display:grid;grid-template-columns:repeat(2,1fr);gap:22.8px 24px}
+.card{position:relative;display:block}
+/* contorno de 1px com o canto inferior direito recortado em volta da seta (desenhado no JS) */
+.card__contorno{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;
+  fill:none;stroke:var(--lime);stroke-width:1;overflow:visible}
+.card__media{position:relative;aspect-ratio:564/352.5;border-radius:12px;overflow:hidden;
+  background:var(--ink-2)}
+.card__media img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.card:hover .card__media img{transform:scale(1.04)}
+.card__media .card__blur{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:blur(12px);transform:scale(1.1);pointer-events:none;opacity:0;will-change:opacity}
+html:not(.anim) .card__blur{display:none}
+.card__badge{position:absolute;top:15.6px;left:14.9px;height:16.74px;width:68.4px;
+  display:grid;place-items:center;border-radius:8.37px;background:var(--lime);
+  font-size:8px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.card__meta{display:flex;flex-direction:column;justify-content:center;
+  height:97.8px;padding:0 96px 14px 62.7px}
+.card__meta h3{font-size:22px;font-weight:700;color:var(--branco);letter-spacing:-.01em}
+.card__meta p{font-size:14px;color:var(--silver-500);margin-top:6px}
+.card__seta{position:absolute;right:2.3px;bottom:0;z-index:2;width:58.2px;height:58.2px;
+  border-radius:8.88px;display:grid;place-items:center;border:1px solid var(--lime);
+  color:var(--lime);background:transparent;transition:background .3s,color .3s}
+.card__seta svg{width:22.38px;height:24.67px}
+.card:hover .card__seta{background:var(--lime);color:var(--ink)}
+
+/* ---------- projeto em tela cheia (peças montadas aqui) ---------- */
+.proj{position:fixed;inset:0;z-index:120;display:flex;flex-direction:column;background:var(--ink);
+  opacity:0;visibility:hidden;transform:translateY(14px);
+  transition:opacity .35s var(--ease),transform .45s var(--ease),visibility .35s}
+.proj.aberto{opacity:1;visibility:visible;transform:none}
+html.proj-aberto .nav,html.proj-aberto .nav-tinta{display:none}
+.proj__barra{flex:none;display:flex;align-items:center;gap:18px;height:64px;
+  padding:0 clamp(16px,3.2vw,40px);border-bottom:1px solid var(--ink-line)}
+.proj__voltar{flex:none;display:inline-flex;align-items:center;gap:9px;height:38px;
+  padding:0 17px 0 13px;border:1px solid var(--ink-line);border-radius:999px;background:transparent;
+  color:var(--silver);font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.07em;
+  text-transform:uppercase;cursor:var(--cursor);
+  transition:background .25s,color .25s,border-color .25s}
+.proj__voltar:hover{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.proj__voltar svg{width:14px;height:15px;transform:rotate(180deg)}
+.proj__titulo{flex:1;min-width:0;font-size:17px;font-weight:700;color:var(--branco);
+  letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.proj__externo{flex:none;font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--silver-500);text-decoration:none;white-space:nowrap}
+.proj__externo:hover{color:var(--lime)}
+.proj__rolo{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;background:var(--ink)}
+.proj__pecas{display:flex;flex-direction:column;gap:clamp(8px,1vw,16px);padding-bottom:0}
+.proj__meio{width:100%;max-width:calc(var(--wrap) + 80px);margin-inline:auto;
+  padding-inline:clamp(16px,3.2vw,40px)}
+.proj__img{display:block;width:100%;height:auto;background:#0d0d0d}
+.proj__galeria .proj__img{height:100%;object-fit:cover}
+.proj__galeria{display:grid;gap:clamp(8px,1vw,16px);
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr))}
+.proj__texto{max-width:760px;margin-inline:auto;padding:clamp(30px,4.5vw,64px) clamp(16px,3.2vw,40px);
+  color:var(--silver);font-size:16.5px;line-height:1.62}
+.proj__texto p + p{margin-top:15px}
+.proj__rotulo{font-family:var(--ff-mono);font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--silver-500)}
+.proj__quadroVideo{position:relative;width:100%;aspect-ratio:16/9;background:#0d0d0d}
+.proj__quadroVideo iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.proj__fim{display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center;
+  margin-top:clamp(48px,6vw,96px);padding:clamp(56px,7vw,104px) 20px clamp(64px,8vw,120px);
+  border-top:1px solid var(--ink-line)}
+.proj__fim p{color:var(--silver-500);font-size:15px;max-width:440px}
+.proj__fim .btn{width:auto;min-width:264px;height:58px;padding:0 34px;font-size:14px}
+.proj__proximo{display:inline-flex;align-items:center;gap:10px;background:none;border:0;
+  color:var(--silver);font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.07em;
+  text-transform:uppercase;cursor:var(--cursor);transition:color .25s}
+.proj__proximo:hover{color:var(--lime)}
+.proj__proximo svg{width:14px;height:15px}
+@media (max-width:760px){
+  .proj__barra{height:56px;gap:12px;padding:0 14px}
+  .proj__titulo{font-size:14px}
+  .proj__externo{display:none}
+  .proj__voltar{width:38px;padding:0;justify-content:center;border-radius:50%}
+  .proj__voltar span{display:none}
+  .proj__meio{padding-inline:0}
+  .proj__texto{font-size:15.5px}
+}
+.cases__rodape{display:flex;justify-content:center;padding:77px 0 0}
+.cases__rodape .btn{width:404.5px;height:88.7px;font-size:32.39px;letter-spacing:0}
+
+/* ============================================================
+   03 · SOBRE       1440×768
+   ============================================================ */
+.sobre{background:var(--silver-100);min-height:clamp(520px,53.34vw,768px);display:flex;align-items:flex-end;
+  padding-bottom:clamp(50px,5.44vw,78.4px);overflow:visible}
+.sobre__maos{position:absolute;left:0;top:-11.15vw;width:100%;z-index:0;
+  pointer-events:none;overflow:hidden}
+.sobre__maos img{width:104.52vw;max-width:none;height:auto}
+.sobre__in{position:relative;z-index:2}
+.sobre__titulo{font-size:min(89px,6.18vw);line-height:1.052;letter-spacing:-.03em;color:var(--ink);
+  margin-left:min(8.3px,.58vw)}
+
+/* ============================================================
+   04 · PROCESSO    1440×640 — travado até as pastas subirem
+   ============================================================ */
+.processo-trilho{position:relative;background:var(--ink)}
+.processo{background:var(--ink);padding:80.5px 0 19.4px}
+.processo__topo{display:grid;grid-template-columns:1fr 271px;gap:40px;align-items:start;height:72px}
+.processo__titulo{font-size:80px;line-height:.9;letter-spacing:-.03em;color:var(--silver)}
+.processo__lead{font-size:17px;line-height:1.6;color:var(--silver-500);margin-top:-2.8px}
+.faixas{margin-top:68.3px}
+.faixa{position:relative;display:flex;align-items:center;height:133.27px}
+@media(hover:hover){
+  .faixa__in{transition:transform .45s var(--ease)}
+  .faixa:hover .faixa__in{transform:translateX(10px)}
+}
+.faixa__fundo{position:absolute;left:0;top:0;width:100%;height:810px;z-index:0;pointer-events:none}
+/* colunas medidas no .ai: a descrição começa 234.7px depois do título (164px na pasta 2) */
+.faixa__in{position:relative;z-index:1;display:grid;grid-template-columns:var(--col,234.7px) minmax(0,1fr);
+  gap:0;align-items:baseline;top:3px}
+.faixa h3{font-size:20px;font-weight:700;white-space:nowrap;justify-self:start}
+.faixa p{font-size:13.5px;line-height:1.28;max-width:520px}
+.faixa--lime .faixa__fundo{fill:var(--lime)}
+.faixa--lime h3{color:var(--ink)} .faixa--lime p{color:var(--grafite)}
+.faixa--dark .faixa__fundo{fill:var(--ink-2);stroke:#daf334;stroke-width:1px;vector-effect:non-scaling-stroke}
+.faixa--dark h3{color:var(--branco)} .faixa--dark p{color:var(--silver-500)}
+.faixa--claro .faixa__fundo{fill:var(--silver-100)}
+.faixa--claro h3{color:var(--ink)} .faixa--claro p{color:var(--grafite)}
+.faixa--1 .faixa__in{padding-left:calc(var(--pad) + 4px)}
+.faixa--2 .faixa__in{padding-left:calc(var(--pad) + 140px);--col:164px}
+.faixa--3 .faixa__in{padding-left:calc(var(--pad) + 276px)}
+/* trava: altura da tela; as pastas de 810px cobrem o que sobra embaixo */
+.processo-trilho.pin{height:220vh;height:220svh}
+.processo-trilho.pin .processo{position:sticky;top:0;height:100vh;height:100svh}
+
+/* ============================================================
+   05 · DESIGN & DEV   1440×764
+   ============================================================ */
+.dev{background:var(--silver-100);color:var(--ink)}
+.dev__in{display:grid;grid-template-columns:375.3px minmax(0,1fr);padding-block:95.6px 95.5px}
+.dev__texto{display:flex;flex-direction:column;align-items:flex-start;padding-top:79.3px}
+.dev__titulo{font-size:min(87px,6.04vw);line-height:.985;letter-spacing:-.03em;color:var(--ink)}
+.dev__sub{font-size:18.9px;line-height:1.2;color:var(--ink);max-width:292px;margin-top:24.7px}
+.dev__cta{margin-top:67px;width:257.8px;height:57.1px;border-radius:7.87px;font-size:13.6px}
+.dev__media{display:grid;grid-template-columns:497.9fr 266.1fr;grid-template-rows:auto auto;
+  gap:12.7px 12.4px;align-self:start}
+.dev__tela{border-radius:21.7px;overflow:hidden;background:#000;aspect-ratio:497.9/280.1}
+.dev__tela img,.dev__tela video{width:100%;height:100%;object-fit:cover;display:block}
+.dev__cel{grid-row:1 / span 2;grid-column:2;border-radius:25.5px;overflow:hidden;background:#0a0a0a;
+  box-shadow:0 0 0 0 transparent}
+.dev__cel img,.dev__cel video{width:100%;height:100%;object-fit:cover;object-position:50% 0;display:block}
+
+/* ============================================================
+   06 · PRODUCT MOTION   1440×1193.7
+   ============================================================ */
+.motion{background:var(--lime);color:var(--ink);padding:0 0 113.7px}
+.motion__blob{position:absolute;left:0;top:0;width:100%;height:1193.7px;z-index:0;pointer-events:none}
+.motion__topo{position:relative;z-index:2;padding-top:102.5px}
+.motion__titulo{font-size:min(76px,5.28vw);line-height:.9;letter-spacing:-.03em;color:var(--ink)}
+.motion__cta{margin-top:20px;width:262px;height:58px;font-size:14px}
+.motion__palco{position:relative;z-index:2;margin-top:58.3px}
+.motion__trilho{position:relative;height:calc(655.3px * var(--k,1))}
+.motion__card{position:absolute;left:0;top:0;width:calc(368.6px * var(--k,1));height:calc(655.3px * var(--k,1));
+  border-radius:calc(30.2px * var(--k,1));background:#000;overflow:hidden;transform-origin:0 50%;
+  transition:transform .9s var(--ease),opacity .6s var(--ease)}
+.motion__card video{width:100%;height:100%;object-fit:cover}
+/* crédito do cliente no rodapé do card, bem pequeno, sobre um degradê escuro suave */
+.motion__credito{position:absolute;left:0;right:0;bottom:0;z-index:1;display:flex;align-items:center;
+  justify-content:center;gap:7px;padding:38px 12px 15px;color:#fff;pointer-events:none;
+  background:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0));
+  font-family:var(--ff-mono);font-size:9px;line-height:1;letter-spacing:.08em;text-transform:uppercase}
+.motion__mtz{height:16px;width:auto;display:block}
+.motion__card--h{width:calc(1164.98px * var(--k,1))}
+.motion__rodape{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;
+  gap:40px;margin-top:61px}
+.motion__legenda{font-family:var(--ff);font-size:21.6px;line-height:1.25;max-width:660px;color:var(--ink)}
+.motion__controles{display:flex;align-items:center;gap:18px;flex:none}
+.motion__barras{display:flex;gap:8px;flex:none}
+.motion__seta{width:42px;height:42px;border-radius:8.88px;border:1px solid var(--ink);display:grid;
+  place-items:center;color:var(--ink);transition:background .3s,color .3s}
+.motion__seta:hover{background:var(--ink);color:var(--lime)}
+.motion__seta svg{width:17px;height:auto}
+.motion__barras button{display:grid;align-items:center;height:21px;padding:0}
+.motion__barras i{position:relative;display:block;width:76.5px;height:5px;border-radius:2.5px;
+  border:1px solid var(--ink);overflow:hidden}
+.motion__barras i::after{content:"";position:absolute;inset:0;background:#000;
+  transform:scaleX(0);transform-origin:0 50%}
+.motion__barras [aria-selected="true"] i::after{transform:none}
+/* a barra ativa enche no tempo do card; quando termina, o carrossel avança */
+.anim .motion__barras [aria-selected="true"] i::after{animation:enche var(--dur,5s) linear both}
+.anim .motion__barras.pausado [aria-selected="true"] i::after,
+.anim .motion__barras.fora [aria-selected="true"] i::after,
+.anim .motion__barras.carregando [aria-selected="true"] i::after{animation-play-state:paused}
+@keyframes enche{from{transform:scaleX(0)}to{transform:none}}
+
+/* ============================================================
+   07 · ELES CONFIAM   1440×644 — travado enquanto os depoimentos passam
+   ============================================================ */
+.confiam-trilho{position:relative;background:var(--silver-100)}
+.confiam{background:var(--silver-100);height:644px;color:var(--ink)}
+.confiam-trilho.pin{height:250vh;height:250svh}
+.confiam-trilho.pin .confiam{position:sticky;top:0;height:100vh;height:100svh}
+.confiam__blob{position:absolute;left:0;top:50%;width:100%;height:644px;margin-top:-322px;
+  z-index:0;pointer-events:none;overflow:visible}
+.anel{position:absolute;left:50%;top:50%;width:0;height:0;z-index:1;
+  animation:gira 90s linear infinite}
+@keyframes gira{to{transform:rotate(360deg)}}
+.tile{position:absolute;left:0;top:0;width:0;height:0;
+  --R:411px;transform:translate(calc(var(--cx) * var(--R) * .56),calc(var(--cy) * var(--R) * .56)) scale(.72);
+  opacity:0;transition:transform 1.1s var(--ease),opacity .7s var(--ease)}
+.anel.in .tile{transform:translate(calc(var(--cx) * var(--R)),calc(var(--cy) * var(--R)));opacity:1}
+.tile__corpo{position:absolute;left:-72.3px;top:-72.3px;width:144.6px;height:144.6px;
+  transition:transform .45s var(--ease-snap)}
+.tile:hover .tile__corpo{transform:scale(1.1)}
+.tile__moldura{position:absolute;inset:0;border-radius:16.2px;background:var(--branco);
+  border:1px solid #d6d6d6}
+.tile--diag .tile__moldura{transform:rotate(45deg)}
+.tile__logo{position:absolute;left:50%;top:50%;width:210px;height:210px;max-width:none;
+  transform:translate(-50%,-50%);pointer-events:none}
+.confiam__centro{position:absolute;left:50%;top:50%;width:420px;transform:translate(-50%,-50%);
+  z-index:2;text-align:center;margin-top:16.1px}
+.confiam__titulo{font-size:56.8px;line-height:1;letter-spacing:-.02em;color:var(--ink);white-space:nowrap}
+.confiam__depos{position:relative;height:140px;margin-top:25px}
+.depo{position:absolute;left:0;right:0;top:0;display:flex;flex-direction:column;align-items:center;
+  opacity:0;transform:translateY(18px);transition:opacity .55s var(--ease),transform .7s var(--ease);
+  pointer-events:none}
+.depo.ativo{opacity:1;transform:none;pointer-events:auto}
+.depo.saiu{transform:translateY(-18px)}
+.depo blockquote{font-family:var(--ff-md);font-size:14px;line-height:1.3;color:var(--ink);max-width:382px}
+.depo h4{margin-top:16px;height:31.3px;min-width:241.4px;padding:0 26px;border-radius:15.7px;
+  background:var(--lime);display:grid;place-items:center;font-family:var(--ff);font-size:19.5px;
+  font-weight:700;text-transform:uppercase;letter-spacing:0;color:var(--ink)}
+.depo span{margin-top:6px;font-family:var(--ff-mono);font-weight:700;font-size:7.4px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+
+/* ============================================================
+   08 · FAQ          1440×612.2 — fundo com aba que sobe à direita
+   ============================================================ */
+.faq{background:var(--ink);padding:118px 0 132px;overflow:visible;z-index:6}
+/* aba de pasta que sobe 60px sobre a seção de cima, colada na borda direita.
+   No .ai a forma é maior, mas o resto dela fica recortado pela seção */
+.faq__aba{position:absolute;right:0;bottom:calc(100% - 1px);width:min(280.5px,19.48vw);
+  height:auto;aspect-ratio:280.49/61.09;z-index:0;pointer-events:none;fill:var(--ink)}
+.faq__in{position:relative;z-index:1;display:grid;grid-template-columns:480px minmax(0,1fr);gap:0;align-items:start}
+.faq__marca{display:grid;grid-template-columns:repeat(4,69px);
+  grid-template-rows:repeat(4,69px);gap:28.55px 22.4px;align-content:start}
+.faq__marca .titulo{grid-area:3/1/5/3;align-self:center}
+.faq .eyebrow{font-size:12.59px;font-family:var(--ff);font-weight:700;letter-spacing:.18em}
+.faq__titulo{font-size:83.92px;line-height:.9;letter-spacing:-.03em;color:var(--silver);margin-top:12px}
+/* apagados: degradê do canto inferior esquerdo (oliva) ao superior direito (quase fundo) */
+.faq__marca i{width:69px;height:69px;border-radius:50%;display:block;
+  background:linear-gradient(45deg,var(--a,#353a1a) 18%,var(--b,#161714) 82%)}
+.faq__marca i.on{background:var(--lime)}
+.acc{border-bottom:1px solid var(--ink-line)}
+.acc__q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding:0 0 6px;text-align:left;font-family:var(--ff-md);font-size:19.5px;
+  color:var(--silver);transition:color .3s}
+.acc__q:hover{color:var(--lime)}
+.acc__sinal{flex:none;width:34.7px;height:34.7px;margin-block:-2.35px;border-radius:50%;border:1px solid var(--ink-line);
+  display:grid;place-items:center;font-family:var(--ff-mono);font-size:12px;color:var(--lime);
+  transition:background .3s,color .3s,border-color .3s}
+/* aberto fica como na referência (+ vazado); fechado acende */
+.acc:not(.aberto) .acc__sinal{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.acc__a{overflow:hidden;max-height:0;opacity:0;transition:max-height .5s var(--ease),opacity .4s,padding .5s}
+.acc.aberto .acc__a{max-height:240px;opacity:1;padding-bottom:13px}
+.acc__a p{font-size:15px;line-height:1.65;color:var(--silver-500);max-width:600px}
+.acc+.acc{margin-top:31px}
+
+/* ============================================================
+   09 · RODAPÉ        1440×563.5
+   ============================================================ */
+.contato{background:var(--lime);color:var(--ink);position:relative;overflow:hidden;height:563.5px;z-index:1}
+.contato .pixfaixa{top:0;height:min(241.4px,16.76vw)}
+.contato__limao{position:absolute;left:max(8px,calc((100vw - 1440px) / 2 + 158.3px));top:46.7px;width:436.9px;
+  max-width:none;z-index:1}
+.contato__in{position:relative;z-index:2;height:100%}
+.contato__titulo{position:absolute;left:calc(var(--pad) + 415.5px);top:167.6px;font-size:104.9px;
+  line-height:.848;letter-spacing:-.03em;color:var(--ink);white-space:nowrap}
+.contato__grade{position:absolute;left:var(--pad);right:var(--pad);top:441.4px;height:100px}
+.contato__grade > *{position:absolute;top:0}
+.contato__grade h4{font-family:var(--ff-px);font-size:24px;font-weight:700;line-height:1;
+  letter-spacing:0;text-transform:uppercase;color:var(--ink);margin-bottom:14px}
+.col--contato a,.contato__grade p{display:block;font-family:var(--ff-md);font-size:16px;
+  line-height:28.4px;color:var(--ink)}
+.col--contato a{transition:opacity .25s}
+.col--contato a:hover{opacity:.6}
+.col--contato{left:0}
+.col--social{left:27.16%;width:141px;text-align:center}
+/* só da largura do texto, com a borda direita em 758.6 de 1152 (antes a caixa ia do 0 ao 758
+   e cobria CONTATO e SOCIAL) */
+.col--local{right:34.15%;width:max-content;text-align:right}
+.contato__cta{right:2.2px;top:13.6px!important;width:262px;height:58px;font-size:14px}
+.sociais{display:flex;gap:11px;justify-content:center;margin-top:12px}
+.sociais a{width:26.9px;height:26.9px;border-radius:50%;border:1px solid var(--ink);
+  display:grid;place-items:center;color:var(--ink);line-height:1;
+  transition:background .3s,color .3s,transform .3s var(--ease-snap)}
+.sociais a:hover{background:var(--ink);color:var(--lime);transform:translateY(-2px)}
+.sociais svg{width:13px;height:13px}
+
+/* ---------- menu mobile ---------- */
+#drawer{position:fixed;inset:0;z-index:90;background:var(--ink);display:flex;
+  flex-direction:column;align-items:center;justify-content:center;gap:4px;
+  clip-path:inset(0 0 100% 0);transition:clip-path .6s cubic-bezier(.76,0,.24,1)}
+#drawer.aberto{clip-path:inset(0 0 0 0)}
+#drawer a{font-family:var(--ff-px);font-weight:700;font-size:clamp(1.9rem,8.4vw,3rem);
+  color:var(--silver);line-height:1.4;transition:color .25s}
+#drawer a:hover{color:var(--lime)}
+.drawer__x{position:absolute;top:20px;right:22px;width:46px;height:46px;display:grid;
+  place-items:center;color:var(--silver)}
+.drawer__x svg{width:22px;height:22px}
+
+/* ============================================================
+   RESPONSIVO
+   ============================================================ */
+@media(max-width:1439px){
+  .faixa{height:auto}
+  .faixa__fundo{height:56.25vw}
+  .faixa__in{grid-template-columns:1fr;gap:8px;align-items:start;
+    padding-block:calc(6.5vw + 18px) 26px;top:0}
+  .faixa h3{justify-self:start}
+  .faixa p{max-width:560px}
+  .faixa p br{display:none}
+  .faixa--1 .faixa__in{padding-left:var(--pad)}
+  .faixa--2 .faixa__in{padding-left:calc(var(--pad) + 4vw)}
+  .faixa--3 .faixa__in{padding-left:calc(var(--pad) + 8vw)}
+  .contato__titulo{font-size:min(104.9px,7.28vw);left:calc(var(--pad) + 29.2vw)}
+  .contato__limao{width:min(436.9px,30.3vw)}
+}
+
+/* 7 itens só cabem antes da foto da capa a partir de 1181px */
+@media(max-width:1180px){
+  .nav__aba,.nav__links,.nav__cta,.nav-tinta{display:none}
+  .burger{display:grid}
+}
+
+@media(max-width:1100px){
+  .capa{height:auto;min-height:clamp(640px,75vw,900px)}
+
+  .cases__topo,.processo__topo{grid-template-columns:1fr;gap:18px;height:auto}
+  .cases__lead,.processo__lead{max-width:440px;padding-top:0;margin-top:0}
+  .cases__topo{margin-bottom:56px}
+  .card__meta{height:auto;min-height:97.8px;padding-block:18px}
+  .cases{padding-bottom:calc(11.15vw + 28px)}
+  .cases__rodape{padding-top:56px}
+  .processo{padding-top:96px}
+
+  .dev__in{grid-template-columns:1fr;gap:48px;padding-block:80px 88px}
+  .dev__texto{padding-top:0}
+  .dev__titulo{font-size:clamp(52px,10.4vw,87px)}
+  .dev__cta{margin-top:32px}
+
+  .confiam__centro{width:min(420px,80vw)}
+
+  .faq{padding:96px 0 104px}
+  .faq__in{grid-template-columns:1fr;gap:56px}
+  .acc__q{padding:12px 0 10px;line-height:1.3}
+  .acc+.acc{margin-top:14px}
+  .acc__sinal{width:36px;height:36px}
+
+  .contato{height:auto;padding:calc(16.76vw + 12px) 0 56px}
+  .contato__limao{position:static;display:block;width:min(360px,56vw);margin:0 auto 20px}
+  .contato__in{height:auto}
+  .contato__titulo{position:static;text-align:center;font-size:clamp(44px,9.6vw,96px);white-space:normal}
+  .contato__grade{position:static;height:auto;margin-top:48px;display:grid;
+    grid-template-columns:repeat(3,1fr);gap:28px;align-items:start}
+  .contato__grade > *{position:static}
+  .col--social{width:auto}
+  .col--local{width:auto}
+  .contato__cta{grid-column:1 / -1;justify-self:center;margin-top:8px}
+  .col--contato a{padding-block:8px;line-height:1.75}
+}
+
+@media(max-width:860px){
+  .capa{min-height:0;flex-direction:column;align-items:stretch;padding-top:clamp(100px,26vw,150px)}
+  .capa__foto{--fw:auto;position:relative;right:auto;top:auto;bottom:auto;
+    width:min(94vw,600px,48svh);height:auto;aspect-ratio:4/5;
+    object-fit:cover;object-position:50% 38%;align-self:flex-end;margin:12px -7vw 0 0}
+  .capa__in{order:1;padding-top:0}
+  .capa__foto{order:2}
+  .capa__titulo{font-size:clamp(40px,11.2vw,84px)}
+  .capa__cta{margin-top:32px}
+
+  .cases{padding-top:56px}
+  .cases__titulo{font-size:clamp(56px,15vw,114px)}
+  .grade{gap:32px 20px}
+  .card__meta{padding-left:18px;padding-right:74px}
+  .card__media .card__blur{filter:blur(7px)}
+  .card__meta h3{font-size:18px}
+  .card__meta p{font-size:13px}
+  .card__seta{width:48px;height:48px}
+  .card__seta svg{width:18px;height:auto}
+
+  .sobre{display:block;min-height:0;padding:calc(49.6vw + 32px) 0 72px}
+  .sobre__titulo{font-size:clamp(38px,10.4vw,72px);margin-left:0}
+
+  .processo{padding-top:64px}
+  .processo__titulo{font-size:clamp(48px,13vw,80px)}
+  .faixas{margin-top:36px}
+
+  .motion{padding-bottom:80px}
+  .motion__topo{padding-top:64px}
+  .motion__titulo{font-size:clamp(38px,9.6vw,76px)}
+  .motion__rodape{flex-direction:column;align-items:flex-start;gap:24px;margin-top:40px}
+  .motion__legenda{font-size:17px}
+  .motion__controles{align-self:stretch}
+  .motion__barras,.motion__barras button{flex:1}
+  .motion__barras i{width:100%}
+
+  .confiam__titulo{font-size:clamp(32px,8.2vw,56.8px)}
+
+  .faq{padding:72px 0 80px}
+  .faq__titulo{font-size:clamp(52px,15vw,84px)}
+  .acc__q{font-size:18px}
+  .cases__rodape .btn{width:min(404px,100%);height:72px;font-size:clamp(20px,5.6vw,32.39px)}
+}
+
+@media(max-width:640px){
+  .grade{grid-template-columns:1fr;gap:40px}
+  .card__meta{padding-left:20px;padding-right:80px}
+  .card__meta h3{font-size:20px}
+  .card__meta p{font-size:14px}
+  .card__seta{width:52px;height:52px}
+  .dev__media{grid-template-columns:1fr;gap:12px}
+  .dev__cel{grid-row:auto;grid-column:auto;aspect-ratio:266.1/572.9;max-width:300px;justify-self:center;width:100%}
+  .contato__grade{grid-template-columns:1fr;gap:28px;text-align:left}
+  .col--social,.col--local{text-align:left}
+  .sociais{justify-content:flex-start}
+  .contato__cta{justify-self:stretch}
+}
+
+@media(max-width:560px){
+  .capa__eyebrow{font-size:10.5px;letter-spacing:.12em;line-height:1.7;margin-left:0}
+  .capa__cta{width:100%;max-width:340px}
+  .cases__topo{margin-bottom:40px}
+  .dev__cta,.motion__cta{width:100%;max-width:340px}
+  .faq__marca{--d:min(69px,calc((100vw - var(--pad) * 2 - 67.2px) / 4));
+    grid-template-columns:repeat(4,var(--d));grid-template-rows:repeat(4,var(--d));
+    gap:calc(var(--d) * .414) 22.4px}
+  .faq__marca i{width:var(--d);height:var(--d)}
+  .faq .eyebrow{font-size:11.5px;letter-spacing:.12em}
+  .acc__q{font-size:17px}
+  .contato__grade h4{margin-bottom:8px;font-size:22px}
+  .col--contato a{line-height:1.5;padding-block:10px}
+  .contato__grade p{line-height:1.5;padding-block:4px}
+  .confiam__centro{width:86vw}
+  .depo blockquote{font-size:13px}
+}
+</style>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1582758463042810');
+fbq('track','PageView');
+/* Contact: cliques em WhatsApp e e-mail */
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[href*="wa.me"],a[href^="mailto:"]');
+  if(a)fbq('track','Contact',{content_name:a.href.indexOf('wa.me')>-1?'WhatsApp':'E-mail'});
+});
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1582758463042810&ev=PageView&noscript=1"></noscript>
+<!-- /Meta Pixel -->
 </head>
-<body class="bg-[#141414]">
-    <div id="root"></div>
+<body>
+<script>(function(d){d.className+=' js';if(!matchMedia('(prefers-reduced-motion: reduce)').matches)d.className+=' anim'})(document.documentElement)</script>
 
-    <script type="text/babel" data-type="module">
-        import React, { useState, useEffect, useRef } from 'https://esm.sh/react@18.2.0';
-        import { createRoot } from 'https://esm.sh/react-dom@18.2.0/client';
-        import { 
-          ArrowRight, Check, Grid, Type, Palette, Layers, PenTool, 
-          Instagram, Monitor, Mail, Phone, Menu, X, ArrowUpRight, 
-          User, Globe, MessageCircle, Quote, Plus, Minus, Linkedin
-        } from 'https://esm.sh/lucide-react@0.292.0';
+<!-- ===================== HEADER ===================== -->
+<nav class="nav" id="nav" data-tema="claro" aria-label="Principal">
+  <svg class="nav__aba" id="navAba" aria-hidden="true"><path class="nav__aba-fundo" id="navAbaFundo"/><path class="nav__aba-linha" id="navAbaLinha"/></svg>
+  <div class="nav__in">
+    <div class="nav__links" id="navLinks">
+      <a href="#capa" data-sec="capa" class="ativo">Home</a>
+      <a href="#cases" data-sec="cases">ID.Visual</a>
+      <a href="#processo" data-sec="processo">Processos</a>
+      <a href="#dev" data-sec="dev">Design &amp; Dev</a>
+      <a href="#motion" data-sec="motion">Product Motion</a>
+      <a href="#depoimentos" data-sec="depoimentos">Depoimentos</a>
+      <a href="#faq" data-sec="faq">FAQ</a>
+    </div>
+  </div>
+  <a class="nav__cta" href="#contato">Contato</a>
+  <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="4" y1="8" x2="20" y2="8"/><line x1="4" y1="16" x2="20" y2="16"/></svg>
+  </button>
+</nav>
 
-        // --- DADOS E CONFIGURAÇÕES ---
-        const PROFILE_IMAGE_URL = "https://47alanlima-erhlw.wordpress.com/wp-content/uploads/2025/11/capa-1.jpg";
-        const BRANDING_PNG_URL = "https://lh3.googleusercontent.com/d/17YiPeDgsIQpmIMykIO_Fuk9K9apWkeDc";
-        const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeg1FYPJkb1v180-7LIcPJ27wi9SSph3oSFFWEoviUrwkm0OA/viewform";
-        const WHATSAPP_URL = "https://wa.me/5516991818725";
+<div id="drawer" aria-hidden="true">
+  <button class="drawer__x" id="drawerX" aria-label="Fechar menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="#capa">Home</a><a href="#cases">ID.Visual</a><a href="#processo">Processos</a><a href="#dev">Design &amp; Dev</a>
+  <a href="#motion">Product Motion</a><a href="#depoimentos">Depoimentos</a><a href="#faq">FAQ</a><a href="#contato">Contato</a>
+</div>
 
-        const IMG_ACAMPA = "1ZcLv67KzfdNqsiQX53VWOApSSNKM8g77";
-        const IMG_MAHRTE = "1JsVhNrOlAeAmqgAk3M9XGHVKukaiV-HJ";
-        const IMG_GALANTE = "1dTWIRZA4Rkya_Ss3NuNrgvo87PnwjDMn";
-        const IMG_CONNECT = "1OOXTtJ8SWnMmIOazeVBqKpeC0VWR4YEB";
+<!-- ===================== 01 · CAPA ===================== -->
+<header class="capa" id="capa">
+  <svg class="isofundo isofundo--capa" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g transform="translate(-36.065,-287.965)"><path fill="#ededed" d="M1230.77,1576.52l-364.12-521.97c-32.13-46.05,4.86-108.52,60.69-102.5l632.75,68.3c17.5,1.89,33.33,7.49,47.05,15.78,3.05-28.51,4.66-57.45,4.66-86.77,0-23.28-1.04-46.32-2.98-69.1-13.9,7.98-29.83,13.22-47.35,14.73l-634.1,54.36c-55.95,4.8-91.55-58.47-58.42-103.81l375.53-513.82c10.38-14.2,23.14-25.1,37.17-32.84-41.83-30.64-86.71-57.34-134.12-79.57-.02,16.07-3.44,32.55-10.93,48.53l-269.97,576.32c-23.82,50.85-96.41,50.05-119.11-1.31L490.29,260.73c-7.13-16.15-10.19-32.7-9.85-48.78-47.92,21.18-93.39,46.89-135.86,76.6,13.87,8.05,26.39,19.23,36.46,33.66l364.12,521.97c32.13,46.05-4.86,108.52-60.69,102.5L51.71,878.38c-17.5-1.89-33.33-7.5-47.05-15.79-3.05,28.51-4.66,57.45-4.66,86.78,0,23.28,1.04,46.32,2.98,69.1,13.9-7.98,29.83-13.22,47.35-14.73l634.1-54.36c55.95-4.8,91.55,58.47,58.42,103.81l-375.53,513.82c-10.38,14.2-23.14,25.1-37.17,32.84,41.83,30.64,86.71,57.34,134.13,79.57.02-16.07,3.44-32.55,10.93-48.53l269.97-576.32c23.82-50.85,96.41-50.05,119.11,1.31l257.22,582.13c7.13,16.15,10.19,32.7,9.85,48.78,47.92-21.18,93.39-46.89,135.86-76.6-13.87-8.05-26.39-19.23-36.46-33.66Z"/></g></svg>
+  <img class="capa__foto" src="assets/images/capa-alan.webp" alt="Alan Lima" decoding="async" fetchpriority="high">
+  <div class="capa__in wrap">
+    <span class="eyebrow capa__eyebrow">// Designer gráfico · Ribeirão Preto · desde 2018</span>
+    <h1 class="mix capa__titulo" data-mix="DÊ FRESCOR|À SUA MARCA." data-px="1000110100|100100011100"></h1>
+    <a class="btn capa__cta" href="https://wa.me/5516991818725?text=Ol%C3%A1%2C%20Alan%21%20Vim%20pelo%20seu%20site%20e%20quero%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">Solicitar orçamento</a>
+  </div>
+  <svg class="pixfaixa" viewBox="0 0 1440 219.5" preserveAspectRatio="none" aria-hidden="true"><path d="M263.66,153.67v21.95h40.57v21.95h20.28v-21.95h20.28v-21.95h-81.13ZM750.42,153.67v21.95h40.57v-21.95h-40.57ZM851.83,153.67v21.95h20.28v-21.95h-20.28ZM912.68,153.67v21.95h20.28v21.95h20.28v-43.9h-40.56ZM20.28,0.01v43.9h20.28v-43.9h-20.28ZM60.85,21.96v43.9h20.28v-43.9h-20.28ZM547.61,197.57v-21.95h-20.29v21.95h-60.84v21.95h-182.54v-21.95h-40.56v-21.95h-20.28v43.9h-60.85v-21.95h20.29v-21.95h-40.57v-21.95h-40.56v43.9h-20.28v-21.95h-20.28v43.9h-40.57v-65.85h20.28v-43.91h40.57v-21.95h-40.57v-21.95h-40.56v175.61h567.89v-21.95h81.12v-21.95h-101.4ZM649.01,175.62v21.95h20.29v-21.95h-20.29ZM730.14,197.57v-21.95h-20.28v21.95h-20.28v21.95h-20.28v21.95h101.4v-43.9h-40.56ZM811.27,175.62v21.95h20.28v-21.95h-20.28ZM1257.46,175.62v-21.95h-40.56v43.9h20.28v21.95h-81.12v-21.95h-81.13v-21.95h-20.28v43.9h-20.28v-21.95h-20.29v-21.95h-40.56v43.9h-60.84v-21.95h-40.57v21.95h-81.12v21.95h466.47v-21.95h40.57v-43.9h-40.57ZM1399.44,219.52v-21.95h-60.85v21.95h-20.28v21.95h121.69v-21.95h-40.56ZM1419.72,0.01v43.9h-40.57v21.95h20.29v21.95h20.28v87.81h20.28v-175.61h-20.28ZM1358.87,0.01v21.95h40.57v-21.95h-40.57ZM567.89,153.67v21.95h60.84v-21.95h-60.84ZM60.85,131.71v21.96h20.28v-21.96h-20.28Z"/></svg>
+</header>
 
-        // --- MENU DE NAVEGAÇÃO ORGANIZADO ---
-        const NAV_ITEMS = [
-            { name: 'Cases', id: 'cases' },
-            { name: 'Sobre', id: 'sobre' },
-            { name: 'Processo', id: 'processo' },
-            { name: 'Serviços', id: 'serviços' },
-            { name: 'Investimento', id: 'planos' }
-        ];
+<!-- ===================== 02 · ID. VISUAIS ===================== -->
+<section class="cases" id="cases">
+  <div class="wrap">
+    <header class="cases__topo">
+      <h2 class="mix mix--base cases__titulo" data-mix="ID. VISUAIS" data-px="01000101010"></h2>
+      <p class="cases__lead">Projetos selecionados de identidade visual — do briefing ao brandbook.</p>
+    </header>
+    <div class="grade" id="grade"></div>
+    <div class="cases__rodape">
+      <a class="btn btn--pill" href="https://www.behance.net/alanlima47" target="_blank" rel="noopener">Ver mais projetos</a>
+    </div>
+  </div>
+</section>
 
-        // --- DADOS & CONTENT ---
+<!-- ===================== 03 · SOBRE ===================== -->
+<section class="sobre" id="sobre">
+  <svg class="isofundo isofundo--sobre" viewBox="0 0 1440 768" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g transform="translate(-36.065,-3105.865)"><path fill="#ffffff" d="M1506.7,3397.45c-12.98,7.6-27.89,12.65-44.32,14.18l-592.71,55.34c-52.3,4.88-86.05-54.05-55.38-96.68l189.45-263.39h-71.25l-120.38,262.13c-21.92,47.73-89.82,47.5-111.41-.37l-118.04-261.76h-70.62l186.47,263.03c30.38,42.85-3.78,101.54-56.03,96.31l-592.33-59.39c-16.37-1.64-31.2-6.77-44.1-14.41-4.89,48.26-5.16,97.1-.62,145.87,12.98-7.6,27.89-12.65,44.32-14.18l592.71-55.34c52.3-4.88,86.05,54.05,55.38,96.68l-347.61,483.27c-9.65,13.4-21.55,23.72-34.67,31.05,39.8,28.61,82.07,53.1,126.15,73.27-.08-14.99,3-30.39,9.87-45.35h0s248.43-540.98,248.43-540.98c21.92-47.73,89.82-47.5,111.41.37l244.72,542.67c6.77,15.02,9.75,30.43,9.56,45.42,24.43-11.05,48.54-23.46,72.2-37.36,18.77-11.03,36.86-22.8,54.32-35.14-13.01-7.43-24.8-17.8-34.31-31.22l-344.3-485.64c-30.38-42.85,3.78-101.54,56.03-96.31l592.33,59.39c16.37,1.64,31.2,6.77,44.1,14.41,4.89-48.26,5.16-97.1.62-145.87Z"/></g></svg>
+  <div class="sobre__maos"><img src="assets/images/sobre-maos.webp" alt="" aria-hidden="true"></div>
+  <div class="sobre__in wrap">
+    <h2 class="mix sobre__titulo" data-mix="DESIGN É A|ESTRATÉGIA|DA MUDANÇA" data-px="1101000101|1001111010|1101000001"></h2>
+  </div>
+</section>
 
-        const PROJECTS = [
-          {
-            id: 1,
-            title: "Acampa 2024",
-            category: "ID.Visual",
-            image: `https://lh3.googleusercontent.com/d/${IMG_ACAMPA}`,
-            fallback: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2670&auto=format&fit=crop",
-            desc: "Identidade visual para evento jovem",
-            link: "https://www.behance.net/gallery/196926601/Acampa-2024-Incendeia-me-com-seu-fogo"
-          },
-          {
-            id: 2,
-            title: "Mahrte Racing Team",
-            category: "ID.Visual",
-            image: `https://lh3.googleusercontent.com/d/${IMG_MAHRTE}`,
-            fallback: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=2670&auto=format&fit=crop",
-            desc: "Branding para equipe de corrida",
-            link: "https://www.behance.net/gallery/194190413/Mahrte-Racing-Team-Identidade-Visual"
-          },
-          {
-            id: 3,
-            title: "Galante",
-            category: "ID.Visual",
-            image: `https://lh3.googleusercontent.com/d/${IMG_GALANTE}`,
-            fallback: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop",
-            desc: "Identidade visual sofisticada",
-            link: "https://www.behance.net/gallery/231429431/GALANTE-CERVEJARIA-Identidade-Visual"
-          },
-          {
-            id: 4,
-            title: "Connect Energia Solar", 
-            category: "ID.Visual",
-            image: `https://lh3.googleusercontent.com/d/${IMG_CONNECT}`,
-            fallback: "https://images.unsplash.com/photo-1481487484168-9b9301cd2766?q=80&w=2662&auto=format&fit=crop",
-            desc: "Franquia de energia solar",
-            link: "https://www.behance.net/gallery/225361699/Connect-Energia-Solar-Identidade-Visual"
-          },
-          {
-            id: 5,
-            title: "MTZ",
-            category: "ID.Visual",
-            image: "https://47alanlima-erhlw.wordpress.com/wp-content/uploads/2026/01/prancheta-1-copia-3.jpg", 
-            desc: "Identidade Visual",
-            link: "https://www.behance.net/gallery/241688325/MTZ-IDENTIDADE-VISUAL"
-          },
-          {
-            id: 6,
-            title: "REDE CEELS - Church",
-            category: "ID.Visual",
-            image: "https://47alanlima-erhlw.wordpress.com/wp-content/uploads/2025/11/thumb.png",
-            desc: "Identidade Visual Igreja",
-            link: "https://www.behance.net/gallery/109463107/REDE-CEELS-Church"
-          }
-        ];
+<!-- ===================== 04 · PROCESSO ===================== -->
+<div class="processo-trilho" id="processoTrilho">
+<section class="processo" id="processo">
+  <div class="wrap">
+    <header class="processo__topo">
+      <h2 class="mix processo__titulo" data-mix="PROCESSO"></h2>
+      <p class="processo__lead">Três etapas, sem mistério. Você sabe exatamente onde o projeto está.</p>
+    </header>
+  </div>
+  <div class="faixas">
+    <div class="faixa faixa--lime faixa--1"><svg class="faixa__fundo" viewBox="0 0 1440 810" preserveAspectRatio="none" aria-hidden="true"><path d="M1440,138.6v626.4c0,24.86-20.14,45-45,45H45c-24.85,0-45-20.14-45-45v-720c0-24.85,20.15-45,45-45h1012.81c10.88,0,21.4,3.95,29.6,11.11l81.75,71.38c8.2,7.16,18.72,11.11,29.6,11.11h196.24c24.86,0,45,20.14,45,45Z"/></svg>
+      <div class="faixa__in"><h3>Imersão &amp; Briefing</h3>
+        <p>Mergulhamos no universo da sua marca para<br>entender a essência, o público e os objetivos de negócio.</p></div>
+    </div>
+    <div class="faixa faixa--dark faixa--2"><svg class="faixa__fundo" viewBox="0 0 1440 810" preserveAspectRatio="none" aria-hidden="true"><path d="M1440,138.6v626.4c0,24.86-20.14,45-45,45H45c-24.85,0-45-20.14-45-45v-720c0-24.85,20.15-45,45-45h1012.81c10.88,0,21.4,3.95,29.6,11.11l81.75,71.38c8.2,7.16,18.72,11.11,29.6,11.11h196.24c24.86,0,45,20.14,45,45Z"/></svg>
+      <div class="faixa__in"><h3>Prévias</h3>
+        <p>Desenvolvimento do conceito, moodboards e<br>arquitetura visual antes do design final.</p></div>
+    </div>
+    <div class="faixa faixa--claro faixa--3"><svg class="faixa__fundo" viewBox="0 0 1440 810" preserveAspectRatio="none" aria-hidden="true"><path d="M1440,138.6v626.4c0,24.86-20.14,45-45,45H45c-24.85,0-45-20.14-45-45v-720c0-24.85,20.15-45,45-45h1012.81c10.88,0,21.4,3.95,29.6,11.11l81.75,71.38c8.2,7.16,18.72,11.11,29.6,11.11h196.24c24.86,0,45,20.14,45,45Z"/></svg>
+      <div class="faixa__in"><h3>Imersão &amp; Briefing</h3>
+        <p>Finalização do projeto e criação do com base<br>na aprovação das prévias para garantir resultado<br>mais acertivo</p></div>
+    </div>
+  </div>
+</section>
+</div>
 
-        // --- Correção: Fechamento correto da array SERVICES e declaração de TESTIMONIALS ---
-        const SERVICES = [
-            { title: 'PALETA DE CORES', desc: 'Códigos de cor (RGB, CMYK, HEX, Pantone)', icon: <Palette /> },
-            { title: 'GRÁFICOS DE APOIO', desc: 'Ícones personalizados. Padrões e Ilustrações.', icon: <Grid /> },
-            { title: 'MÍDIAS SOCIAIS', desc: 'Padrão estético para artes social media', icon: <Instagram /> },
-            { title: 'APRESENTAÇÕES', desc: 'Apresentação PDF', icon: <Monitor /> },
-            { title: 'TIPOGRAFIA', desc: 'Fontes principais e secundárias', icon: <Type /> },
-            { title: 'BRANDING', desc: 'Produtos promocionais (canecas, uniformes, etc.)', icon: <Layers /> },
-            { title: 'LOGOTIPO', desc: 'logotipo principal e suas variações', icon: <PenTool /> },
-        ];
+<!-- ===================== 05 · DESIGN & DEV ===================== -->
+<section class="dev" id="dev">
+  <div class="wrap dev__in">
+    <div class="dev__texto">
+      <h2 class="mix mix--base dev__titulo" data-mix="DESIGN|& DEV" data-px="010101|00101"></h2>
+      <p class="dev__sub">Da ideia ao no ar, rápido. Sites, landing pages e aplicativos sob medida, com domínio próprio e entrega em prazo acelerado.</p>
+      <a class="btn dev__cta" href="https://wa.me/5516991818725?text=Ol%C3%A1%2C%20Alan%21%20Vim%20pelo%20seu%20site%20e%20quero%20um%20or%C3%A7amento%20de%20site%20ou%20aplicativo." target="_blank" rel="noopener">Solicitar orçamento</a>
+    </div>
+    <div class="dev__media">
+      <figure class="dev__tela"><video class="dev__video" muted loop playsinline preload="none" poster="assets/video/dev/dev-baldan.webp" data-src="assets/video/dev/dev-baldan.mp4" aria-label="Site da Matheus Baldan Performance"></video></figure>
+      <figure class="dev__tela"><video class="dev__video" muted loop playsinline preload="none" poster="assets/video/dev/dev-autoplus.webp" data-src="assets/video/dev/dev-autoplus.mp4" aria-label="Auto-gEN, gerador de artes da Autoplus"></video></figure>
+      <figure class="dev__cel"><video class="dev__video" muted loop playsinline preload="none" poster="assets/video/dev/dev-falaguasta.webp" data-src="assets/video/dev/dev-falaguasta.mp4" aria-label="Site da Falaguasta Pizza Express navegado no celular"></video></figure>
+    </div>
+  </div>
+</section>
 
-        const TESTIMONIALS = [
-          {
-            id: 1,
-            name: "Sérgio Galante",
-            role: "Fundador, GALANTE Cervejaria",
-            text: "O Alan não entregou apenas um logo, ele entregou uma estratégia. Nossa percepção de valor no mercado aumentou drasticamente após o rebranding."
-          },
-          {
-            id: 2,
-            name: "Josué Alves",
-            role: "Líder, REDE CEELS",
-            text: "Profissionalismo impecável. O processo foi claro, organizado e o resultado final superou todas as minhas expectativas. Recomendo de olhos fechados."
-          },
-          {
-            id: 3,
-            name: "Alexandre Castilho",
-            role: "CEO, Connect Energia Solar",
-            text: "Estávamos estagnados com uma marca antiga. O trabalho do Alan trouxe o frescor e a modernidade que precisávamos para atrair novos franqueados e clientes."
-          }
-        ];
+<!-- ===================== 06 · PRODUCT MOTION ===================== -->
+<section class="motion" id="motion">
+  <svg class="motion__blob" viewBox="0 0 1440 1193.7" preserveAspectRatio="xMidYMin meet" aria-hidden="true">
+    <defs>
+      <radialGradient id="gMotion" gradientUnits="userSpaceOnUse" cx="583" cy="379" r="823">
+        <stop offset="0" stop-color="#ededed" stop-opacity="0.000"/>
+        <stop offset="0.4" stop-color="#ededed" stop-opacity="0.011"/>
+        <stop offset="0.5" stop-color="#ededed" stop-opacity="0.033"/>
+        <stop offset="0.6" stop-color="#ededed" stop-opacity="0.080"/>
+        <stop offset="0.7" stop-color="#ededed" stop-opacity="0.172"/>
+        <stop offset="0.75" stop-color="#ededed" stop-opacity="0.241"/>
+        <stop offset="0.8" stop-color="#ededed" stop-opacity="0.332"/>
+        <stop offset="0.85" stop-color="#ededed" stop-opacity="0.448"/>
+        <stop offset="0.9" stop-color="#ededed" stop-opacity="0.594"/>
+        <stop offset="0.95" stop-color="#ededed" stop-opacity="0.776"/>
+        <stop offset="1" stop-color="#ededed" stop-opacity="1.000"/>
+      </radialGradient>
+    </defs>
+    <path d="M719.03 1193.72C659.19 1193.72 601.15 1182 546.51 1158.89C493.73 1136.56 446.33 1104.61 405.62 1063.9C364.92 1023.2 332.96 975.8 310.63 923.02C287.52 868.37 275.8 810.33 275.8 750.49C275.8 690.66 287.52 632.61 310.63 577.97C332.96 525.19 364.92 477.79 405.62 437.09C446.33 396.38 493.73 364.42 546.51 342.1C601.15 318.99 659.2 307.27 719.03 307.27C751.04 307.27 782.86 310.66 813.61 317.34C820.29 318.79 827.04 319.5 833.74 319.5C856.8 319.5 879.34 311.08 896.89 295.41C919.53 275.17 931.11 245.32 928.03 215.11C927.16 206.63 926.72 197.95 926.72 189.32C926.72 155.68 933.31 123.04 946.31 92.32C958.86 62.65 976.83 36 999.71 13.11C1022.6 -9.77 1049.25 -27.74 1078.92 -40.29C1109.64 -53.28 1142.27 -59.87 1175.91 -59.87C1209.55 -59.87 1242.19 -53.28 1272.91 -40.29C1302.58 -27.74 1329.23 -9.77 1352.12 13.11C1375 36 1392.97 62.65 1405.52 92.32C1418.51 123.04 1425.1 155.68 1425.1 189.32C1425.1 222.96 1418.51 255.59 1405.52 286.31C1392.97 315.99 1375 342.63 1352.12 365.52C1329.23 388.41 1302.58 406.37 1272.91 418.92C1249.97 428.62 1225.84 434.79 1201.18 437.25C1170.9 440.28 1143.91 457.66 1128.63 483.97C1113.35 510.29 1111.64 542.34 1124.02 570.14C1125.17 572.72 1126.32 575.35 1127.42 577.97C1150.54 632.61 1162.25 690.66 1162.25 750.49C1162.25 810.33 1150.54 868.37 1127.42 923.02C1105.1 975.8 1073.14 1023.2 1032.44 1063.9C991.73 1104.61 944.33 1136.56 891.55 1158.89C836.91 1182 778.87 1193.72 719.03 1193.72Z" fill="url(#gMotion)" stroke="#ededed" stroke-width="1.3"/>
+    <path d="M1266.63 226.73L1239 187.13C1236.56 183.63 1239.37 178.89 1243.61 179.35L1291.61 184.53C1292.94 184.68 1294.14 185.1 1295.18 185.73C1295.42 183.57 1295.54 181.37 1295.54 179.15C1295.54 177.38 1295.46 175.63 1295.31 173.9C1294.26 174.51 1293.05 174.91 1291.72 175.02L1243.61 179.15C1239.36 179.51 1236.66 174.71 1239.17 171.27L1267.67 132.28C1268.45 131.21 1269.42 130.38 1270.49 129.79C1267.31 127.47 1263.91 125.44 1260.31 123.76C1260.31 124.97 1260.05 126.23 1259.48 127.44L1239 171.17C1237.19 175.02 1231.68 174.96 1229.96 171.07L1210.44 126.9C1209.9 125.67 1209.67 124.42 1209.7 123.2C1206.06 124.8 1202.61 126.75 1199.39 129.01C1200.44 129.62 1201.39 130.47 1202.15 131.56L1229.78 171.17C1232.22 174.66 1229.41 179.4 1225.18 178.94L1177.17 173.76C1175.84 173.62 1174.64 173.19 1173.6 172.56C1173.37 174.73 1173.24 176.92 1173.24 179.15C1173.24 180.91 1173.32 182.66 1173.47 184.39C1174.52 183.79 1175.73 183.39 1177.06 183.27L1225.18 179.15C1229.42 178.78 1232.12 183.59 1229.61 187.03L1201.11 226.01C1200.33 227.09 1199.36 227.92 1198.29 228.5C1201.47 230.83 1204.87 232.85 1208.47 234.54C1208.47 233.32 1208.73 232.07 1209.3 230.86L1229.78 187.13C1231.59 183.27 1237.1 183.33 1238.82 187.23L1258.34 231.4C1258.88 232.62 1259.11 233.88 1259.09 235.1C1262.72 233.49 1266.17 231.54 1269.39 229.29C1268.34 228.68 1267.39 227.83 1266.63 226.73Z" fill="#141414"/>
+  </svg>
+  <div class="wrap motion__topo">
+    <h2 class="mix mix--base motion__titulo" data-mix="PRODUCT MOTION" data-px="01010100101010"></h2>
+    <a class="btn motion__cta" href="https://wa.me/5516991818725?text=Ol%C3%A1%2C%20Alan%21%20Vim%20pelo%20seu%20site%20e%20quero%20um%20or%C3%A7amento%20de%20v%C3%ADdeo%20de%20product%20motion." target="_blank" rel="noopener">Solicitar orçamento</a>
+  </div>
+  <div class="wrap motion__palco">
+    <div class="motion__trilho" id="motionTrilho"></div>
+  </div>
+  <div class="wrap motion__rodape">
+    <p class="motion__legenda">Seu produto em movimento. Imagens estáticas viram vídeos profissionais que prendem o olhar e geram desejo de compra.</p>
+    <div class="motion__controles">
+      <div class="motion__barras" id="motionBarras" role="tablist" aria-label="Vídeos"></div>
+      <button class="motion__seta" id="motionProximo" type="button" aria-label="Próximo vídeo"><svg viewBox="0 0 22.38 24.67" fill="currentColor" aria-hidden="true"><path d="M22.38 12.34L10.05 24.67L7.9 22.52L16.58 13.83L0 13.83L0 10.79L16.53 10.79L7.89 2.15L10.04 0Z"/></svg></button>
+    </div>
+  </div>
+</section>
 
-        const FAQ = [
-          {
-            q: "Você entrega os arquivos editáveis?",
-            a: "Sim! Ao final do projeto, você recebe um pacote completo com arquivos em vetor (AI, EPS, PDF) e imagem (PNG, JPG) prontos para uso impresso e digital."
-          },
-          {
-            q: "Qual é o prazo médio de entrega?",
-            a: "Para uma identidade visual completa, o prazo médio é de 30 a 45 dias úteis. Isso garante tempo para pesquisa, estratégia e refinamento."
-          },
-          {
-            q: "Como funciona o pagamento?",
-            a: "Trabalho com 50% de entrada para reserva da agenda e início do projeto, e os 50% restantes na aprovação final e entrega dos arquivos."
-          }
-        ];
+<!-- ===================== 07 · ELES CONFIAM ===================== -->
+<div class="confiam-trilho" id="confiamTrilho">
+<section class="confiam" id="depoimentos">
+  <svg class="confiam__blob" viewBox="0 0 1440 644" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+    <defs>
+      <radialGradient id="gConfiam" gradientUnits="userSpaceOnUse" cx="739" cy="75" r="717">
+        <stop offset="0" stop-color="#d8f334" stop-opacity="0.000"/>
+        <stop offset="0.4" stop-color="#d8f334" stop-opacity="0.011"/>
+        <stop offset="0.5" stop-color="#d8f334" stop-opacity="0.033"/>
+        <stop offset="0.6" stop-color="#d8f334" stop-opacity="0.081"/>
+        <stop offset="0.7" stop-color="#d8f334" stop-opacity="0.172"/>
+        <stop offset="0.75" stop-color="#d8f334" stop-opacity="0.242"/>
+        <stop offset="0.8" stop-color="#d8f334" stop-opacity="0.333"/>
+        <stop offset="0.85" stop-color="#d8f334" stop-opacity="0.449"/>
+        <stop offset="0.9" stop-color="#d8f334" stop-opacity="0.595"/>
+        <stop offset="0.95" stop-color="#d8f334" stop-opacity="0.777"/>
+        <stop offset="1" stop-color="#d8f334" stop-opacity="1.000"/>
+      </radialGradient>
+    </defs>
+    <path d="M922.37 844.12C858.43 844.12 795.18 827.55 739.45 796.21C682.05 763.92 634.09 716.59 600.77 659.34C577.06 618.61 561.49 574.59 554.48 528.52C550.18 500.27 533.37 475.47 508.72 461.02C494.01 452.39 477.44 448 460.78 448C449.53 448 438.25 450 427.47 454.04C403.92 462.88 379.31 467.37 354.32 467.37C318.37 467.37 282.81 458.05 251.48 440.43C219.2 422.27 192.24 395.66 173.5 363.48C159.31 339.09 150.32 312.66 146.78 284.91C143.36 258.11 145.14 231.21 152.07 204.97C159 178.73 170.74 154.46 186.95 132.85C203.74 110.47 224.61 91.93 248.99 77.73C280.92 59.15 317.2 49.33 353.92 49.33C389.87 49.33 425.43 58.65 456.76 76.27C489.04 94.43 516 121.04 534.74 153.22C536.01 155.41 537.25 157.63 538.43 159.84C551.91 184.97 575.99 202.71 604 208.11C609.97 209.27 615.98 209.83 621.96 209.83C644.03 209.83 665.62 202.12 682.83 187.7C698.97 174.18 716.53 161.86 735.04 151.09C791.82 118.05 856.35 100.58 921.68 100.58C985.62 100.58 1048.87 117.15 1104.59 148.49C1162 180.78 1209.96 228.11 1243.28 285.36C1268.52 328.73 1284.52 375.75 1290.82 425.1C1296.9 472.78 1293.74 520.62 1281.41 567.29C1269.08 613.97 1248.2 657.13 1219.36 695.58C1189.51 735.38 1152.38 768.36 1109.01 793.61C1052.23 826.66 987.7 844.12 922.37 844.12Z" fill="url(#gConfiam)" stroke="#d8f334" stroke-width="1"/>
+  </svg>
+  <div class="anel" id="anel">
+    <div class="tile" style="--cx:1;--cy:0"><div class="tile__corpo"><div class="tile__moldura"></div><img class="tile__logo" loading="lazy" decoding="async" src="assets/logos/mahrte.svg" alt="Mahrte Racing Team"></div></div>
+    <div class="tile tile--diag" style="--cx:.70711;--cy:.70711"><div class="tile__corpo"><div class="tile__moldura"></div><img class="tile__logo" loading="lazy" decoding="async" src="assets/logos/igreja-apex.svg" alt="Igreja Apex"></div></div>
+    <div class="tile" style="--cx:0;--cy:1"><div class="tile__corpo"><div class="tile__moldura"></div><img class="tile__logo" loading="lazy" decoding="async" src="assets/logos/adonai.svg" alt="Adonai Oficial"></div></div>
+    <div class="tile tile--diag" style="--cx:-.70711;--cy:.70711"><div class="tile__corpo"><div class="tile__moldura"></div><img class="tile__logo" loading="lazy" decoding="async" src="assets/logos/galante.svg" alt="Galante Cervejaria"></div></div>
+    <div class="tile" style="--cx:-1;--cy:0"><div class="tile__corpo"><div class="tile__moldura"></div><img class="tile__logo" loading="lazy" decoding="async" src="assets/logos/borelli.svg" alt="Gelato Borelli"></div></div>
+    <div class="tile tile--diag" style="--cx:-.70711;--cy:-.70711"><div class="tile__corpo"><div class="tile__moldura"></div><img class="tile__logo" loading="lazy" decoding="async" src="assets/logos/matheus-baldan.svg" alt="Matheus Baldan Performance"></div></div>
+    <div class="tile" style="--cx:0;--cy:-1"><div class="tile__corpo"><div class="tile__moldura"></div><img class="tile__logo" loading="lazy" decoding="async" src="assets/logos/emblema-dourado.webp" alt=""></div></div>
+    <div class="tile tile--diag" style="--cx:.70711;--cy:-.70711"><div class="tile__corpo"><div class="tile__moldura"></div><img class="tile__logo" loading="lazy" decoding="async" src="assets/logos/connect.svg" alt="Connect Energia Solar"></div></div>
+  </div>
+  <div class="confiam__centro">
+    <h2 class="mix mix--base confiam__titulo" data-mix="ELES CONFIAM:" data-px="0101001010100"></h2>
+    <div class="confiam__depos" id="depos"></div>
+  </div>
+</section>
+</div>
 
-        const PROCESS_STEPS = [
-          {
-            id: '01',
-            title: 'Imersão & Briefing',
-            desc: 'Mergulhamos no universo da sua marca para entender a essência, o público e os objetivos de negócio.',
-            icon: <Layers className="w-6 h-6" />
-          },
-          {
-            id: '02',
-            title: 'Estratégia Visual',
-            desc: 'Desenvolvimento do conceito, moodboards e arquitetura visual antes do design final.',
-            icon: <PenTool className="w-6 h-6" />
-          },
-          {
-            id: '03',
-            title: 'Entrega & Guia',
-            desc: 'Finalização dos arquivos e criação do brandbook para garantir consistência futura.',
-            icon: <Check className="w-6 h-6" />
-          }
-        ];
+<!-- ===================== 08 · FAQ ===================== -->
+<section class="faq" id="faq">
+  <svg class="faq__aba" viewBox="1159.92 -60.09 280.49 61.09" aria-hidden="true"><path d="M1440.41 -60.09L1246.82 -60.09C1235.93 -60.09 1225.42 -56.15 1217.21 -48.99L1189.52 -11.39C1181.32 -4.23 1170.8 -0.29 1159.92 -0.29L1159.92 1L1440.41 1Z"/></svg>
+  <div class="wrap faq__in">
+    <div class="faq__marca" id="faqMarca">
+      <div class="titulo">
+        <span class="eyebrow">// 05 — Dúvidas</span>
+        <h2 class="mix faq__titulo" data-mix="FAQ"></h2>
+      </div>
+    </div>
+    <div id="faqLista"></div>
+  </div>
+</section>
 
-        const PLANS = [
-          {
-            name: "Bronze",
-            tagline: "Ideal para quem está começando e precisa de profissionalismo rápido.",
-            features: [
-              "3 Mockups de aplicação",
-              "1 Proposta de Identidade Visual",
-              "1 Rodada de revisão",
-              "Arquivos em alta resolução"
-            ],
-            highlight: false
-          },
-          {
-            name: "Prata",
-            tagline: "Perfeito para negócios que buscam reposicionamento de mercado.",
-            features: [
-              "10 Mockups de aplicação",
-              "3 Templates Social Media",
-              "Manual de Marca (Brandbook)",
-              "1 Proposta de Identidade Visual",
-              "2 Rodadas de revisão",
-              "Arquivos vetoriais (AI, EPS, SVG)"
-            ],
-            highlight: true
-          },
-          {
-            name: "Ouro",
-            tagline: "A experiência completa para dominar o seu nicho.",
-            features: [
-              "15 Mockups realistas",
-              "Manual de Marca Completo",
-              "3 Templates Social Media",
-              "Ícones Personalizados",
-              "Curadoria de Fotos (Mood)",
-              "Estudo de Arquétipo",
-              "3 Rodadas de revisão",
-              "5 Vídeos curtos c/ IA"
-            ],
-            highlight: false
-          }
-        ];
+<!-- ===================== 09 · RODAPÉ ===================== -->
+<footer class="contato" id="contato">
+  <svg class="pixfaixa" viewBox="0 0 1440 241.4" preserveAspectRatio="none" aria-hidden="true"><path d="M1135.77 65.62L1135.77 43.67L1115.49 43.67L1115.49 65.62L1095.21 65.62L1095.21 87.57L1176.34 87.57L1176.34 65.62L1135.77 65.62ZM649.01 65.62L649.01 87.57L689.58 87.57L689.58 65.62L649.01 65.62ZM567.89 65.62L567.89 87.57L588.17 87.57L588.17 65.62L567.89 65.62ZM507.04 65.62L507.04 43.67L486.76 43.67L486.76 87.57L527.32 87.57L527.32 65.62L507.04 65.62ZM1399.44 197.33L1399.44 241.23L1419.72 241.23L1419.72 197.33L1399.44 197.33ZM1358.87 175.38L1358.87 219.28L1379.15 219.28L1379.15 175.38L1358.87 175.38ZM818.82 65.62L818.82 87.57L872.11 87.57L872.11 65.62L818.82 65.62ZM1135.77 65.62L1135.77 43.67L1115.49 43.67L1115.49 65.62L1095.21 65.62L1095.21 87.57L1176.34 87.57L1176.34 65.62L1135.77 65.62ZM1358.87 87.57L1358.87 109.53L1379.15 109.53L1379.15 87.57L1358.87 87.57ZM872.11 -0.23L872.11 21.72L790.99 21.72L790.99 43.67L892.39 43.67L892.39 65.62L912.68 65.62L912.68 43.67L973.52 43.67L973.52 21.72L1156.06 21.72L1156.06 43.67L1196.62 43.67L1196.62 65.62L1216.9 65.62L1216.9 21.72L1277.75 21.72L1277.75 43.67L1257.46 43.67L1257.46 65.62L1298.03 65.62L1298.03 87.57L1338.59 87.57L1338.59 43.67L1358.87 43.67L1358.87 65.62L1379.15 65.62L1379.15 21.72L1419.72 21.72L1419.72 87.57L1399.44 87.57L1399.44 131.48L1358.87 131.48L1358.87 153.43L1399.44 153.43L1399.44 175.38L1440 175.38L1440 -0.23L872.11 -0.23ZM1379.15 87.57L1358.87 87.57L1358.87 109.53L1379.15 109.53L1379.15 87.57ZM1135.77 65.62L1135.77 43.67L1115.49 43.67L1115.49 65.62L1095.21 65.62L1095.21 87.57L1176.34 87.57L1176.34 65.62L1135.77 65.62ZM818.82 65.62L818.82 87.57L872.11 87.57L872.11 65.62L818.82 65.62ZM770.7 43.67L770.7 65.62L790.99 65.62L790.99 43.67L770.7 43.67ZM669.3 -0.23L669.3 43.67L709.86 43.67L709.86 65.62L730.14 65.62L730.14 43.67L750.42 43.67L750.42 21.72L770.7 21.72L770.7 -0.23L669.3 -0.23ZM608.45 43.67L608.45 65.62L628.73 65.62L628.73 43.67L608.45 43.67ZM507.04 65.62L507.04 43.67L486.76 43.67L486.76 87.57L527.32 87.57L527.32 65.62L507.04 65.62ZM182.54 -0.23L182.54 21.72L141.97 21.72L141.97 65.62L182.54 65.62L182.54 87.57L223.1 87.57L223.1 43.67L202.82 43.67L202.82 21.72L283.94 21.72L283.94 43.67L365.07 43.67L365.07 65.62L385.35 65.62L385.35 21.72L405.63 21.72L405.63 43.67L425.92 43.67L425.92 65.62L466.48 65.62L466.48 21.72L527.32 21.72L527.32 43.67L567.89 43.67L567.89 21.72L649.01 21.72L649.01 -0.23L182.54 -0.23ZM507.04 65.62L507.04 43.67L486.76 43.67L486.76 87.57L527.32 87.57L527.32 65.62L507.04 65.62ZM0 -0.23L0 21.72L40.56 21.72L40.56 43.67L101.41 43.67L101.41 21.72L121.69 21.72L121.69 -0.23L0 -0.23ZM40.56 175.38L40.56 153.43L20.28 153.43L20.28 65.62L0 65.62L0 241.23L20.28 241.23L20.28 197.33L60.85 197.33L60.85 175.38L40.56 175.38ZM40.56 219.28L40.56 241.23L81.13 241.23L81.13 219.28L40.56 219.28ZM811.27 65.62L811.27 87.57L872.11 87.57L872.11 65.62L811.27 65.62ZM1358.87 87.57L1358.87 109.53L1379.15 109.53L1379.15 87.57L1358.87 87.57Z"/></svg>
+  <img class="contato__limao" src="assets/images/contato-limao.webp" alt="Limão com fita adesiva">
+  <div class="wrap contato__in">
+    <h2 class="mix contato__titulo" data-mix="DÊ FRESCOR|À SUA MARCA." data-px="1000110100|100100011100"></h2>
+    <div class="contato__grade">
+      <div class="col--contato">
+        <h4>Contato</h4>
+        <a href="mailto:47alanlima@gmail.com">47alanlima@gmail.com</a>
+        <a href="https://wa.me/5516991818725" target="_blank" rel="noopener">(16) 99181-8725</a>
+      </div>
+      <div class="col--social">
+        <h4>Social</h4>
+        <div class="sociais">
+          <a href="https://www.instagram.com/alanlima.dsgn/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.8" cy="6.2" r="1.2" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/alan-lima-28b8b11a2/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9.5 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21h-4z"/></svg>
+          </a>
+          <a href="https://www.behance.net/alanlima47" target="_blank" rel="noopener" aria-label="Behance">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.3 5.2c1.2 0 2.1.2 2.8.5.7.3 1.2.8 1.5 1.3.3.5.4 1.1.4 1.8 0 .8-.2 1.4-.5 1.9-.35.5-.9.9-1.6 1.2.95.27 1.65.72 2.1 1.35.45.63.68 1.4.68 2.3 0 .74-.14 1.38-.42 1.92-.28.54-.66.98-1.140 1.32-.48.34-1.04.58-1.67.74-.63.16-1.29.24-1.96.24H1.6V5.2zM7.9 10.9c.62 0 1.12-.15 1.5-.44.38-.3.57-.75.57-1.36 0-.34-.06-.62-.18-.84a1.3 1.3 0 0 0-.5-.52 2.1 2.1 0 0 0-.72-.26 4.9 4.9 0 0 0-.86-.07H4.6v3.49zm.17 5.98c.34 0 .67-.03.98-.1.31-.07.58-.18.82-.34.24-.16.43-.38.57-.66.14-.28.21-.63.21-1.06 0-.83-.23-1.42-.7-1.78-.47-.36-1.09-.54-1.86-.54H4.6v4.48zM17.9 16.7c.4.4.99.6 1.76.6.55 0 1.03-.14 1.43-.42.4-.28.65-.58.74-.89h2.3c-.37 1.15-.93 1.97-1.69 2.46-.76.5-1.68.74-2.76.74-.75 0-1.43-.12-2.03-.36a4.3 4.3 0 0 1-1.54-1.03 4.6 4.6 0 0 1-.97-1.6 5.9 5.9 0 0 1-.34-2.05c0-.73.12-1.4.35-2.02.23-.62.56-1.16.99-1.61a4.6 4.6 0 0 1 1.54-1.07 5 5 0 0 1 1.99-.39c.83 0 1.55.16 2.17.48.62.32 1.13.75 1.52 1.29.39.54.67 1.16.84 1.85.17.69.23 1.42.18 2.17h-6.76c0 .79.21 1.45.61 1.85zm3.1-5.05c-.32-.35-.85-.54-1.54-.54-.45 0-.83.08-1.13.23-.3.15-.54.34-.72.56-.18.22-.3.46-.37.71-.07.25-.11.47-.12.66h4.19c-.12-.66-.32-1.17-.64-1.52zM16.2 6.3h5.2v1.5h-5.2z"/></svg>
+          </a>
+          <a href="https://wa.me/5516991818725" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2.1 21.9l5-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.2 14.8l-.3-.2-2.8.8.8-2.7-.2-.3A8 8 0 0 1 12 4zm-3 4c-.2 0-.5 0-.7.5s-.9 1-.9 2.3 1 2.6 1.1 2.8 1.9 3 4.7 4.1c2.3 1 2.8.8 3.3.8s1.6-.7 1.9-1.3.3-1.2.2-1.3l-.9-.4c-.4-.2-1.4-.7-1.6-.8s-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-1.9-1.2 7.2 7.2 0 0 1-1.3-1.7c-.1-.2 0-.4.1-.5l.4-.5.3-.5v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="col--local">
+        <h4>Local</h4>
+        <p>Ribeirão Preto / SP</p>
+        <p>Disponível para o mundo.</p>
+      </div>
+      <a class="btn contato__cta" href="https://wa.me/5516991818725?text=Ol%C3%A1%2C%20Alan%21%20Vim%20pelo%20seu%20site%20e%20quero%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">Solicitar orçamento</a>
+    </div>
+  </div>
+</footer>
 
-        // --- COMPONENTES ---
+<!-- peças dos projetos do Behance (geradas por behance/extrai.mjs) -->
+<script id="dadosProjetos" type="application/json">{"acampa":{"nome":"Acampa 2024 - Incendeia-me com seu fogo","url":"https://www.behance.net/gallery/196926601/Acampa-2024-Incendeia-me-com-seu-fogo","blocos":[{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/ea596e196926601.6627f409e0a34.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: screenshot"},{"t":"txt","ps":["O Acampa 2024 foi um encontro incrível dedicado aos jovens da igreja CEELS. Este ano, o tema foi \"Incendeia-me com Teu Fogo\", buscando inspirar e fortalecer nossa conexão espiritual. Foi uma experiência repleta de momentos de união e compartilhamento, desde emocionantes gincanas até refrescantes mergulhos na piscina. Não podemos esquecer dos concursos de fantasia, que trouxeram muita diversão e criatividade. Uma novidade especial deste ano foi a participação da banda \"Soundriven\", que embalou nossos momentos de louvor e adoração com muito Rock pra ninguém ficar parado. Mas o mais importante de tudo foi a presença do Espírito Santo e a abundância de ensinamentos e reflexões que recebemos. Foi uma verdadeira experiência de fé e crescimento espiritual que ficará marcada nos corações de cada jovem."]},{"t":"galeria","itens":[{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/3b28e0196926601.6627f4019073e.jpg","w":1400,"h":933,"p":[5184,3456]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/b2394a196926601.6627f4018f458.jpg","w":1400,"h":933,"p":[4737,3158]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/c2c4fa196926601.6627f4018fe20.jpg","w":1400,"h":933,"p":[5184,3456]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/cb9e16196926601.6627f4018ec10.jpg","w":1400,"h":933,"p":[5184,3456]}]},{"t":"galeria","itens":[{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/e76fc0196926601.6627f4044c797.jpg","w":1400,"h":933,"p":[4776,3184]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/de738c196926601.6627f4044d081.jpg","w":1400,"h":933,"p":[4484,2989]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/6f86bc196926601.6627f4044d7f4.jpg","w":1400,"h":933,"p":[4338,2892]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/60663f196926601.6627f4044cc19.jpg","w":1400,"h":934,"p":[2048,1366]}]},{"t":"galeria","itens":[{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/544396196926601.6627f406726c8.jpeg","w":1400,"h":933,"p":[5184,3456]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/61ec0c196926601.6627f40672b8b.jpeg","w":1400,"h":933,"p":[5184,3456]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/027d01196926601.66280450d4a62.jpeg","w":1400,"h":933,"p":[5184,3456]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/8cb09f196926601.66280450d436c.jpeg","w":1400,"h":933,"p":[5184,3456]}]},{"t":"galeria","itens":[{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/ae37bc196926601.6627f407c6813.jpg","w":1400,"h":933,"p":[4708,3139]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/269973196926601.6627f407c7098.jpg","w":1400,"h":933,"p":[4907,3271]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/6568c4196926601.6627f407c797b.jpg","w":1400,"h":933,"p":[5184,3456]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/4368e7196926601.6627f407c5f21.jpg","w":1400,"h":933,"p":[4329,2886]}]},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/1558b6196926601.662901cf45d97.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":""},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/550e67196926601.6627f409e21ac.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: poster, human face and person"},{"t":"video","u":"https://www-ccv.adobe.io/v1/player/ccv/JA23niKPnAf/embed?api_key=behance1&bgcolor=%23191919","w":600,"h":450},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/840c53196926601.6627f409df7e0.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: indoor and furniture"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/a43674196926601.6627f409e0524.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: fruit, orange and food"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/3779e1196926601.6627f409e1816.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":""},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/86cec1196926601.6627f409e0f3e.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":""},{"t":"txt","ps":["Animações: Gladstone filho"]}]},"mahrte":{"nome":"Mahrte Racing Team | Identidade Visual","url":"https://www.behance.net/gallery/194190413/Mahrte-Racing-Team-Identidade-Visual","blocos":[{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/38f309194190413.66db74ae52f23.png","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: helmet and cartoon"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/e760ba194190413.66db75a77d3ce.png","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: cartoon and screenshot"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/max_316_webp/648c9e194190413.66db75a77beae.png","w":1451,"h":0,"p":[1451,316],"larga":true,"alt":""},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/a0c0c8194190413.66db75a77e3ea.png","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: cartoon"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/d83c65194190413.66db75a77c6e5.png","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: screenshot"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/0cda6e194190413.66db76364091e.png","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: typography"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/e77047194190413.66db75a77cb2e.png","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: cartoon and poster"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/5e3cf4194190413.66db75a77d893.png","w":1400,"h":0,"p":[600,318],"larga":true,"alt":"Image may contain: cartoon"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/db4d9f194190413.66db75a77dcd7.png","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: screenshot"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/d444ef194190413.65f859db2a931.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":""},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/4eb7eb194190413.65f86153cab0c.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":""},{"t":"galeria","itens":[{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/d8f053194190413.65f861534cffc.jpg","w":1080,"h":1920,"p":[1080,1920]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/3749f4194190413.65f861534e2ba.jpg","w":800,"h":1422,"p":[800,1422]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/dc8d3e194190413.65f861534f1cd.jpg","w":1080,"h":1920,"p":[1080,1920]}]},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/d6d300194190413.66db75a77cf5e.png","w":1400,"h":0,"p":[1400,436],"larga":true,"alt":"Image may contain: screenshot"}]},"galante":{"nome":"GALANTE CERVEJARIA- Identidade Visual","url":"https://www.behance.net/gallery/231429431/GALANTE-CERVEJARIA-Identidade-Visual","blocos":[{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/454c88231429431.68890afb025ef.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: person, drink and wine"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/31c39c231429431.68890afb05957.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":""},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/0118ae231429431.68890afb03539.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: cartoon and poster"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/ffcca3231429431.68890afb05027.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: screenshot, template and abstract"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/337bd5231429431.68890afb02eda.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: poster, illustration and screenshot"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/e8939d231429431.68890afb0601a.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: houseplant, flowerpot and door"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/43d1d1231429431.68890afb043ac.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: person, drink and beer"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/95726e231429431.68890afb0499b.jpg","w":1400,"h":0,"p":[600,675],"larga":true,"alt":"Image may contain: person"},{"t":"anim","u":"assets/video/projetos/galante-8.mp4","capa":"assets/video/projetos/galante-8.webp","p":[600,327]},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/c85f27231429431.68890afb0672d.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: cartoon, poster and illustration"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/54472a231429431.68890afb08206.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: drawing, art and cartoon"},{"t":"txt","ps":["."]},{"t":"anim","u":"assets/video/projetos/galante-12.mp4","capa":"assets/video/projetos/galante-12.webp","p":[600,338]},{"t":"txt","ps":["."]},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/5f6067231429431.68890afb0877d.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: screenshot"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/e7ba10231429431.68890afb07aed.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: food, natural foods and pineapple"}]},"connect":{"nome":"Connect Energia Solar - Identidade Visual","url":"https://www.behance.net/gallery/225361699/Connect-Energia-Solar-Identidade-Visual","blocos":[{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/f8fde0225361699.684842e24fc3d.jpg","w":1400,"h":0,"p":[600,337],"larga":true,"alt":"Image may contain: hand"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/df576c225361699.681bab5ba0495.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: screenshot, circle and electronics"},{"t":"txt","ps":["O redesign da Connect Energia Solar Franchising posiciona a marca para o presente e o futuro com uma identidade visual autêntica e estratégica. Fugindo do óbvio no setor solar, adotei o laranja como cor principal, tipografia grotesk e o girassol como metáfora visual. O uso de inteligência artificial nos mockups trouxe agilidade e inovação ao processo criativo.","ENG","The rebranding of Connect Energia Solar Franchising positions the company for both the present and the future with a bold, strategic visual identity. Breaking away from the typical solar palette, I introduced orange as the primary color, a grotesk typeface, and the sunflower as a visual metaphor. AI-powered mockups brought speed and innovation to the creative process."]},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/5e6e4f225361699.681bab5b9b6a4.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: screenshot"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/8e0f4d225361699.681bab5ba2d2e.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: screenshot"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/0df222225361699.681bab5ba3e91.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: abstract, screenshot and line"},{"t":"anim","u":"assets/video/projetos/connect-6.mp4","capa":"assets/video/projetos/connect-6.webp","p":[600,338]},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/eaaecb225361699.681bab5b9a6a9.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: screenshot and abstract"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/3de65b225361699.681bab5ba09d6.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":""},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/f7d0b3225361699.681bab5b9dbbc.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: flower"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/2c1386225361699.681bab5b9cac3.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: cartoon"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/247849225361699.687fa32e4b3b9.jpg","w":1408,"h":0,"p":[600,327],"larga":true,"alt":"Image may contain: box and book"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/8a7772225361699.681bab5b9eb09.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: furniture, chair and orange"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/b51fa7225361699.681bab5ba2576.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: human face, person and man"},{"t":"anim","u":"assets/video/projetos/connect-14.mp4","capa":"assets/video/projetos/connect-14.webp","p":[600,360]},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/16d52a225361699.681bab5ba15ad.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: orange"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/4003c2225361699.6852d0582865d.jpg","w":1408,"h":0,"p":[600,327],"larga":true,"alt":"Image may contain: table, chair and coffee table"},{"t":"anim","u":"assets/video/projetos/connect-17.mp4","capa":"assets/video/projetos/connect-17.webp","p":[600,360]},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/4fe8bd225361699.6852d05827e2b.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: floor, indoor and houseplant"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/8ef61c225361699.681bab5b9d146.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: land vehicle, vehicle and car"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/9ee531225361699.681bab5b9bdde.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: cartoon and clothing"},{"t":"galeria","itens":[{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/1df2b2225361699.6877f40e0470a.jpeg","w":1400,"h":2567,"p":[1536,2816]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/90ff5f225361699.6877f40e03c06.jpeg","w":1400,"h":2567,"p":[1536,2816]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/31dc68225361699.6877f40e041f6.jpeg","w":1400,"h":2567,"p":[1536,2816]}]},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/59732c225361699.681bab5b9e39b.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: vector, internet and cartoon"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/d47a49225361699.681bab5ba3426.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: screenshot and human face"},{"t":"galeria","itens":[{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/32890a225361699.6877f54e1eec6.jpg","w":1344,"h":768,"p":[1344,768]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/6101b0225361699.6877f54e207c5.jpg","w":1400,"h":764,"p":[1408,768]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/64c7e0225361699.6877f54e20101.jpg","w":1365,"h":768,"p":[1365,768]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/8f58b0225361699.6877f54e1f47c.jpg","w":1400,"h":763,"p":[1596,870]}]},{"t":"txt","ps":["Comercial gerado 100% I.A"]},{"t":"video","u":"https://www-ccv.adobe.io/v1/player/ccv/IjIdnST4STb/embed?api_key=behance1&bgcolor=%23191919","w":600,"h":337},{"t":"video","u":"https://www-ccv.adobe.io/v1/player/ccv/Gdt_KPoiYkU/embed?api_key=behance1&bgcolor=%23191919","w":600,"h":339},{"t":"video","u":"https://www-ccv.adobe.io/v1/player/ccv/LrMuVb6QiKj/embed?api_key=behance1&bgcolor=%23191919","w":600,"h":1066},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/39e734225361699.681bab5b9f13c.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: cartoon and orange"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/5ab980225361699.68484521d601f.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: smile, person and human face"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/max_316_webp/42b6ed225361699.68484521d67d4.jpg","w":1494,"h":0,"p":[1494,316],"larga":false,"alt":"Image may contain: person, orange and cartoon"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/86241e225361699.6877f4107daa8.jpg","w":1400,"h":0,"p":[600,327],"larga":true,"alt":"Image may contain: computer, laptop and sitting"},{"t":"galeria","itens":[{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/81957a225361699.6877efc9df158.jpg","w":1080,"h":1350,"p":[1080,1350]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/ae7a96225361699.6877efc9de84e.jpg","w":1080,"h":1350,"p":[1080,1350]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/978da4225361699.6877efc9dfabb.jpg","w":1080,"h":1350,"p":[1080,1350]}]},{"t":"galeria","itens":[{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/250b03225361699.6877efcaab5de.jpg","w":1080,"h":1350,"p":[1080,1350]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/ed7ee6225361699.6877efcaac340.jpg","w":1080,"h":1350,"p":[1080,1350]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/3d88af225361699.6877efcaabc8f.jpg","w":1080,"h":1350,"p":[1080,1350]}]},{"t":"galeria","itens":[{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/682810225361699.6877efcbcb2ec.jpg","w":1080,"h":1350,"p":[1080,1350]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/8a3cd7225361699.6877efcbca39f.jpg","w":1080,"h":1350,"p":[1080,1350]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/40f45b225361699.6877efcbcab73.jpg","w":1080,"h":1350,"p":[1080,1350]}]},{"t":"galeria","itens":[{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/4fa6ab225361699.6877efcc9a393.jpg","w":1080,"h":1350,"p":[1080,1350]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/7a5565225361699.6877efcc9971f.jpg","w":1080,"h":1350,"p":[1080,1350]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/172a21225361699.6877efcc99ed3.jpg","w":1080,"h":1350,"p":[1080,1350]}]},{"t":"galeria","itens":[{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/cd972c225361699.6877efcd7cc89.jpg","w":1080,"h":1350,"p":[1080,1350]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/dbeeea225361699.6877efcd7c53e.jpg","w":1080,"h":1350,"p":[1080,1350]},{"u":"https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/6ecf46225361699.6877f410176f6.jpg","w":1080,"h":1350,"p":[1080,1350]}]}]},"mtz":{"nome":"MTZ IDENTIDADE VISUAL","url":"https://www.behance.net/gallery/241688325/MTZ-IDENTIDADE-VISUAL","blocos":[{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/c1105e241688325.695db2b0478dc.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: font, typography and electric blue"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/87ce69241688325.695db2b04b276.jpg","w":1400,"h":0,"p":[600,337],"larga":true,"alt":"Image may contain: cartoon"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/881243241688325.695db2b0481e0.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":""},{"t":"video","u":"https://www-ccv.adobe.io/v1/player/ccv/44dImMHppb6/embed?api_key=behance1&bgcolor=%23191919","w":600,"h":1066},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/28cef9241688325.695db2b04e9fb.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: cartoon, human face and clothing"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/35aa49241688325.695db2b04f1c9.jpg","w":1400,"h":0,"p":[600,337],"larga":true,"alt":"Image may contain: indoor and laptop"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/616c47241688325.695db2b048744.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: cartoon and door"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/9910b7241688325.695db2b048c89.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: electric blue"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/d96671241688325.695db2b04c4af.jpg","w":1400,"h":0,"p":[600,337],"larga":true,"alt":"Image may contain: cartoon and shirt"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/7625cc241688325.695db2b04a529.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: person, footwear and man"},{"t":"anim","u":"assets/video/projetos/mtz-10.mp4","capa":"assets/video/projetos/mtz-10.webp","p":[600,338]},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/794148241688325.695db2b0472ef.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":""},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/332536241688325.695db2b0491a1.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: human face, person and clothing"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/a0e247241688325.695db2b04bcb8.jpg","w":1400,"h":0,"p":[600,337],"larga":true,"alt":"Image may contain: monitor, person and electronics"},{"t":"anim","u":"assets/video/projetos/mtz-14.mp4","capa":"assets/video/projetos/mtz-14.webp","p":[600,338]},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/7abb34241688325.695db2b04d13e.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: cartoon, indoor and toy"},{"t":"anim","u":"assets/video/projetos/mtz-16.mp4","capa":"assets/video/projetos/mtz-16.webp","p":[600,338]},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/83370e241688325.695db2b04b798.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: cartoon, internet and vector"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/9713a4241688325.695db2b04d683.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: cartoon, screenshot and internet"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/c684b1241688325.695db2b04e268.jpg","w":1400,"h":0,"p":[600,337],"larga":true,"alt":"Image may contain: screenshot and abstract"},{"t":"anim","u":"assets/video/projetos/mtz-20.mp4","capa":"assets/video/projetos/mtz-20.webp","p":[600,338]},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/949080241688325.695db2b04ca5d.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: electric blue, font and majorelle blue"}]},"baldan":{"nome":"MATHEUS BALDAN PERFORMANCE - Identidade visual","url":"https://www.behance.net/gallery/250784707/MATHEUS-BALDAN-PERFORMANCE-Identidade-visual","blocos":[{"t":"anim","u":"assets/video/projetos/baldan-0.mp4","capa":"assets/video/projetos/baldan-0.webp","p":[600,338]},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/e45a3e250784707.6a2f3ba2a73da.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: screenshot, graphic design and graphics"},{"t":"txt","ps":["PT-BR:","Matheus Baldan é uma figura influente em Catanduva: advogado, empresário e referência por seus negócios bem-sucedidos. Além da carreira sólida, carrega uma paixão de vida inteira: carros de luxo e alta performance.","Sempre foi reconhecido por sua frota impecável e participação ativa em eventos automotivos.","Agora, essa paixão se transforma em uma marca oficial, com posicionamento estratégico, identidade e presença visual.","EN-US:","Matheus Baldan is an influential figure in Catanduva — a lawyer, entrepreneur, and recognized benchmark for building successful businesses. Beyond his established career, he carries a lifelong passion: luxury and high-performance automobiles.","He has always been known for his impeccable vehicle collection and active presence in the automotive scene.","Now, that passion evolves into an official brand, supported by strategic positioning, a distinctive identity, and a strong visual presence."]},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/93e8bb250784707.6a2f3ba2a92d0.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: screenshot and font"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/ee6f7f250784707.6a2f3ba2a5563.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: mobile phone, screenshot and gadget"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/047a95250784707.6a2f3ba2a7c42.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: screenshot, font and graphic design"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/bdcf9c250784707.6a2f3ba2a6404.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: screenshot, font and logo"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/629896250784707.6a2f3ba2ac490.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: candle, amber and still life photography"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/de5276250784707.6a2f3ba2a4f46.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: logo, symbol and font"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/36da6f250784707.6a2f3ba2a6b47.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: screenshot"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/99d602250784707.6a2f3ba2aca9a.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: screenshot and graphics"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/fa587f250784707.6a2f3ba2a9921.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: clothing, active shirt and person"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/a64d78250784707.6a2f3ba2ab851.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: clothing, cap and baseball cap"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/e74c8b250784707.6a2f3ba2a8c1e.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: vehicle, land vehicle and sports car"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/cc7b82250784707.6a2f3ba2ad088.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: land vehicle, vehicle and wheel"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/09ddaf250784707.6a2f3ba2add0e.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: laptop, computer and wall"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/4914c3250784707.6a2f3ba2a491b.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: land vehicle, vehicle and car"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/c8185d250784707.6a2f3ba2abe8d.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: tool"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/cf2850250784707.6a2f3ba2a8343.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: coffee"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/089ca4250784707.6a2f3ba2aa5c4.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: vehicle, wheel and land vehicle"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/3a7ac8250784707.6a2f3ba2aabfe.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: vehicle, wheel and land vehicle"},{"t":"anim","u":"assets/video/projetos/baldan-21.mp4","capa":"assets/video/projetos/baldan-21.webp","p":[600,338]},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/d618ad250784707.6a2f3ba2ad6df.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: wheel, vehicle and land vehicle"},{"t":"img","u":"https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/2fc2a4250784707.6a2f3ba2a5b7c.jpg","w":1400,"h":0,"p":[600,338],"larga":true,"alt":"Image may contain: screenshot, font and graphics"}]}}</script>
+<script>
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
-        // Componente Cursor Personalizado (Bolinha Verde)
-        const CustomCursor = () => {
-            const cursorRef = useRef(null);
-            
-            useEffect(() => {
-                const moveCursor = (e) => {
-                    if (cursorRef.current) {
-                        cursorRef.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`;
-                    }
-                };
-                window.addEventListener('mousemove', moveCursor);
-                return () => window.removeEventListener('mousemove', moveCursor);
-            }, []);
+/* ---------- tipografia mesclada — isPixel = (charCode + i*13) % 2 === 0 ---------- */
+function renderMix(el){
+  // data-px marca, letra a letra (espaços contam), quais glifos são Pixel: veio da
+  // referência, título por título. Sem data-px vale a regra antiga (charCode + i*13).
+  const linhas = el.dataset.mix.split('|'), mascaras = (el.dataset.px || '').split('|');
+  el.innerHTML = '';
+  linhas.forEach((linha, li) => {
+    const mascara = mascaras[li];
+    [...linha].forEach((ch, i) => {
+      const s = document.createElement('span');
+      const px = mascara ? mascara[i] === '1' : (ch.charCodeAt(0) + i * 13) % 2 === 0;
+      s.className = 'g' + (px ? ' px' : '');
+      s.textContent = ch === ' ' ? '\u00a0' : ch;
+      el.appendChild(s);
+    });
+    if (li < linhas.length - 1) el.appendChild(document.createElement('br'));
+  });
+}
+document.querySelectorAll('.mix[data-mix]').forEach(renderMix);
 
-            return (
-                <div 
-                    ref={cursorRef}
-                    className="fixed top-0 left-0 w-4 h-4 bg-[#D8F334] rounded-full pointer-events-none z-[9999] shadow-[0_0_15px_#D8F334]"
-                    style={{ 
-                        transition: 'transform 0.1s ease-out',
-                        willChange: 'transform'
-                    }}
-                />
-            );
-        };
+/* ============================================================
+   DADOS
+   ============================================================ */
+const CASES = [
+  ['acampa','Acampa 2024','Identidade visual para evento jovem','https://www.behance.net/gallery/196926601/Acampa-2024-Incendeia-me-com-seu-fogo'],
+  ['mahrte','Mahrte Racing Team','Branding para equipe de corrida','https://www.behance.net/gallery/194190413/Mahrte-Racing-Team-Identidade-Visual'],
+  ['galante','Galante','Identidade visual sofisticada','https://www.behance.net/gallery/231429431/GALANTE-CERVEJARIA-Identidade-Visual'],
+  ['connect','Connect Energia Solar','Franquia de energia solar','https://www.behance.net/gallery/225361699/Connect-Energia-Solar-Identidade-Visual'],
+  ['mtz','MTZ Company','Marketing que vira o jogo','https://www.behance.net/gallery/241688325/MTZ-IDENTIDADE-VISUAL'],
+  ['baldan','Matheus Baldan Performance','Identidade visual para performance automotiva','https://www.behance.net/gallery/250784707/MATHEUS-BALDAN-PERFORMANCE-Identidade-visual']
+];
+// capas em WebP; as demais ficaram em JPG (o WebP só batia a qualidade sem perda, e ficava maior)
+const CASE_WEBP = new Set(['galante', 'connect', 'baldan', 'mahrte']);
 
-        const Button = ({ children, variant = 'primary', className = '', ...props }) => {
-          const baseStyle = "inline-flex items-center justify-center font-roc px-6 py-4 rounded-lg transition-all duration-300 text-sm font-semibold tracking-wide uppercase cursor-pointer";
-          const variants = {
-            primary: "bg-[#D8F334] text-[#141414] hover:bg-[#C7E92A] hover:shadow-[0_0_20px_rgba(216,243,52,0.3)]",
-            outline: "border border-[#D8F334] text-[#D8F334] hover:bg-[#D8F334] hover:text-[#141414]",
-            neon: "bg-transparent border border-[#D8F334] text-[#D8F334] shadow-[0_0_10px_rgba(216,243,52,0.15)] hover:bg-[#D8F334] hover:text-[#141414] hover:shadow-[0_0_25px_rgba(216,243,52,0.6)]",
-            black: "bg-[#141414] text-[#D8F334] border-2 border-[#141414] hover:bg-[#D8F334] hover:text-[#141414] hover:border-[#141414]"
-          };
+const DEPOS = [
+  ['Sérgio Galante', 'Fundador, Galante Cervejaria', '“O Alan não entregou apenas um logo, ele entregou uma estratégia. Nossa percepção de valor no mercado aumentou drasticamente após o rebranding.”'],
+  ['Josué Alves', 'Líder, Rede CEELS', '“Profissionalismo impecável. O processo foi claro, organizado e o resultado final superou todas as minhas expectativas. Recomendo de olhos fechados.”'],
+  ['Alexandre Castilho', 'CEO, Connect Energia Solar', '“Estávamos estagnados com uma marca antiga. O trabalho do Alan trouxe o frescor e a modernidade que precisávamos para atrair novos franqueados e clientes.”']
+];
 
-          return (
-            <button className={`${baseStyle} ${variants[variant]} ${className}`} {...props}>
-              {children}
-            </button>
-          );
-        };
+const FAQ = [
+  ['A marca fica sendo minha?','Fica sim. Na entrega, todos os direitos de uso passam para você, sem restrição. O registro no INPI não faz parte do meu serviço: é um trâmite jurídico, conduzido por um advogado ou agente da propriedade industrial, e você pode dar entrada com os arquivos que recebe de mim.'],
+  ['Quantas propostas de marca você apresenta?','Uma só, construída a partir do que combinamos no briefing. Ao longo do caminho você acompanha prévias dos outros elementos, e é o seu retorno em cada etapa que me leva até a proposta final. Ela tem direito a uma rodada de ajustes, dentro do que foi alinhado no briefing e do que já havia sido aprovado.'],
+  ['Você trabalha com contrato? E se eu for de outra cidade?','Todo projeto começa com contrato, emitido pelo meu CNPJ. A distância não muda nada: briefing, aprovações e entrega dos arquivos acontecem on-line, para qualquer cidade.']
+];
 
-        const Badge = ({ children }) => (
-          <span className="inline-block px-3 py-1 bg-[#D8F334] text-[#141414] text-[10px] uppercase tracking-wider font-bold rounded-full mb-3">
-            {children}
-          </span>
-        );
+const SETA = '<svg viewBox="0 0 22.38 24.67" fill="currentColor" aria-hidden="true"><path d="M22.38 12.34L10.05 24.67L7.9 22.52L16.58 13.83L0 13.83L0 10.79L16.53 10.79L7.89 2.15L10.04 0Z"/></svg>';
 
-        const SimpleCard = ({ children, className = "", borderColor = "border-[#313519]", bgHeader = "bg-[#1a1a1a]", href, ...props }) => {
-          const Component = href ? 'a' : 'div';
-          return (
-            <Component 
-              href={href}
-              target={href ? "_blank" : undefined}
-              rel={href ? "noopener noreferrer" : undefined}
-              className={`relative border ${borderColor} rounded-xl p-6 flex flex-col h-full transition-all duration-500 hover:shadow-2xl ${bgHeader} ${className} ${href ? 'cursor-pointer' : ''}`}
-              {...props}
-            >
-              {children}
-            </Component>
-          );
-        };
+document.getElementById('grade').innerHTML = CASES.map(([k, t, d, href]) => `
+  <a class="card" href="${href}" target="_blank" rel="noopener"
+     data-projeto="${(href.match(/gallery\/(\d+)/) || [])[1] || ''}" data-titulo="${esc(t)}" data-chave="${k}">
+    <svg class="card__contorno" aria-hidden="true"><path/></svg>
+    <div class="card__media">
+      <img src="assets/images/case-${k}.${CASE_WEBP.has(k) ? 'webp' : 'jpg'}" alt="${esc(t)}" loading="lazy">
+      <span class="card__badge">ID.Visual</span>
+    </div>
+    <div class="card__meta"><h3>${esc(t)}</h3><p>${esc(d)}</p></div>
+    <span class="card__seta">${SETA}</span>
+  </a>`).join('');
 
-        const FolderCard = ({ children, label = "INFO", className = "", borderColor = "border-[#333]", bgHeader = "bg-[#1a1a1a]", labelColor = "text-[#888]" }) => {
-          return (
-            <div className={`group relative mt-10 h-full flex flex-col ${className}`}>
-              <div className={`absolute -top-8 left-0 h-9 w-3/4 max-w-[240px] z-10 flex items-center px-6 
-                rounded-t-2xl border-t border-l border-r ${borderColor} ${bgHeader}`}>
-                <span className={`text-[10px] uppercase tracking-widest ${labelColor} font-roc truncate w-full group-hover:text-[#D8F334] transition-colors`}>
-                  {label}
-                </span>
-                
-                <div className={`absolute bottom-[-1px] -right-4 w-4 h-4 overflow-hidden pointer-events-none`}>
-                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute bottom-0 right-0">
-                        <path d="M0 16H16C16 16 0 16 0 0V16Z" fill="#141414"/> 
-                        <path d="M0 16C8.83656 16 16 8.83656 16 0" stroke={borderColor === 'border-[#333]' ? '#333' : borderColor === 'border-[#222]' ? '#222' : borderColor === 'border-[#D8F334]' ? '#D8F334' : borderColor === 'border-[#141414]/10' ? '#333' : '#313519'} strokeWidth="1"/>
-                     </svg>
-                </div>
-              </div>
+/* contorno do card: cantos de 11.93, recorte de 14.9 em volta da seta.
+   O recorte acompanha o tamanho da seta (no .ai: seta + 18.46 x seta + 15.9) */
+(function(){
+  const R = 11.93, r = 14.9, f = n => Math.round(n * 100) / 100;
+  const desenha = card => {
+    const w = card.offsetWidth, h = card.offsetHeight, s = card.querySelector('.card__seta').offsetWidth;
+    if (!w || !h) return;
+    const x0 = .5, y0 = .5, x1 = w - .5, y1 = h - .5, nx = x1 - s - 18.46, ny = y1 - s - 15.9;
+    const svg = card.querySelector('.card__contorno');
+    svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+    svg.firstElementChild.setAttribute('d',
+      'M' + f(x0 + R) + ',' + y0 + 'H' + f(x1 - R) + 'A' + R + ',' + R + ' 0 0 1 ' + x1 + ',' + f(y0 + R) +
+      'V' + f(ny - r) + 'A' + r + ',' + r + ' 0 0 1 ' + f(x1 - r) + ',' + f(ny) +
+      'H' + f(nx + r) + 'A' + r + ',' + r + ' 0 0 0 ' + f(nx) + ',' + f(ny + r) +
+      'V' + f(y1 - r) + 'A' + r + ',' + r + ' 0 0 1 ' + f(nx - r) + ',' + y1 +
+      'H' + f(x0 + R) + 'A' + R + ',' + R + ' 0 0 1 ' + x0 + ',' + f(y1 - R) +
+      'V' + f(y0 + R) + 'A' + R + ',' + R + ' 0 0 1 ' + f(x0 + R) + ',' + y0 + 'Z');
+  };
+  const cards = [...document.querySelectorAll('.card')];
+  cards.forEach(desenha);
+  if ('ResizeObserver' in window) {
+    const ro = new ResizeObserver(es => es.forEach(e => desenha(e.target)));
+    cards.forEach(c => ro.observe(c));
+  }
+})();
 
-              <div className={`absolute -top-[1px] left-[1px] h-[2px] w-[calc(75%-2px)] max-w-[238px] z-20 ${bgHeader}`}></div>
+document.getElementById('depos').innerHTML = DEPOS.map(([nome, cargo, txt], i) => `
+  <div class="depo${i === 0 ? ' ativo' : ''}" aria-hidden="${i === 0 ? 'false' : 'true'}">
+    <blockquote>${esc(txt)}</blockquote>
+    <h4>${esc(nome)}</h4><span>${esc(cargo)}</span>
+  </div>`).join('');
 
-              <div className={`relative border ${borderColor} rounded-b-2xl rounded-tr-2xl rounded-tl-none p-8 flex-grow flex flex-col ${bgHeader} transition-colors duration-300`}>
-                {children}
-              </div>
-            </div>
-          );
-        };
+document.getElementById('faqLista').innerHTML = FAQ.map(([q, a]) => `
+  <div class="acc aberto">
+    <button class="acc__q" aria-expanded="true">${esc(q)}<span class="acc__sinal">+</span></button>
+    <div class="acc__a"><p>${esc(a)}</p></div>
+  </div>`).join('');
+document.querySelectorAll('.acc__q').forEach(b => b.addEventListener('click', () => {
+  const acc = b.closest('.acc'), abrir = !acc.classList.contains('aberto');
+  acc.classList.toggle('aberto', abrir);
+  b.setAttribute('aria-expanded', abrir);
+}));
 
-        const AccordionItem = ({ question, answer }) => {
-          const [isOpen, setIsOpen] = useState(false);
-          return (
-            <div className="border-b border-[#333]">
-              <button 
-                className="w-full py-6 flex justify-between items-center text-left focus:outline-none group"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                <span className={`font-roc text-lg md:text-xl ${isOpen ? 'text-[#D8F334]' : 'text-[#D0D0D0]'} group-hover:text-[#D8F334] transition-colors`}>
-                  {question}
-                </span>
-                <div className={`p-2 rounded-full border border-[#333] group-hover:border-[#D8F334] transition-all ${isOpen ? 'bg-[#D8F334] text-black' : 'text-[#D8F334]'}`}>
-                  {isOpen ? <Minus size={16} /> : <Plus size={16} />}
-                </div>
-              </button>
-              <div 
-                className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-40 opacity-100 pb-6' : 'max-h-0 opacity-0'}`}
-              >
-                <p className="font-roc text-gray-400 text-sm leading-relaxed max-w-2xl">
-                  {answer}
-                </p>
-              </div>
-            </div>
-          );
-        };
+(function(){
+  const box = document.getElementById('faqMarca');
+  // [linha, coluna, 1 = aceso | cores do degradê apagado, amostradas na referência]
+  const CELULAS = [[1,1,['#353a1a','#161714']],[1,2,1],[1,3,1],[1,4,1],
+    [2,1,['#57601f','#383d1a']],[2,2,['#373d1a','#191a15']],[2,3,1],[2,4,1],
+    [3,3,['#393f1a','#1b1c15']],[3,4,1],[4,3,['#5b6520','#3d431b']],[4,4,['#3c411a','#1d1e15']]];
+  CELULAS.forEach(([linha, col, estado], i) => {
+    const d = document.createElement('i');
+    if (estado === 1) d.className = 'on';
+    else { d.style.setProperty('--a', estado[0]); d.style.setProperty('--b', estado[1]); }
+    d.style.gridArea = linha + '/' + col;
+    d.style.transitionDelay = (i * 55) + 'ms';
+    box.appendChild(d);
+  });
+})();
 
-        const AnimatedDotGrid = () => {
-          const [isVisible, setIsVisible] = useState(false);
-          const containerRef = useRef(null);
-          const dotPattern = [0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0];
+/* ============================================================
+   HEADER: aba de pasta que corre até o item da seção atual e
+   cor que acompanha o fundo embaixo do header
+   ============================================================ */
+(function(){
+  const nav = document.getElementById('nav');
+  const fundo = document.getElementById('navAbaFundo'), linha = document.getElementById('navAbaLinha');
+  const links = [...document.querySelectorAll('#navLinks a')], cta = nav.querySelector('.nav__cta');
+  // camadas do texto no negativo (ver .nav-tinta no CSS); só com elas prontas os links ficam transparentes
+  const tintas = ['nav-tinta', 'nav-tinta nav-tinta--cinza'].map(classe => {
+    const camada = document.createElement('div');
+    camada.className = classe;
+    camada.setAttribute('aria-hidden', 'true');
+    camada.innerHTML = '<div class="nav__in"><div class="nav__links">' + links.map(l => '<span>' + l.innerHTML + '</span>').join('') + '</div></div>';
+    document.body.insertBefore(camada, nav.nextSibling);
+    return [...camada.querySelectorAll('span')];
+  });
+  nav.classList.add('nav--tinta');
+  const Y0 = 10.94, Y1 = 46.58, CW = 64.74;
+  const r = n => Math.round(n * 100) / 100;
+  // curva do .ai (degrau de 64.74 x 35.64), do topo para o fundo. s = +1 à direita do
+  // ponto x, -1 à esquerda; w = largura da curva
+  const desce = (x, s, w) => {
+    const k = s * w / CW;
+    return `C${r(x + 51.71 * k)},${Y0} ${r(x + 39.77 * k)},17.51 ${r(x + 32.79 * k)},28.53C${r(x + 25.64 * k)},39.83 ${r(x + 13.38 * k)},${Y1} ${x},${Y1}`;
+  };
+  const sobe = (x, s, w) => {
+    const k = s * w / CW;
+    return `C${r(x + 13.38 * k)},${Y1} ${r(x + 25.64 * k)},39.83 ${r(x + 32.79 * k)},28.53C${r(x + 39.77 * k)},17.51 ${r(x + 51.71 * k)},${Y0} ${r(x + w * s)},${Y0}`;
+  };
+  // na altura do topo das letras a curva já avançou 57% da própria largura: com os itens
+  // mais próximos que no .ai ela estreita, e sobram ~10px até a palavra vizinha
+  const larguraCurva = () => {
+    const gap = parseFloat(getComputedStyle(links[0].parentElement).columnGap);
+    return isNaN(gap) ? CW : Math.max(24, Math.min(CW, (gap - 9) / .57));
+  };
 
-          useEffect(() => {
-            const observer = new IntersectionObserver(
-              ([entry]) => {
-                if (entry.isIntersecting) {
-                  setIsVisible(true);
-                  if (containerRef.current) observer.unobserve(containerRef.current);
-                }
-              }, { threshold: 0.3 }
-            );
-            if (containerRef.current) observer.observe(containerRef.current);
-            return () => { if (containerRef.current) observer.unobserve(containerRef.current); };
-          }, []);
+  function desenha(xL, xR, wE, wD){
+    const W = document.documentElement.clientWidth + 2;
+    xL = r(xL); xR = r(xR);
+    if (xL <= 0) {
+      fundo.setAttribute('d', `M-1,-1L${W},-1L${W},${Y0}L${r(xR + wD)},${Y0}${desce(xR, 1, wD)}L-1,${Y1}Z`);
+      linha.setAttribute('d', `M-1,${Y1}L${xR},${Y1}${sobe(xR, 1, wD)}L${W},${Y0}`);
+    } else {
+      fundo.setAttribute('d', `M-1,-1L${W},-1L${W},${Y0}L${r(xR + wD)},${Y0}${desce(xR, 1, wD)}L${xL},${Y1}${sobe(xL, -1, wE)}L-1,${Y0}Z`);
+      linha.setAttribute('d', `M-1,${Y0}L${r(xL - wE)},${Y0}${desce(xL, -1, wE)}L${xR},${Y1}${sobe(xR, 1, wD)}L${W},${Y0}`);
+    }
+  }
 
-          return (
-            <div ref={containerRef} className="grid grid-cols-4 gap-4 md:gap-6 place-items-center h-full">
-              {dotPattern.map((val, i) => (
-                <div key={i} style={{ transitionDelay: `${i * 100}ms` }} className={`w-12 h-12 md:w-16 md:h-16 rounded-full transition-all duration-700 ease-out ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'} ${val ? 'bg-[#D8F334] shadow-[0_0_20px_rgba(216,243,52,0.5)]' : 'bg-[#313519]/40'}`} />
-              ))}
-            </div>
-          );
-        };
+  // seção -> item da aba e tema do fundo (Sobre não tem item: fica o anterior)
+  const SECOES = [
+    ['capa', 'capa', 'claro'], ['cases', 'cases', 'escuro'], ['sobre', 'cases', 'claro'],
+    ['processoTrilho', 'processo', 'escuro'], ['dev', 'dev', 'claro'], ['motion', 'motion', 'claro'],
+    ['confiamTrilho', 'depoimentos', 'claro'], ['faq', 'faq', 'escuro'], ['contato', 'contato', 'claro']
+  ].map(([id, item, tema]) => ({ el: document.getElementById(id), item, tema }));
 
-        const AnimatedSection = ({ children, className = "" }) => {
-          const [isVisible, setIsVisible] = useState(false);
-          const domRef = useRef();
+  let alvoL = 0, alvoR = 182.41, curL = 0, curR = 182.41, alvoE = CW, alvoD = CW, curE = CW, curD = CW;
+  let rodando = false, pendente = false, itemMouse = null;
+  function alvoDo(item){
+    const i = links.findIndex(l => l.dataset.sec === item);
+    if (i < 0) return;
+    const b = links[i].getBoundingClientRect(), w = larguraCurva();
+    // no .ai a aba termina colada no fim do texto (HOME: 182.41) e a curva sobe fora dele
+    alvoL = i === 0 ? 0 : b.left + 1;
+    alvoR = b.right - 1;
+    alvoE = w;
+    alvoD = i === links.length - 1 ? CW : w;      // depois do último item não há vizinho
+  }
+  function atualiza(){
+    pendente = false;
+    const vh = innerHeight;
+    let item = 'capa', tema = 'claro';
+    for (const s of SECOES) {
+      if (!s.el) continue;
+      const b = s.el.getBoundingClientRect();
+      if (b.top <= vh * .42) item = s.item;
+      if (b.top <= 28 && b.bottom > 28) tema = s.tema;
+    }
+    nav.dataset.tema = tema;
+    cta.classList.toggle('ativo', item === 'contato');
+    if (item === 'contato') item = 'faq';
+    links.forEach(l => l.classList.toggle('ativo', l.dataset.sec === item));
+    alvoDo(itemMouse || item);
+    if (!rodando) { rodando = true; requestAnimationFrame(passo); }
+  }
+  function passo(){
+    const k = matchMedia('(prefers-reduced-motion: reduce)').matches ? 1 : .16;
+    curL += (alvoL - curL) * k; curR += (alvoR - curR) * k;
+    curE += (alvoE - curE) * k; curD += (alvoD - curD) * k;
+    if (Math.abs(alvoL - curL) < .2 && Math.abs(alvoR - curR) < .2 && Math.abs(alvoE - curE) < .2 && Math.abs(alvoD - curD) < .2) {
+      curL = alvoL; curR = alvoR; curE = alvoE; curD = alvoD; rodando = false;
+    }
+    desenha(curL, curR, curE, curD);
+    if (rodando) requestAnimationFrame(passo);
+  }
+  const agenda = () => { if (!pendente) { pendente = true; requestAnimationFrame(atualiza); } };
+  // hover: a aba vai até o item sob o mouse e volta ao item da seção quando o mouse sai do menu
+  links.forEach(l => l.addEventListener('pointerenter', () => { itemMouse = l.dataset.sec; agenda(); }));
+  links[0].parentElement.addEventListener('pointerleave', () => { itemMouse = null; agenda(); });
+  addEventListener('scroll', agenda, { passive: true });
+  addEventListener('resize', agenda);
+  document.fonts && document.fonts.ready.then(agenda);
+  agenda();
+})();
 
-          useEffect(() => {
-            const observer = new IntersectionObserver(entries => {
-              entries.forEach(entry => setIsVisible(entry.isIntersecting));
-            });
-            const currentElement = domRef.current;
-            if (currentElement) observer.observe(currentElement);
-            return () => { if (currentElement) observer.unobserve(currentElement); };
-          }, []);
+/* ============================================================
+   PRODUCT MOTION: carrossel de vídeos
+   O primeiro card fica grande; os seguintes, todos do mesmo tamanho
+   (80% da altura). Cada card mantém o formato do vídeo: vertical 9:16
+   ou horizontal 16:9. Passa sozinho (a barra ativa enche no tempo do
+   vídeo) ou pela seta ao lado das barras. A fila tem duas voltas de
+   cards para sempre haver um esperando à direita.
+   Leveza: só o card grande toca, os outros mostram a capa; nada baixa
+   antes de a seção chegar perto da tela, e carregam só o ativo e o próximo.
+   ============================================================ */
+(function(){
+  const trilho = document.getElementById('motionTrilho'), barras = document.getElementById('motionBarras');
+  const seta = document.getElementById('motionProximo');
+  if (!trilho) return;
+  const PASTA = 'assets/video/motion/';
+  // arquivo (.mp4 + capa .webp), formato ('v' 9:16 | 'h' 16:9), segundos em que o card fica ativo
+  // e cliente (crédito "feito para" no rodapé do card)
+  const VIDEOS = [
+    { nome: 'motion-granturismo', titulo: 'Legend: Gran Turismo', formato: 'v', dur: 8, cliente: 'mtz' },
+    { nome: 'motion-shewolf', titulo: 'SheWolf Gin', formato: 'v', dur: 30, cliente: 'mtz' },
+    { nome: 'motion-sense-milho', titulo: 'Sense Milho', formato: 'v', dur: 12 },
+    { nome: 'motion-corax-prime', titulo: 'Corax Prime', formato: 'h', dur: 12 },
+  ];
+  const CREDITOS = {
+    mtz: '<span>feito para</span><svg class="motion__mtz" viewBox="0 0 1191.6 526.2" fill="currentColor" role="img" aria-label="MTZ Company"><path d="M290.8,58V.1h-101.5C84.7.1,0,84.9,0,189.4v207.9h115.9v-207.9c0-40.6,32.9-73.5,73.5-73.5h43.6v281.3h115.8V115.9h116.2v281.3h115.8v-107.6h-57.9l57.9-57.9V0h-232l-57.9,57.9h0l-.1.1Z"/><path d="M1184.6,339.1v-58.5h-132.3L1191.7.2h-588v113.6h84.7v283.1h115.7V115.9h200.2l-139.8,281h320.1v-9.5c.2-.8.3-1.6.3-2.5l-.3-45.9h0v.1Z"/><path d="M740.4,452.2v10.2h-26.1c-9.2,0-13.2,4.8-13.2,16.2s4,16.1,13.2,16.1h26.1v10.3h-27.1c-14.1,0-22.8-8.6-22.8-26.3s8.8-26.3,22.8-26.3h27.1v-.2Z"/><path d="M784.4,452.2c14,0,22.8,8.6,22.8,26.3s-8.9,26.3-22.8,26.3h-11.1c-14.1,0-22.8-8.6-22.8-26.3s8.8-26.3,22.8-26.3h11.1ZM774.3,462.4c-9.2,0-13.2,4.8-13.2,16.2s4,16.1,13.2,16.1h9.1c9.1,0,13.2-4.7,13.2-16.1s-4.1-16.2-13.2-16.2h-9.1Z"/><path d="M881.5,452.2c17.9,0,26.6,8.5,26.6,23v29.6h-10.7v-29.6c0-8.3-4.8-12.9-15.9-12.9h-12.4v42.5h-10.7v-42.5h-26.7c-.9,0-1.3.5-1.3,1.5v41h-10.6v-44.5c0-6.2,2.1-8.2,7.4-8.2h54.2l.1.1Z"/><path d="M956.6,452.2c14,0,22.8,8.6,22.8,26.3s-8.8,26.3-22.8,26.3h-23.3v21.2h-10.6v-51.3c0-15.2,6.7-22.5,19.4-22.5h14.6-.1ZM933.3,494.6h22.2c9.2,0,13.2-4.7,13.2-16.1s-4-16.2-13.2-16.2h-10.4c-8.6,0-11.9,3.8-11.9,12.9v19.4h.1Z"/><path d="M1025.8,452.2c13.2,0,18.4,7.4,18.4,17.4v24.8c0,7.6-2,10.6-10.9,10.6h-24.7c-12.5,0-17.7-6.1-17.7-16.1s4.8-15.2,17.8-15.2h25.1v-4c0-4.1-2.3-7.3-8.1-7.3h-31.5v-10.2h31.6,0ZM1033.8,492v-9.9h-24.8c-5.6,0-7.6,2.3-7.6,6.2s2.1,6.4,7.4,6.4h22.2c2.1,0,2.9-.8,2.9-2.7h-.1Z"/><path d="M1088.3,452.2c17.9,0,26.5,8.5,26.5,23v29.6h-10.7v-29.6c0-8.3-4.8-12.9-15.9-12.9h-17.3c-.9,0-1.3.5-1.3,1.5v41h-10.6v-44.5c0-6.2,2.1-8.2,7.4-8.2h21.8l.1.1Z"/><path d="M1182.7,452.2l-31.7,73.8h-11.4l9.9-23c-6,0-8.1-1.9-9.9-6.5l-17.7-44.3h11.2l15.9,39.2c.7,1.9,1.2,2.2,3.2,2.2h1.4l17.9-41.4h11.3-.1Z"/></svg>',
+  };
+  const N = VIDEOS.length, T = N * 2;
+  const ALTURA = 655.3, GAP = 24.8, MENOR = 0.8;
+  const largura = f => f === 'h' ? ALTURA * 16 / 9 : ALTURA * 9 / 16;
+  const movimento = document.documentElement.classList.contains('anim');
+  const cards = [];
+  for (let i = 0; i < T; i++) {
+    const v = VIDEOS[i % N], el = document.createElement('div');
+    el.className = 'motion__card' + (v.formato === 'h' ? ' motion__card--h' : '');
+    const video = document.createElement('video');
+    video.muted = true; video.loop = true; video.playsInline = true;
+    video.setAttribute('muted', ''); video.setAttribute('playsinline', '');
+    video.preload = 'none';
+    video.poster = PASTA + v.nome + '.webp';
+    video.disablePictureInPicture = true;
+    video.setAttribute('aria-label', v.titulo);
+    video.addEventListener('waiting', () => { if (cards[ativo] && cards[ativo].video === video) barras.classList.add('carregando'); });
+    video.addEventListener('playing', () => barras.classList.remove('carregando'));
+    el.appendChild(video);
+    if (v.cliente && CREDITOS[v.cliente]) {
+      const credito = document.createElement('div');
+      credito.className = 'motion__credito';
+      credito.innerHTML = CREDITOS[v.cliente];
+      el.appendChild(credito);
+    }
+    trilho.appendChild(el);
+    cards.push({ el, video, v, pos: -1 });
+  }
+  let ativo = 0, k = 1, perto = false, visivel = false;
+  const botoes = VIDEOS.map((v, i) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.setAttribute('role', 'tab'); b.setAttribute('aria-label', v.titulo);
+    b.style.setProperty('--dur', v.dur + 's');
+    b.innerHTML = '<i></i>';
+    b.addEventListener('click', () => {
+      const passos = (i - ativo % N + N) % N;
+      if (passos) { ativo = (ativo + passos) % T; aplica(); }
+    });
+    barras.appendChild(b);
+    return b;
+  });
+  function midia(){
+    for (const c of cards) {
+      if (perto && c.pos <= 1 && !c.video.getAttribute('src')) { c.video.preload = 'auto'; c.video.src = PASTA + c.v.nome + '.mp4'; }
+      if (c.pos === 0 && visivel && movimento) { if (c.video.paused) c.video.play().catch(() => {}); }
+      else if (!c.video.paused) c.video.pause();
+    }
+    if (!visivel) barras.classList.remove('carregando');
+  }
+  function mede(){
+    const w = trilho.clientWidth;
+    k = Math.max(w / 1152, Math.min(1, w * .6 / 368.6));
+    trilho.style.setProperty('--k', k.toFixed(4));
+    aplica(true);
+  }
+  function aplica(semTransicao){
+    let x = 0;
+    barras.classList.remove('carregando');
+    for (let p = 0; p < T; p++) {
+      const c = cards[(ativo + p) % T], f = c.v.formato;
+      let tx, s = p === 0 ? 1 : MENOR, o = 1;
+      if (p === T - 1) { tx = -(largura(f) + GAP); s = 1; o = 0; }      // acabou de sair pela esquerda
+      else { tx = x; x += largura(f) * s + GAP; }
+      // quem sai pela esquerda volta ao fim da fila direto, sem atravessar a tela
+      const pula = semTransicao === true || c.pos === T - 1;
+      if (pula) c.el.style.transition = 'none';
+      c.el.style.transform = 'translateX(' + (tx * k).toFixed(2) + 'px) scale(' + s + ')';
+      c.el.style.opacity = o;
+      c.el.style.zIndex = String(T - p);
+      if (pula) { c.el.getBoundingClientRect(); c.el.style.transition = ''; }
+      // o vídeo recomeça quando o card vira o grande, para acompanhar a barra
+      if (p === 0 && c.pos !== 0 && c.video.getAttribute('src')) { try { c.video.currentTime = 0; } catch (e) {} }
+      c.pos = p;
+    }
+    botoes.forEach((b, i) => b.setAttribute('aria-selected', i === ativo % N ? 'true' : 'false'));
+    midia();
+  }
+  const avanca = () => { ativo = (ativo + 1) % T; aplica(); };
+  barras.addEventListener('animationend', e => { if (e.animationName === 'enche') avanca(); });
+  if (seta) seta.addEventListener('click', avanca);
+  const palco = trilho.parentElement;
+  palco.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') barras.classList.add('pausado'); });
+  palco.addEventListener('pointerleave', () => barras.classList.remove('pausado'));
+  new IntersectionObserver(es => { perto = es[0].isIntersecting; midia(); }, { rootMargin: '700px 0px' }).observe(trilho);
+  new IntersectionObserver(es => { visivel = es[0].isIntersecting; barras.classList.toggle('fora', !visivel); midia(); }).observe(trilho);
+  addEventListener('resize', mede);
+  mede();
+})();
 
-          return (
-            <div ref={domRef} className={`transition-all duration-700 ease-out transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} ${className}`}>{children}</div>
-          );
-        };
+/* ============================================================
+   DESIGN & DEV: vídeos dos cards
+   Baixam só quando a seção chega perto da tela e tocam só enquanto visíveis.
+   ============================================================ */
+(function(){
+  const movimento = document.documentElement.classList.contains('anim');
+  const visiveis = new Set();
+  // baixa um vídeo de cada vez, na ordem em que aparecem, para a rolagem não travar
+  const fila = [];
+  let baixando = false;
+  function proximo(){
+    if (baixando || !fila.length) return;
+    baixando = true;
+    const video = fila.shift();
+    const libera = () => { baixando = false; proximo(); };
+    video.addEventListener('canplaythrough', libera, { once: true });
+    video.addEventListener('error', libera, { once: true });
+    setTimeout(libera, 8000);            // se demorar demais, libera o próximo assim mesmo
+    video.preload = 'auto';
+    video.src = video.dataset.src;
+  }
+  const toca = video => {
+    if (!video.getAttribute('src')) return;
+    if (movimento && visiveis.has(video)) video.play().catch(() => {});
+    else video.pause();
+  };
+  document.querySelectorAll('video.dev__video').forEach(video => {
+    video.addEventListener('loadeddata', () => toca(video));
+    new IntersectionObserver(es => {
+      if (es[0].isIntersecting && !video.getAttribute('src') && fila.indexOf(video) < 0) { fila.push(video); proximo(); }
+    }, { rootMargin: '600px 0px' }).observe(video);
+    new IntersectionObserver(es => {
+      if (es[0].isIntersecting) visiveis.add(video); else visiveis.delete(video);
+      toca(video);
+    }).observe(video);
+  });
+})();
 
-        const MixedType = ({ text }) => {
-          const [isVisible, setIsVisible] = useState(false);
-          const elementRef = useRef(null);
+/* ============================================================
+   PROJETOS DO BEHANCE DENTRO DO SITE
+   O card abre o projeto inteiro em tela cheia, montado aqui mesmo:
+   as peças (imagens, galerias, textos e vídeos) vêm da lista em
+   assets/dados/projetos.json, que é gerada a partir das páginas
+   públicas do Behance. As imagens continuam hospedadas no CDN
+   deles — o site não engorda — e cada uma só é baixada quando
+   chega perto da tela.
+   O projeto entra no endereço (#projeto-baldan), então o botão
+   voltar do navegador devolve a lista e o link pode ser mandado
+   para alguém. Ctrl/cmd+clique continua abrindo no Behance.
+   ============================================================ */
+(function(){
+  const grade = document.getElementById('grade');
+  if (!grade) return;
+  const ZAP = 'https://wa.me/5516991818725?text=' +
+    encodeURIComponent('Olá, Alan! Vim pelo seu site e quero um orçamento de identidade visual.');
+  const tela = document.createElement('div');
+  tela.className = 'proj';
+  tela.hidden = true;
+  tela.innerHTML =
+    '<div class="proj__barra">' +
+      '<button class="proj__voltar" type="button">' + SETA + '<span>Voltar para projetos</span></button>' +
+      '<h2 class="proj__titulo" id="projTitulo"></h2>' +
+      '<a class="proj__externo" target="_blank" rel="noopener">Abrir no Behance</a>' +
+    '</div>' +
+    '<div class="proj__rolo"><div class="proj__pecas"></div></div>';
+  tela.setAttribute('role', 'dialog');
+  tela.setAttribute('aria-modal', 'true');
+  tela.setAttribute('aria-labelledby', 'projTitulo');
+  document.body.appendChild(tela);
+  const titulo = tela.querySelector('.proj__titulo'), externo = tela.querySelector('.proj__externo');
+  const rolo = tela.querySelector('.proj__rolo'), pecas = tela.querySelector('.proj__pecas');
+  const voltar = tela.querySelector('.proj__voltar');
+  const cartoes = [...grade.querySelectorAll('a.card[data-chave]')];
+  const porChave = {};
+  cartoes.forEach(a => { porChave[a.dataset.chave] = a; });
+  const movimento = document.documentElement.classList.contains('anim');
+  let voltaPara = null, empurrado = false, dados = null, aberto = null;
+  const chaveDoEndereco = () => (location.hash.match(/^#projeto-([a-z0-9-]+)$/i) || [])[1];
 
-          useEffect(() => {
-            const observer = new IntersectionObserver(
-              ([entry]) => {
-                if (entry.isIntersecting) {
-                  setIsVisible(true);
-                  if (elementRef.current) observer.unobserve(elementRef.current);
-                }
-              }, { threshold: 0.1 }
-            );
-            if (elementRef.current) observer.observe(elementRef.current);
-            return () => { if (elementRef.current) observer.unobserve(elementRef.current); };
-          }, []);
+  // os vídeos do Behance só recebem o endereço quando chegam perto da tela
+  const olhoVideo = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    const q = e.target, f = document.createElement('iframe');
+    f.src = q.dataset.src;
+    f.title = q.dataset.titulo || 'Vídeo do projeto';
+    f.allowFullscreen = true;
+    f.setAttribute('allow', 'autoplay; fullscreen; encrypted-media');
+    f.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+    q.appendChild(f);
+    olhoVideo.unobserve(q);
+  }), { root: rolo, rootMargin: '600px 0px' });
 
-          return (
-            <span ref={elementRef} aria-label={text} className="inline-block">
-              {text.split('').map((char, i) => {
-                const seed = char.charCodeAt(0) + (i * 13); 
-                const isPixel = seed % 2 === 0; 
-                return (
-                  <span key={i} className={`inline-block ${isPixel ? 'font-pixelify' : 'font-roc'} hover:text-[#D8F334] transition-colors duration-300`}
-                    style={{
-                       opacity: 0,
-                       animationName: isVisible ? 'revealChar' : 'none',
-                       animationDuration: '0.6s',
-                       animationTimingFunction: 'cubic-bezier(0.2, 0.65, 0.3, 0.9)',
-                       animationFillMode: 'forwards',
-                       animationDelay: `${i * 0.04}s`
-                    }}
-                  >
-                    {char === ' ' ? '\u00A0' : char}
-                  </span>
-                );
-              })}
-            </span>
-          );
-        };
+  // as animações (antigos GIFs) só recebem o arquivo perto da tela e tocam à vista
+  const olhoBaixa = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting || e.target.getAttribute('src')) return;
+    e.target.preload = 'auto';
+    e.target.src = e.target.dataset.src;
+    olhoBaixa.unobserve(e.target);
+  }), { root: rolo, rootMargin: '700px 0px' });
+  const olhoToca = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting && movimento) e.target.play().catch(() => {});
+    else e.target.pause();
+  }), { root: rolo });
 
-        // --- MAIN APP ---
+  function peca(b, dentroDeGaleria){
+    if (b.t === 'anim') {
+      const v = document.createElement('video');
+      v.className = 'proj__img';
+      v.muted = true; v.loop = true; v.playsInline = true; v.preload = 'none';
+      v.setAttribute('muted', ''); v.setAttribute('playsinline', '');
+      v.disablePictureInPicture = true;
+      v.poster = b.capa;
+      v.dataset.src = b.u;
+      if (b.p) v.style.aspectRatio = b.p[0] + '/' + b.p[1];
+      if (dentroDeGaleria) v.style.height = '100%', v.style.objectFit = 'cover';
+      olhoBaixa.observe(v);
+      olhoToca.observe(v);
+      return v;
+    }
+    const img = document.createElement('img');
+    img.className = 'proj__img';
+    img.src = b.u;
+    img.alt = b.alt && !/^Image may contain/i.test(b.alt) ? b.alt : '';
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    if (b.p) { img.width = b.p[0]; img.height = b.p[1]; img.style.aspectRatio = b.p[0] + '/' + b.p[1]; }
+    return img;
+  }
+  function monta(chave){
+    const p = dados[chave];
+    pecas.textContent = '';
+    for (const b of p.blocos) {
+      if (b.t === 'img' || b.t === 'anim') {
+        const caixa = document.createElement('div');
+        caixa.className = b.larga === false ? 'proj__meio' : '';
+        caixa.appendChild(peca(b));
+        pecas.appendChild(caixa);
+      } else if (b.t === 'galeria') {
+        const g = document.createElement('div');
+        g.className = 'proj__galeria proj__meio';
+        b.itens.forEach(i => g.appendChild(peca(i, true)));
+        pecas.appendChild(g);
+      } else if (b.t === 'txt') {
+        const bloco = document.createElement('div');
+        bloco.className = 'proj__texto';
+        b.ps.forEach(linha => {
+          const el = document.createElement('p');
+          // "PT-BR:", "EN-US:" e afins viram etiqueta, não parágrafo
+          if (linha.length <= 12 && /:$/.test(linha)) el.className = 'proj__rotulo';
+          el.textContent = linha;
+          bloco.appendChild(el);
+        });
+        pecas.appendChild(bloco);
+      } else if (b.t === 'video') {
+        const caixa = document.createElement('div');
+        caixa.className = 'proj__quadroVideo proj__meio';
+        caixa.dataset.src = b.u;
+        caixa.dataset.titulo = 'Vídeo do projeto ' + p.nome;
+        pecas.appendChild(caixa);
+        olhoVideo.observe(caixa);
+      }
+    }
+    pecas.appendChild(fim(chave));
+  }
+  function fim(chave){
+    const bloco = document.createElement('div');
+    bloco.className = 'proj__fim';
+    const i = cartoes.findIndex(a => a.dataset.chave === chave);
+    const seguinte = cartoes[(i + 1) % cartoes.length];
+    const texto = document.createElement('p');
+    texto.textContent = 'Gostou do que viu? Sua marca pode ser a próxima.';
+    const cta = document.createElement('a');
+    cta.className = 'btn btn--pill';
+    cta.href = ZAP;
+    cta.target = '_blank';
+    cta.rel = 'noopener';
+    cta.textContent = 'Solicitar orçamento';
+    bloco.append(texto, cta);
+    if (seguinte && seguinte !== porChave[chave]) {
+      const prox = document.createElement('button');
+      prox.className = 'proj__proximo';
+      prox.type = 'button';
+      prox.innerHTML = '<span>Próximo projeto: ' + seguinte.dataset.titulo + '</span>' + SETA;
+      prox.addEventListener('click', () => { voltaPara = seguinte; abre(seguinte, true); });
+      bloco.appendChild(prox);
+    }
+    return bloco;
+  }
 
-        function App() {
-          const [scrolled, setScrolled] = useState(false);
-          const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  async function abre(a, empurra){
+    const chave = a.dataset.chave;
+    titulo.textContent = a.dataset.titulo;
+    externo.href = a.href;
+    tela.hidden = false;
+    tela.getBoundingClientRect();
+    tela.classList.add('aberto');
+    document.documentElement.classList.add('proj-aberto');
+    document.body.style.overflow = 'hidden';
+    voltar.focus({ preventScroll: true });
+    if (empurra) { history.pushState({ projeto: chave }, '', '#projeto-' + chave); empurrado = true; }
+    aberto = chave;
+    if (!dados) {
+      const fonte = document.getElementById('dadosProjetos');
+      try { dados = JSON.parse(fonte.textContent); }
+      catch (e) { dados = {}; }
+    }
+    if (aberto !== chave) return;                       // trocou de projeto enquanto carregava
+    rolo.scrollTop = 0;
+    if (dados[chave]) monta(chave);
+    else {                                              // sem a lista, oferece o Behance
+      pecas.innerHTML = '<div class="proj__texto"><p>Não consegui montar este projeto agora.</p></div>';
+      pecas.appendChild(fim(chave));
+    }
+  }
+  function fecha(){
+    if (!tela.classList.contains('aberto')) return;
+    tela.classList.remove('aberto');
+    document.documentElement.classList.remove('proj-aberto');
+    document.body.style.overflow = '';
+    aberto = null;
+    setTimeout(() => {
+      if (tela.classList.contains('aberto')) return;
+      tela.hidden = true;
+      pecas.querySelectorAll('video').forEach(v => { v.pause(); v.removeAttribute('src'); v.load(); });
+      pecas.textContent = '';                           // solta as imagens da memória
+    }, 400);
+    if (voltaPara) { voltaPara.focus({ preventScroll: true }); voltaPara = null; }
+  }
+  // sair volta pelo histórico, para o botão voltar do navegador fazer a mesma coisa
+  function sai(){
+    if (empurrado) { empurrado = false; history.back(); return; }
+    history.replaceState(null, '', location.pathname + location.search);
+    const tinhaCartao = !!voltaPara;
+    fecha();
+    if (!tinhaCartao) {
+      const secao = document.getElementById('cases');
+      if (secao) scrollTo({ top: secao.offsetTop, behavior: 'instant' });
+    }
+  }
 
-          useEffect(() => {
-            const handleScroll = () => setScrolled(window.scrollY > 50);
-            window.addEventListener('scroll', handleScroll);
-            return () => window.removeEventListener('scroll', handleScroll);
-          }, []);
+  grade.addEventListener('click', e => {
+    const a = e.target.closest('a.card');
+    if (!a || !a.dataset.chave) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;  // deixa abrir em outra aba
+    e.preventDefault();
+    voltaPara = a;
+    abre(a, true);
+  });
+  voltar.addEventListener('click', sai);
+  addEventListener('keydown', e => { if (e.key === 'Escape' && tela.classList.contains('aberto')) sai(); });
+  addEventListener('popstate', () => {
+    const chave = chaveDoEndereco();
+    if (chave && porChave[chave]) { empurrado = false; abre(porChave[chave], false); }
+    else fecha();
+  });
+  // o foco não escapa da tela do projeto
+  tela.addEventListener('keydown', e => {
+    if (e.key !== 'Tab') return;
+    const focaveis = [...tela.querySelectorAll('button,a[href],iframe')];
+    const primeiro = focaveis[0], ultimo = focaveis[focaveis.length - 1];
+    if (e.shiftKey && document.activeElement === primeiro) { e.preventDefault(); ultimo.focus(); }
+    else if (!e.shiftKey && document.activeElement === ultimo) { e.preventDefault(); primeiro.focus(); }
+  });
+  // link direto para um projeto (#projeto-baldan) abre já na tela do projeto
+  const chaveInicial = chaveDoEndereco();
+  if (chaveInicial && porChave[chaveInicial]) abre(porChave[chaveInicial], false);
+})();
 
-          const getStepStyle = (index) => {
-            switch(index) {
-              case 0: 
-                return {
-                  bgHeader: "bg-[#D0D0D0]",
-                  borderColor: "border-[#D0D0D0]",
-                  textColor: "text-[#141414]",
-                  descColor: "text-[#333]",
-                  iconColor: "text-[#141414]",
-                  labelColor: "text-[#141414]/60"
-                };
-              case 1: 
-                return {
-                  bgHeader: "bg-[#1a1a1a]",
-                  borderColor: "border-[#333]",
-                  textColor: "text-white",
-                  descColor: "text-gray-400",
-                  iconColor: "text-[#D0D0D0]",
-                  labelColor: "text-[#888]"
-                };
-              case 2: 
-                return {
-                  bgHeader: "bg-[#D8F334]",
-                  borderColor: "border-[#D8F334]",
-                  textColor: "text-[#141414]",
-                  descColor: "text-[#141414]/80",
-                  iconColor: "text-[#141414]",
-                  labelColor: "text-[#141414]/60"
-                };
-              default: return {};
-            }
-          }
+/* ============================================================
+   CHAMAS DE PIXEL
+   Cada faixa do .ai vira uma grade de 71 colunas (passo 20.28) e
+   tantas linhas quantas couberem em passos de 21.95 — a do rodapé
+   ganhou uma linha (241.4px). A máscara original é a base; as células
+   de borda acendem e apagam a 12 quadros por segundo.
+   ============================================================ */
+(function(){
+  const COLS = 71, CW = 1440 / COLS, PASSO = 21.95;
+  const parado = !document.documentElement.classList.contains('anim');
 
-          return (
-            <div className="min-h-screen bg-[#141414] text-[#D0D0D0] font-roc selection:bg-[#D8F334] selection:text-[#141414] overflow-x-hidden relative">
-              
-              {/* Cursor Personalizado */}
-              <CustomCursor />
+  function arestas(d){
+    const tk = d.match(/[MmHhVvLlZz]|-?\d*\.?\d+(?:e-?\d+)?/g) || [];
+    const out = []; let i = 0, c = '', x = 0, y = 0, sx = 0, sy = 0;
+    const n = () => parseFloat(tk[i++]);
+    const vert = (x0, y0, y1) => { if (Math.abs(y1 - y0) > .01) out.push([x0, y0, y1]); };
+    while (i < tk.length) {
+      const t = tk[i];
+      if (/^[A-Za-z]$/.test(t)) {
+        c = t; i++;
+        if (c === 'Z' || c === 'z') { if (Math.abs(x - sx) < .05) vert(x, y, sy); x = sx; y = sy; }
+        continue;
+      }
+      switch (c) {
+        case 'M': x = n(); y = n(); sx = x; sy = y; c = 'L'; break;
+        case 'm': x += n(); y += n(); sx = x; sy = y; c = 'l'; break;
+        case 'H': x = n(); break;
+        case 'h': x += n(); break;
+        case 'V': { const ny = n(); vert(x, y, ny); y = ny; break; }
+        case 'v': { const ny = y + n(); vert(x, y, ny); y = ny; break; }
+        case 'L': { const nx = n(), ny = n(); if (Math.abs(nx - x) < .05) vert(x, y, ny); x = nx; y = ny; break; }
+        case 'l': { const nx = x + n(), ny = y + n(); if (Math.abs(nx - x) < .05) vert(x, y, ny); x = nx; y = ny; break; }
+        default: i++;
+      }
+    }
+    return out;
+  }
+  function mascara(d, LINS, RH){
+    const ar = arestas(d), m = new Uint8Array(COLS * LINS);
+    for (let r = 0; r < LINS; r++) for (let c = 0; c < COLS; c++) {
+      const px = (c + .5) * CW, py = (r + .5) * RH; let w = 0;
+      for (const [ex, y0, y1] of ar) {
+        if (ex <= px) continue;
+        if (py >= Math.min(y0, y1) && py < Math.max(y0, y1)) w += y1 > y0 ? 1 : -1;
+      }
+      m[r * COLS + c] = w !== 0 ? 1 : 0;
+    }
+    return m;
+  }
+  const hash = (x, y) => {
+    let h = (Math.imul(x, 374761393) + Math.imul(y, 668265263)) | 0;
+    h = Math.imul(h ^ (h >>> 13), 1274126177);
+    return ((h ^ (h >>> 16)) >>> 0) / 4294967296;
+  };
+  const ruido = (x, y) => {
+    const xi = Math.floor(x), yi = Math.floor(y), u = x - xi, v = y - yi;
+    const su = u * u * (3 - 2 * u), sv = v * v * (3 - 2 * v);
+    const a = hash(xi, yi), b = hash(xi + 1, yi), c = hash(xi, yi + 1), d = hash(xi + 1, yi + 1);
+    return a + (b - a) * su + (c - a) * sv + (a - b - c + d) * su * sv;
+  };
 
-              <a 
-                href={WHATSAPP_URL} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="fixed bottom-8 right-8 z-50 bg-[#D8F334] text-[#141414] p-4 rounded-full shadow-[0_0_20px_rgba(216,243,52,0.5)] hover:scale-110 transition-transform duration-300 animate-bounce"
-                title="Fale comigo no WhatsApp"
-              >
-                <MessageCircle size={28} fill="#141414" className="text-[#141414]" />
-              </a>
-
-              <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#141414]/95 backdrop-blur-md py-4 border-b border-[#313519]' : 'bg-transparent py-6'}`}>
-                <div className="container mx-auto px-6 flex justify-between items-center">
-                  <div className="text-2xl font-roc font-bold text-white tracking-tighter">
-                    ALAN<span className="text-[#D8F334]">.</span>LIMA
-                  </div>
-                  
-                  {/* --- MENU DESKTOP ATUALIZADO --- */}
-                  <nav className="hidden md:flex gap-8 items-center">
-                    {NAV_ITEMS.map((item) => (
-                      <a key={item.id} href={`#${item.id}`} className="text-sm uppercase tracking-widest hover:text-[#D8F334] transition-colors">
-                        {item.name}
-                      </a>
-                    ))}
-                    <a href="#contact" className="px-4 py-2 border border-[#D0D0D0] rounded text-xs uppercase hover:bg-[#D8F334] hover:border-[#D8F334] hover:text-black transition-all">
-                      Contato
-                    </a>
-                  </nav>
-                  
-                  <button className="md:hidden text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-                    {mobileMenuOpen ? <X /> : <Menu />}
-                  </button>
-                </div>
-              </header>
-
-              {/* --- MENU MOBILE ATUALIZADO --- */}
-              {mobileMenuOpen && (
-                <div className="fixed inset-0 bg-[#141414] z-40 flex flex-col items-center justify-center gap-8 md:hidden">
-                  {NAV_ITEMS.map((item) => (
-                    <a key={item.id} href={`#${item.id}`} onClick={() => setMobileMenuOpen(false)} className="text-3xl font-pixelify hover:text-[#D8F334]">
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-              )}
-
-              <section className="relative min-h-screen flex flex-col justify-center pt-20 overflow-hidden bg-[#141414]">
-                <div className="absolute inset-0 w-full h-full">
-                  <img 
-                    src={PROFILE_IMAGE_URL} 
-                    alt="Alan Lima" 
-                    className="w-full h-full object-cover object-top opacity-50 md:opacity-100 transition-opacity duration-1000"
-                    onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2574&auto=format&fit=crop"; }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#141414] via-[#141414]/80 to-transparent opacity-100"></div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-[#141414]/50 opacity-100"></div>
-                </div>
-
-                <div className="container mx-auto px-6 relative z-10 text-center flex flex-col items-center justify-center">
-                  <AnimatedSection className="w-full">
-                    <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-[#D0D0D0] leading-[0.9] tracking-tighter mb-6">
-                      <MixedType text="DÊ FRESCOR" /> <br />
-                      <span className="text-white"><MixedType text="À SUA MARCA" /></span> <span className="text-[#D8F334]">.</span>
-                    </h1>
-                  </AnimatedSection>
-                </div>
-              </section>
-
-              <div id="cases" className="container mx-auto px-4 mt-32 mb-24">
-                <AnimatedSection>
-                  <div className="mb-16 text-center md:text-left">
-                     <h2 className="text-5xl md:text-8xl font-black text-[#D0D0D0] tracking-tighter leading-none">
-                       <MixedType text="CASES" />
-                     </h2>
-                     <div className="h-1 w-24 bg-[#D8F334] mt-4 md:ml-2"></div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {PROJECTS.map((project) => (
-                      <SimpleCard 
-                        key={project.id} 
-                        href={project.link}
-                        borderColor="border-[#313519]"
-                        className={`p-0 overflow-hidden group hover:border-[#D8F334] aspect-video`}
-                      >
-                        <img 
-                          src={project.image} 
-                          alt={project.title} 
-                          className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-                          onError={(e) => { 
-                              if(project.fallback) e.target.src = project.fallback; 
-                          }}
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent opacity-90" />
-                        
-                        <div className="absolute bottom-0 left-0 w-full p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                          <span className="inline-block px-2 py-1 bg-[#D8F334] text-[#141414] text-[10px] font-bold uppercase tracking-wider rounded mb-2">
-                            {project.category}
-                          </span>
-                          <div className="flex justify-between items-end">
-                            <div>
-                              <h3 className="text-2xl font-roc font-bold text-white mb-1">{project.title}</h3>
-                              <p className="text-xs text-[#D0D0D0] font-roc uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                                {project.desc}
-                              </p>
-                            </div>
-                            <div className="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                              <ArrowUpRight size={16} />
-                            </div>
-                          </div>
-                        </div>
-                      </SimpleCard>
-                    ))}
-                  </div>
-
-                  {/* Botão Ver Mais */}
-                  <div className="mt-16 flex justify-center">
-                    <Button 
-                      variant="outline" 
-                      onClick={() => window.open("https://www.behance.net/alanlima47", "_blank")}
-                      className="px-10 py-4 text-sm tracking-widest hover:scale-105 transition-transform"
-                    >
-                      VER MAIS PROJETOS
-                    </Button>
-                  </div>
-
-                </AnimatedSection>
-              </div>
-
-              <section id="sobre" className="py-24 bg-[#1a1a1a] border-t border-[#313519] relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-[#313519]/20 rounded-full blur-[100px] pointer-events-none"></div>
-                <div className="container mx-auto px-6">
-                  <AnimatedSection>
-                    <div className="flex flex-col md:flex-row gap-16 items-center">
-                      <div className="md:w-1/2 flex justify-center md:justify-start">
-                         <AnimatedDotGrid />
-                      </div>
-                      
-                      <div className="md:w-1/2">
-                        <Badge>Sobre Mim</Badge>
-                        <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white leading-tight">
-                          <MixedType text="DESIGN É A ESTRATÉGIA" /> <br/>
-                          <span className="text-[#D8F334]"><MixedType text="DA MUDANÇA." /></span>
-                        </h2>
-                        
-                        <div className="font-roc text-[#D0D0D0] text-base leading-relaxed space-y-4">
-                            <p>
-                                Empreender exige coragem, mas quando os desafios aparecem, é preciso estratégia. Sou <strong>Alan Lima</strong>, designer gráfico em Ribeirão Preto, e acredito em uma verdade: se a vida te der limões, faça uma limonada.
-                            </p>
-                            <p>
-                                Desde 2018, minha missão é transformar o "azedo" dos problemas do seu negócio em soluções visuais que encantam e vendem. Eu não entrego apenas design; entrego a clareza estratégica que sua empresa precisa para voltar a crescer.
-                            </p>
-                            <p className="text-white font-medium border-l-2 border-[#D8F334] pl-4 italic">
-                                "Vamos transformar seus obstáculos na sua melhor apresentação?"
-                            </p>
-                        </div>
-                      </div>
-                    </div>
-                  </AnimatedSection>
-                </div>
-              </section>
-
-              <section className="bg-[#D0D0D0] text-[#141414] py-32 rounded-t-[40px] md:rounded-t-[80px] -mt-10 relative z-20 overflow-hidden">
-                <div className="container mx-auto px-6 relative z-10">
-                  <div className="flex flex-col lg:flex-row items-center gap-12">
-                    <div className="lg:w-1/2">
-                      <div className="inline-block px-3 py-1 border border-[#141414] text-[#141414] text-[10px] uppercase tracking-wider font-bold rounded-full mb-6">
-                        Conceito
-                      </div>
-                      <h2 className="text-6xl md:text-8xl font-black leading-[0.85] mb-8">
-                        <MixedType text="O QUE É" /><br/>
-                        <span className="text-[#666]"><MixedType text="BRANDING?" /></span>
-                      </h2>
-                      <p className="font-roc text-xl font-medium leading-relaxed mb-6 text-[#141414] max-w-md">
-                        Não é apenas um logotipo bonito. É a linguagem silenciosa que sua empresa fala antes mesmo de você abrir a boca.
-                      </p>
-                      <p className="font-roc text-sm text-[#444] leading-relaxed max-w-md mb-8">
-                        Uma identidade visual coesa constrói confiança, estabelece autoridade e diferencia você em um mercado saturado.
-                      </p>
-                      <div className="flex items-center gap-4 border-t border-[#141414]/20 pt-6">
-                        <div className="text-5xl font-bold font-roc">94%</div>
-                        <p className="text-xs font-bold uppercase tracking-wider max-w-[150px]">
-                          das primeiras impressões são relacionadas ao design
-                        </p>
-                      </div>
-                    </div>
-                    <div className="lg:w-1/2 flex justify-center lg:justify-end relative">
-                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-white rounded-full blur-[80px] opacity-60"></div>
-                       <img 
-                         src={BRANDING_PNG_URL} 
-                         alt="3D Abstract Shape" 
-                         className="relative z-10 w-full max-w-[500px] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-700"
-                         onError={(e) => { e.target.style.display = 'none'; }}
-                       />
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <section id="processo" className="bg-[#141414] pt-32 pb-24 relative">
-                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#313519] rounded-full blur-[100px] opacity-40"></div>
-                <div className="container mx-auto px-6">
-                  <div className="mb-32">
-                    <AnimatedSection>
-                      <h2 className="font-roc text-4xl font-bold mb-16 text-center">Como Trabalhamos</h2>
-                      <div className="grid md:grid-cols-3 gap-8">
-                        {PROCESS_STEPS.map((step, i) => {
-                          const styles = getStepStyle(i);
-                          return (
-                            <FolderCard 
-                              key={step.id} 
-                              label={`PASSO ${step.id}`} 
-                              borderColor={styles.borderColor}
-                              bgHeader={styles.bgHeader}
-                              labelColor={styles.labelColor} 
-                            >
-                              <div className={`mt-2 mb-4 ${styles.iconColor}`}>
-                                {step.icon}
-                              </div>
-                              <h3 className={`font-roc text-xl font-bold mb-3 ${styles.textColor}`}>{step.title}</h3>
-                              <p className={`font-roc text-sm leading-relaxed ${styles.descColor}`}>
-                                {step.desc}
-                              </p>
-                            </FolderCard>
-                          )
-                        })}
-                      </div>
-                    </AnimatedSection>
-                  </div>
-
-                  <div id="serviços">
-                    <AnimatedSection>
-                      <div className="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-[#333] pb-6">
-                        <h2 className="text-5xl font-bold uppercase">
-                          <MixedType text="SERVIÇOS" />
-                        </h2>
-                        <div className="flex items-center gap-4 mt-4 md:mt-0">
-                          <div className="w-8 h-8 rounded-full bg-[#D8F334] flex items-center justify-center text-black transform rotate-45">
-                            <ArrowRight size={16} />
-                          </div>
-                          <p className="text-gray-400 text-sm font-bold uppercase tracking-wide">
-                            INCLUSOS EM QUALQUER DOS 3 PLANOS
-                          </p>
-                        </div>
-                      </div>
-                      
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-                        {SERVICES.map((service, index) => (
-                          <div key={index} className="flex flex-col group">
-                            <div className="flex items-start gap-4">
-                              <div className="w-1 h-12 bg-[#D8F334] group-hover:h-full transition-all duration-500 ease-in-out"></div>
-                              
-                              <div className="flex-1">
-                                 <div className="flex items-center gap-3 mb-2">
-                                    <div className="text-[#666] group-hover:text-[#D8F334] transition-colors duration-300">
-                                      {React.cloneElement(service.icon, { size: 20, strokeWidth: 2 })}
-                                    </div>
-                                    <h3 className="font-roc text-xl font-bold text-white uppercase tracking-wide group-hover:text-[#D8F334] transition-colors">
-                                      {service.title}
-                                    </h3>
-                                 </div>
-                                <p className="font-roc text-sm text-gray-400 leading-relaxed border-t border-[#333] pt-2 mt-1 group-hover:border-[#D8F334]/30 transition-colors">
-                                  {service.desc}
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </AnimatedSection>
-                  </div>
-                </div>
-              </section>
-
-              <section className="py-24 bg-[#141414] border-t border-[#333]">
-                <div className="container mx-auto px-6">
-                  <AnimatedSection>
-                    <h2 className="font-pixelify text-4xl text-center mb-16 text-white">
-                      O QUE <span className="text-[#D8F334]">DIZEM</span>
-                    </h2>
-                    <div className="grid md:grid-cols-3 gap-8">
-                      {TESTIMONIALS.map((t) => (
-                        <FolderCard key={t.id} label="FEEDBACK" borderColor="border-[#313519]" className="bg-[#1a1a1a]">
-                          <Quote className="text-[#D8F334] mb-4 opacity-50" size={32} />
-                          <p className="font-roc text-lg text-[#D0D0D0] mb-6 flex-grow italic">"{t.text}"</p>
-                          <div>
-                            <h4 className="text-white font-bold font-roc">{t.name}</h4>
-                            <span className="text-xs text-[#666] font-roc uppercase tracking-widest">{t.role}</span>
-                          </div>
-                        </FolderCard>
-                      ))}
-                    </div>
-                  </AnimatedSection>
-                </div>
-              </section>
-
-              <section id="planos" className="py-24 bg-[#0f0f0f] relative overflow-hidden">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] md:w-[50vw] md:h-[50vw] bg-[#313519] rounded-full blur-[150px] opacity-40 pointer-events-none"></div>
-                
-                <div className="container mx-auto px-6 relative z-10">
-                  <AnimatedSection>
-                    <h2 className="text-center text-5xl md:text-6xl mb-4 font-bold text-white">
-                       <MixedType text="INVESTIMENTO" />
-                    </h2>
-                    <p className="text-center text-gray-400 mb-16 max-w-md mx-auto font-roc text-lg">
-                      Escolha o nível de impacto que você deseja causar.
-                    </p>
-
-                    <div className="grid lg:grid-cols-3 gap-8 items-stretch">
-                      {PLANS.map((plan, idx) => (
-                        <SimpleCard 
-                          key={plan.name} 
-                          borderColor={plan.highlight ? 'border-[#D8F334]' : 'border-[#333]'}
-                          bgHeader="bg-[#141414]/80"
-                          className={`backdrop-blur-sm ${plan.highlight ? 'shadow-[0_0_30px_rgba(216,243,52,0.1)]' : 'hover:border-gray-500'}`}
-                        >
-                          <h3 className="font-roc text-4xl font-bold mb-4 text-white uppercase tracking-tight">
-                            {plan.name}
-                          </h3>
-                          <p className="font-roc text-sm text-gray-400 mb-8 leading-relaxed flex-grow">
-                            {plan.tagline}
-                          </p>
-
-                          <ul className="space-y-4 mb-10">
-                            {plan.features.map((feat, i) => (
-                              <li key={i} className="flex items-start gap-3 text-sm text-gray-300 font-roc">
-                                <Check size={16} className="text-[#666] mt-1 shrink-0" /> 
-                                <span>{feat}</span>
-                              </li>
-                            ))}
-                          </ul>
-
-                          <Button 
-                            variant="black"
-                            className="w-full font-roc mt-auto"
-                            onClick={() => window.open(GOOGLE_FORM_URL, '_blank')}
-                          >
-                            Fazer Orçamento
-                          </Button>
-                        </SimpleCard>
-                      ))}
-                    </div>
-
-                    <div className="mt-12 text-center font-roc text-[10px] md:text-xs text-[#666] uppercase tracking-widest space-y-2">
-                      <p>Prazo médio: 45 dias úteis após o pagamento da entrada.</p>
-                      <p>Pagamento: 50% na assinatura e 50% na entrega final.</p>
-                    </div>
-                  </AnimatedSection>
-                </div>
-              </section>
-
-              <section className="py-24 bg-[#141414] border-t border-[#222]">
-                <div className="container mx-auto px-6 max-w-3xl">
-                  <AnimatedSection>
-                    <h2 className="text-4xl font-pixelify text-center mb-12 text-white">DÚVIDAS <span className="text-[#D8F334]">FREQUENTES</span></h2>
-                    <div className="space-y-2">
-                      {FAQ.map((item, i) => (
-                        <AccordionItem key={i} question={item.q} answer={item.a} />
-                      ))}
-                    </div>
-                  </AnimatedSection>
-                </div>
-              </section>
-
-              <footer id="contact" className="bg-[#D8F334] text-[#141414] pt-24 pb-12 rounded-t-[60px] relative overflow-hidden">
-                <div className="container mx-auto px-6 relative z-10">
-                  <div className="flex flex-col items-center text-center mb-20">
-                    <h2 className="text-6xl md:text-8xl lg:text-9xl font-black leading-[0.85] mb-8 tracking-tight">
-                      <MixedType text="FAÇA DOS SEUS" /> <br />
-                      <MixedType text="PROBLEMAS," /> <br />
-                      <MixedType text="UMA SOLUÇÃO" />
-                    </h2>
-                    <Button variant="black" className="px-12 py-6 text-lg" onClick={() => window.open(GOOGLE_FORM_URL, "_blank")}>
-                      Solicitar Orçamento
-                    </Button>
-                  </div>
-
-                  <div className="grid md:grid-cols-3 gap-12 border-t border-[#141414]/20 pt-12">
-                    <div>
-                      <h4 className="font-pixelify text-2xl mb-4">CONTATO</h4>
-                      <div className="flex flex-col gap-2 font-roc font-medium">
-                        <a href="mailto:47alanlima@gmail.com" className="flex items-center gap-2 hover:opacity-70">
-                          <Mail size={18} /> 47alanlima@gmail.com
-                        </a>
-                        <a href="tel:+5516991818725" className="flex items-center gap-2 hover:opacity-70">
-                          <Phone size={18} /> (16) 99181-8725
-                        </a>
-                      </div>
-                    </div>
-                    
-                    <div className="md:text-center">
-                      <h4 className="font-pixelify text-2xl mb-4">SOCIAL</h4>
-                      <div className="flex gap-4 md:justify-center items-center">
-                        <a href="https://www.instagram.com/alanlima.dsgn/" target="_blank" rel="noopener noreferrer" className="p-2 border border-[#141414] rounded-full hover:bg-[#141414] hover:text-[#D8F334] transition-colors">
-                          <Instagram size={20} />
-                        </a>
-                        <a href="https://www.linkedin.com/in/alan-lima-28b8b11a2/" target="_blank" rel="noopener noreferrer" className="p-2 border border-[#141414] rounded-full hover:bg-[#141414] hover:text-[#D8F334] transition-colors">
-                          <Linkedin size={20} />
-                        </a>
-                        <a href="https://www.behance.net/alanlima47" target="_blank" rel="noopener noreferrer" className="px-4 py-2 border border-[#141414] rounded-full font-bold text-sm hover:bg-[#141414] hover:text-[#D8F334] transition-colors">
-                          BEHANCE
-                        </a>
-                        <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="p-2 border border-[#141414] rounded-full hover:bg-[#141414] hover:text-[#D8F334] transition-colors">
-                          <MessageCircle size={20} />
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="md:text-right">
-                      <h4 className="font-pixelify text-2xl mb-4">LOCAL</h4>
-                      <p className="font-roc font-medium">
-                        Ribeirão Preto/SP<br/>
-                        Disponível para o mundo.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="mt-20 text-center border-t border-[#141414]/10 pt-8">
-                    <p className="font-roc text-xs font-bold uppercase tracking-widest">
-                      © 2025 Alan Lima. Todos os direitos reservados.
-                    </p>
-                  </div>
-                </div>
-              </footer>
-            </div>
-          );
+  function chama(svg, sentido){
+    const alturaVB = parseFloat(svg.getAttribute('viewBox').split(/\s+/)[3]);
+    const LINS = Math.round(alturaVB / PASSO), RH = alturaVB / LINS;
+    const base = mascara(svg.querySelector('path').getAttribute('d'), LINS, RH);
+    const cv = document.createElement('canvas');
+    cv.className = svg.getAttribute('class');
+    cv.setAttribute('aria-hidden', 'true');
+    svg.after(cv);
+    svg.style.visibility = 'hidden';
+    const ctx = cv.getContext('2d');
+    const cor = getComputedStyle(svg).fill || '#141414';
+    const atual = new Uint8Array(COLS * LINS);
+    let W = 0, H = 0, xs = [], ys = [], anterior = null;
+    const medir = () => {
+      const bx = cv.getBoundingClientRect(), dpr = Math.min(2, devicePixelRatio || 1);
+      W = Math.max(1, Math.round(bx.width * dpr)); H = Math.max(1, Math.round(bx.height * dpr));
+      if (cv.width !== W) cv.width = W;
+      if (cv.height !== H) cv.height = H;
+      xs = Array.from({ length: COLS + 1 }, (_, i) => Math.round(i * W / COLS));
+      ys = Array.from({ length: LINS + 1 }, (_, i) => Math.round(i * H / LINS));
+      anterior = null;
+    };
+    const cel = (r, c) => {
+      if (c < 0 || c >= COLS) return base[Math.max(0, Math.min(LINS - 1, r)) * COLS + (c < 0 ? 0 : COLS - 1)] || 0;
+      if (r < 0) return sentido > 0 ? 0 : 1;
+      if (r >= LINS) return sentido > 0 ? 1 : 0;
+      return base[r * COLS + c];
+    };
+    const calcula = t => {
+      for (let r = 0; r < LINS; r++) for (let c = 0; c < COLS; c++) {
+        const i = r * COLS + c, b = base[i];
+        const ponta = cel(r - sentido, c), massa = cel(r + sentido, c);
+        const lado = cel(r, c - 1) + cel(r, c + 1);
+        const nz = ruido(c * .62, r * .9 + t * 2.4 * sentido);
+        let v = b;
+        if (b) {
+          if (!ponta) v = nz > .2 ? 1 : 0;
+          else if (!massa) v = 1;
+        } else {
+          if (massa) v = nz > .74 ? 1 : 0;
+          else if (lado) v = nz > .87 ? 1 : 0;
+          else if (cel(r + 2 * sentido, c) && ruido(c * 1.7 + 40, r * 1.3 + t * 5 * sentido) > .93) v = 1;
         }
+        atual[i] = v;
+      }
+    };
+    const desenha = () => {
+      if (anterior && anterior.every((v, i) => v === atual[i])) return;
+      ctx.clearRect(0, 0, W, H);
+      ctx.fillStyle = cor;
+      for (let r = 0; r < LINS; r++) for (let c = 0; c < COLS; c++)
+        if (atual[r * COLS + c]) ctx.fillRect(xs[c], ys[r], xs[c + 1] - xs[c], ys[r + 1] - ys[r]);
+      anterior = atual.slice();
+    };
+    medir();
+    if (parado) { atual.set(base); desenha(); return { medir: () => { medir(); atual.set(base); desenha(); } }; }
+    let visivel = false, rodando = false, ultimo = 0, t = 0;
+    const passo = agora => {
+      if (!visivel) { rodando = false; return; }
+      if (agora - ultimo >= 83) { ultimo = agora; t += 1 / 12; calcula(t); desenha(); }
+      requestAnimationFrame(passo);
+    };
+    new IntersectionObserver(es => {
+      visivel = es[0].isIntersecting;
+      if (visivel && !rodando) { rodando = true; requestAnimationFrame(passo); }
+    }).observe(cv);
+    atual.set(base); desenha();
+    return { medir: () => { medir(); desenha(); } };
+  }
+  const faixasPx = [...document.querySelectorAll('svg.pixfaixa')].map(sv => chama(sv, sv.closest('.capa') ? 1 : -1));
+  let pend = false;
+  addEventListener('resize', () => {
+    if (pend) return; pend = true;
+    requestAnimationFrame(() => { pend = false; faixasPx.forEach(f => f.medir()); });
+  });
+})();
 
-        // Renderização
-        const root = createRoot(document.getElementById('root'));
-        root.render(<App />);
-    </script>
+/* ============================================================
+   TRAVAS (processo e depoimentos)
+   Só travam quando a seção inteira cabe na altura da tela.
+   ============================================================ */
+(function(){
+  const trilhos = [['processoTrilho', 'processo'], ['confiamTrilho', 'depoimentos']]
+    .map(([t, s]) => ({ t: document.getElementById(t), s: document.getElementById(s) }));
+  const anim = document.documentElement.classList.contains('anim');
+  function avalia(){
+    trilhos.forEach(({ t, s }) => {
+      if (!t || !s) return;
+      t.classList.remove('pin');
+      // altura da seção sem a trava; as pastas de 810px transbordam e não contam
+      const cabe = s.offsetHeight <= innerHeight + 2 || s.id === 'depoimentos';
+      if (anim && cabe && innerHeight >= 560) t.classList.add('pin');
+    });
+  }
+  avalia();
+  let pend = false;
+  addEventListener('resize', () => { if (pend) return; pend = true; requestAnimationFrame(() => { pend = false; avalia(); }); });
+})();
+
+/* ============================================================
+   ANEL DE LOGOS: abre de um raio menor ao entrar e segue girando
+   ============================================================ */
+(function(){
+  const anel = document.getElementById('anel');
+  if (!anel) return;
+  const raio = () => {
+    const w = document.documentElement.clientWidth, h = innerHeight;
+    const r = Math.min(411, w * .44, Math.max(260, h * .46));
+    anel.querySelectorAll('.tile').forEach(t => t.style.setProperty('--R', r.toFixed(1) + 'px'));
+    const esc = Math.min(1, r / 411);
+    anel.style.setProperty('--esc', esc.toFixed(3));
+    anel.querySelectorAll('.tile__corpo').forEach(c => c.style.scale = esc < 1 ? esc.toFixed(3) : '');
+  };
+  raio();
+  addEventListener('resize', raio);
+  if (!document.documentElement.classList.contains('anim')) { anel.classList.add('in'); return; }
+  new IntersectionObserver(es => { if (es[0].isIntersecting) anel.classList.add('in'); }, { threshold: .25 })
+    .observe(document.getElementById('depoimentos'));
+})();
+
+/* ============================================================
+   MOTOR DE MOVIMENTO
+   ============================================================ */
+(function(){
+  const raiz = document.documentElement;
+  const $ = q => document.querySelector(q), $$ = q => [...document.querySelectorAll(q)];
+  const depos = $$('#depos .depo');
+  // sem motor (reduzir movimento), os depoimentos ainda trocam ao rolar
+  if (!raiz.classList.contains('anim')) {
+    const tr = $('#confiamTrilho');
+    addEventListener('scroll', () => {
+      const b = tr.getBoundingClientRect(), P = Math.min(1, Math.max(0, -b.top / Math.max(1, b.height - innerHeight)));
+      const idx = Math.min(depos.length - 1, Math.floor(P * depos.length));
+      depos.forEach((d, i) => { d.classList.toggle('ativo', i === idx); d.setAttribute('aria-hidden', i !== idx); });
+    }, { passive: true });
+    return;
+  }
+  try {
+    const clamp = (v, a = 0, b = 1) => v < a ? a : v > b ? b : v;
+    const lerp = (a, b, t) => a + (b - a) * t;
+    const sai = t => 1 - Math.pow(1 - t, 3);
+    const saiForte = t => 1 - Math.pow(1 - t, 4);
+    const topo = (el, ate) => { let y = 0; for (let e = el; e && e !== ate; e = e.offsetParent) y += e.offsetTop; return y; };
+    const f2 = v => v.toFixed(2), f4 = v => v.toFixed(4);
+    const set = (el, prop, v) => { const k = '_' + prop; if (el[k] !== v) { el.style[prop] = v; el[k] = v; } };
+
+    let vh = innerHeight, vw = innerWidth, sy = scrollY;
+
+    const capa = $('.capa'), foto = $('.capa__foto');
+    const intro = { eyebrow: $('.capa__eyebrow'), glifos: $$('.capa__titulo .g'), cta: $('.capa__cta') };
+    const procTrilho = $('#processoTrilho'), processo = $('#processo');
+    const confTrilho = $('#confiamTrilho');
+
+    const revela = [];
+    const reg = (el, tipo, extra) => { if (el && !el.closest('.capa') && !el.closest('.confiam')) revela.push(Object.assign({ el, tipo, top: 0, ult: -1 }, extra)); };
+    $$('.eyebrow').forEach(e => reg(e, 'sobe', { d: 16 }));
+    $$('.mix').forEach(e => reg(e, 'titulo', { g: [...e.querySelectorAll('.g')] }));
+    $$('.cases__lead,.cases__rodape,.processo__lead,.dev__sub,.dev__cta,.motion__cta,.motion__legenda,.motion__controles,.acc,.contato__grade > *')
+      .forEach(e => reg(e, 'sobe', { d: 30 }));
+    $$('.dev__tela,.dev__cel').forEach((e, i) => reg(e, 'sobe', { d: 60 + i * 20 }));
+    reg($('.faq__marca'), 'pontos', { g: $$('.faq__marca i') });
+    // títulos de dentro das seções travadas revelam antes da trava começar
+    const confTitulo = $('.confiam__titulo');
+    const confGlifos = confTitulo ? [...confTitulo.querySelectorAll('.g')] : [];
+
+    const cards = $$('.card').map(el => {
+      const img = el.querySelector('.card__media img'), blur = img.cloneNode();
+      blur.className = 'card__blur'; blur.alt = ''; blur.setAttribute('aria-hidden', 'true');
+      img.after(blur);
+      return { el, blur, top: 0, ult: -1 };
+    });
+    const faixas = $$('.faixa').map(el => ({ el, txt: el.querySelector('.faixa__in'), h: 133 }));
+    const sobre = $('.sobre'), maos = $('.sobre__maos');
+    const contato = $('.contato'), limao = $('.contato__limao');
+
+    let M = {};
+    const medir = () => {
+      vh = innerHeight; vw = innerWidth;
+      const maxY = Math.max(0, document.documentElement.scrollHeight - vh);
+      const janela = (ini, fim) => {
+        if (fim > maxY) { fim = maxY; ini = Math.min(ini, fim - vh * .25); }
+        return [ini, Math.max(ini + 1, fim)];
+      };
+      const pt = topo(procTrilho);
+      revela.forEach(r => {
+        r.top = processo.contains(r.el) ? pt + topo(r.el, processo) : topo(r.el);
+        [r.ini, r.fim] = janela(r.top - vh * .94, r.top - vh * .58); r.ult = -1;
+      });
+      cards.forEach(c => { c.top = topo(c.el); [c.ini, c.fim] = janela(c.top - vh * 1.02, c.top - vh * .52); c.ult = -1; });
+      faixas.forEach(f => f.h = f.el.offsetHeight);
+      M = {
+        capaH: capa.offsetHeight,
+        procTop: pt, procH: procTrilho.offsetHeight, procPin: procTrilho.classList.contains('pin'),
+        confTop: topo(confTrilho), confH: confTrilho.offsetHeight, confPin: confTrilho.classList.contains('pin'),
+        sobreTop: topo(sobre), sobreH: sobre.offsetHeight,
+        contatoTop: topo(contato),
+        limaoDesl: topo(limao, contato) + limao.offsetHeight + 40
+      };
+      [M.limIni, M.limFim] = janela(M.contatoTop - vh, M.contatoTop - vh * .25);
+      acorda();
+    };
+
+    const glifo = (g, e) => {
+      set(g, 'opacity', f4(e));
+      if (e >= 1 || e <= 0) { set(g, 'transform', e <= 0 ? 'translate3d(0,.5em,0)' : ''); set(g, 'filter', ''); return; }
+      set(g, 'transform', `translate3d(0,${f4((1 - e) * .5)}em,0)`);
+      set(g, 'filter', `blur(${f2((1 - e) * 7)}px)`);
+    };
+    const sobe = (el, e, d) => {
+      set(el, 'opacity', f4(e));
+      set(el, 'transform', e >= 1 ? '' : `translate3d(0,${f2((1 - e) * d)}px,0)`);
+    };
+
+    let t0 = Infinity, introFeita = false, deposIdx = 0;
+    const comecar = () => { if (t0 === Infinity) { t0 = performance.now(); acorda(); } };
+    (foto.decode ? foto.decode() : Promise.resolve()).then(comecar, comecar);
+    setTimeout(comecar, 1200);
+
+    function cena(agora){
+      const ti = agora - t0;
+      const pf = sai(clamp(ti / 1400));
+      if (!introFeita || sy < M.capaH + 40) {
+        const par = clamp(sy / M.capaH) * M.capaH * .28;
+        set(foto, 'opacity', f4(pf));
+        set(foto, 'transform', `translate3d(0,${f2(par)}px,0) scale(${f4(1.06 - .06 * pf)})`);
+      }
+      if (!introFeita) {
+        sobe(intro.eyebrow, sai(clamp((ti - 150) / 700)), 14);
+        intro.glifos.forEach((g, i) => glifo(g, saiForte(clamp((ti - 280 - i * 36) / 820))));
+        sobe(intro.cta, sai(clamp((ti - 950) / 700)), 18);
+        if (ti > 1750 + intro.glifos.length * 36) introFeita = true;
+      }
+
+      for (const r of revela) {
+        let p = clamp((sy - r.ini) / (r.fim - r.ini));
+        p = Math.round(p * 1000) / 1000;
+        if (p === r.ult) continue;
+        r.ult = p;
+        if (r.tipo === 'sobe') sobe(r.el, sai(p), r.d);
+        else if (r.tipo === 'titulo') {
+          const n = r.g.length;
+          r.g.forEach((g, i) => glifo(g, saiForte(clamp((p - (n > 1 ? i / (n - 1) * .45 : 0)) / .55))));
+        } else if (r.tipo === 'pontos') {
+          const n = r.g.length;
+          r.g.forEach((d, i) => {
+            const e = sai(clamp((p - i / n * .55) / .45));
+            d.style.opacity = f4(e);
+            d.style.transform = e >= 1 ? '' : `scale(${f4(.35 + .65 * e)})`;
+          });
+        }
+      }
+
+      for (const c of cards) {
+        let p = clamp((sy - c.ini) / (c.fim - c.ini));
+        p = Math.round(p * 1000) / 1000;
+        if (p === c.ult) continue;
+        c.ult = p;
+        const e = sai(p);
+        set(c.el, 'opacity', f4(.25 + .75 * e));
+        set(c.el, 'transform', e >= 1 ? '' : `translate3d(0,${f2((1 - e) * 80)}px,0) scale(${f4(.94 + .06 * e)})`);
+        set(c.blur, 'opacity', f4(1 - e));
+      }
+
+      /* processo: com a trava, as pastas sobem durante ela e só depois a página segue */
+      {
+        let P;
+        if (M.procPin) P = clamp((sy - M.procTop + vh * .35) / (M.procH - vh + vh * .35));
+        else P = clamp((vh * .95 - (M.procTop - sy)) / (vh * .8));
+        faixas.forEach((f, i) => {
+          const e = saiForte(clamp((P - i * .22) / .56));
+          const ty = (1 - e) * (f.h * 1.6 + i * f.h * 1.1);
+          set(f.el, 'transform', e >= 1 ? '' : `translate3d(0,${f2(ty)}px,0)`);
+          set(f.txt, 'opacity', f4(clamp((e - .4) / .6)));
+        });
+      }
+
+      {
+        const P = clamp((sy + vh - M.sobreTop) / (vh + M.sobreH));
+        const amp = Math.min(vw, 1440) / 1440 * 80;
+        set(maos, 'transform', `translate3d(0,${f2(lerp(amp, -amp, P))}px,0)`);
+      }
+
+      /* eles confiam: título revela ao entrar; durante a trava os depoimentos passam */
+      {
+        const pe = clamp((sy - (M.confTop - vh * .9)) / (vh * .5));
+        const n = confGlifos.length;
+        confGlifos.forEach((g, i) => glifo(g, saiForte(clamp((pe - (n > 1 ? i / (n - 1) * .45 : 0)) / .55))));
+        const P = M.confPin ? clamp((sy - M.confTop) / Math.max(1, M.confH - vh)) : clamp((sy - M.confTop + vh * .5) / vh);
+        const idx = Math.min(depos.length - 1, Math.floor(P * depos.length * .999));
+        if (idx !== deposIdx) {
+          depos.forEach((d, i) => {
+            d.classList.toggle('ativo', i === idx);
+            d.classList.toggle('saiu', i < idx);
+            d.setAttribute('aria-hidden', i !== idx);
+          });
+          deposIdx = idx;
+        }
+      }
+
+      {
+        const P = clamp((sy - M.limIni) / (M.limFim - M.limIni));
+        const e = saiForte(P);
+        set(limao, 'transform', e >= 1 ? '' : `translate3d(0,${f2(-(1 - e) * M.limaoDesl)}px,0) rotate(${f2((1 - e) * -16)}deg)`);
+      }
+    }
+
+    let ativo = false, antes = 0;
+    function quadro(agora){
+      const dt = Math.min(.25, Math.max(.001, (agora - antes) / 1000)); antes = agora;
+      const alvo = scrollY;
+      sy += (alvo - sy) * (1 - Math.exp(-dt * 12));
+      if (Math.abs(alvo - sy) < .25) sy = alvo;
+      try { cena(agora); } catch (e) { console.error(e); }
+      if (sy !== alvo || (!introFeita && t0 !== Infinity)) requestAnimationFrame(quadro);
+      else ativo = false;
+    }
+    function acorda(){
+      if (ativo) return;
+      ativo = true; antes = performance.now();
+      requestAnimationFrame(quadro);
+    }
+
+    addEventListener('scroll', acorda, { passive: true });
+    let pend = false;
+    const remedir = () => { if (pend) return; pend = true; requestAnimationFrame(() => { pend = false; medir(); }); };
+    addEventListener('resize', remedir);
+    addEventListener('load', remedir);
+    if ('ResizeObserver' in window) new ResizeObserver(remedir).observe(document.body);
+    medir();
+  } catch (erro) {
+    raiz.classList.remove('anim');
+    $$('[style]').forEach(el => { el.style.opacity = ''; el.style.transform = ''; el.style.filter = ''; });
+    console.error(erro);
+  }
+})();
+
+/* ---------- menu mobile ---------- */
+(function(){
+  const d = document.getElementById('drawer'), b = document.getElementById('burger');
+  const set = a => {
+    d.classList.toggle('aberto', a);
+    d.setAttribute('aria-hidden', !a);
+    b.setAttribute('aria-expanded', a);
+    document.body.style.overflow = a ? 'hidden' : '';
+  };
+  b.addEventListener('click', () => set(true));
+  document.getElementById('drawerX').addEventListener('click', () => set(false));
+  d.querySelectorAll('a').forEach(a => a.addEventListener('click', () => set(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
+})();
+</script>
 </body>
 </html>
